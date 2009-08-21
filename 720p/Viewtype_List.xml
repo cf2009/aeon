@@ -325,7 +325,7 @@
 						<height>50</height>
 						<texture>list/listpanel_selectbar.png</texture>
 						<include>Animation_ButtonFocusFade</include>
-						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
@@ -518,7 +518,7 @@
 						<height>75</height>
 						<texture>list/listpanel_selectbar.png</texture>
 						<include>Animation_ButtonFocusFade</include>
-						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>			
 					<control type="label">
 						<include>ListLabel_Track</include>
@@ -803,7 +803,7 @@
 						<height>95</height>
 						<texture>list/listpanel_selectbar.png</texture>
 						<include>Animation_ButtonFocusFade</include>
-						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
 					
 					
