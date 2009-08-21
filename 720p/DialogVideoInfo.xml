@@ -10,7 +10,7 @@
 	<controls>
 
 	<control type="image">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<texture>common/darkgrey.png</texture>
 	</control>	
 

@@ -669,7 +669,7 @@
 	
 	<include name="Furniture_MediaPanel">
 		<control type="image">
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<texture>list/list_filter.png</texture>
 			<colordiffuse>d0FFFFFF</colordiffuse>
 			<visible>Control.IsVisible(50)</visible>

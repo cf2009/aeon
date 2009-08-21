@@ -4,7 +4,7 @@
 	<controls>
 
 	<control type="multiimage">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<imagepath>backdrops/default_settings</imagepath>
 		<info>Skin.String(CustomSettings)</info>
 	</control>

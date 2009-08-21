@@ -55,7 +55,7 @@
 	
 	<include name="ViewChange">
 		<control type="image">
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<visible>Control.HasFocus(69)</visible>
 			<texture>viewselect/vs_background.png</texture>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
@@ -163,7 +163,7 @@
 		
 		<control type="button">
 			<visible>Control.HasFocus(69)</visible>		
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<align>center</align>
 			<aligny>top</aligny>
 			<textoffsety>320</textoffsety>
@@ -178,7 +178,7 @@
 		
 		<control type="button">
 			<visible>Control.HasFocus(69)</visible>		
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<align>center</align>
 			<aligny>top</aligny>
 			<textoffsety>355</textoffsety>

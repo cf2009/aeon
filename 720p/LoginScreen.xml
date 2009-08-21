@@ -9,7 +9,7 @@
 	<controls>
 
 	<control type="image">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<texture>welcome/login_backdrop.png</texture>
 		<include>Animation_WindowFade600</include>
 	</control>

@@ -4,7 +4,7 @@
 	<controls>
 		<control type="multiimage">
 			<description>Settings Backdrop</description>
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<imagepath>backdrops/default_settings</imagepath>
 			<info>Skin.String(CustomSettings)</info>
 			<animation effect="fade" start="0" end="100" time="200" condition="Window.Previous(Home) | Skin.HasSetting(bmtransit)">WindowOpen</animation>
@@ -12,7 +12,7 @@
 		</control>
 		
 		<control type="group">
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<animation type="WindowOpen" reversible="false" condition="Window.Previous(Home) | Skin.HasSetting(bmtransit)">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -329,7 +329,7 @@
 
 			<control type="group">
 				<description>Main instruction labels</description>
-				<include>FullscreenDimensions</include>
+				<include>FullScreenDimensions</include>
 				<include>Animation_CommonFade</include>
 				<include>Labels_AeonScreenLabels</include>
 			</control>

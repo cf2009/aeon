@@ -10,7 +10,7 @@
 	</control>
 
 	<control type="largeimage">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
         <visible>Control.IsVisible(57) + !IsEmpty(listitem.property(fanart_image)) + !Skin.HasSetting(nomoviefanart)</visible>
 		<include>Animation_FanartFade</include>
 		<fadetime>400</fadetime>		
@@ -20,7 +20,7 @@
 	<include>Furniture_WallBackground</include>
 	
 	<control type="group">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		
 		<include>Furniture_Time</include>	

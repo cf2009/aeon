@@ -1,6 +1,6 @@
 <includes>
 
-	<include name="FullscreenDimensions">
+	<include name="FullScreenDimensions">
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>1280</width>
@@ -15,7 +15,7 @@
 	</include>	
 	
 	<include name="BackgroundVarsGlobal">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<timeperimage>20000</timeperimage>
 		<randomize>true</randomize>
 		<fadetime>1000</fadetime>
@@ -24,7 +24,7 @@
 	</include>
 	
 	<include name="BackgroundVarsMultiplex">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<timeperimage>20000</timeperimage>
 		<randomize>true</randomize>
 		<fadetime>1000</fadetime>
@@ -190,7 +190,7 @@
 
 	<include name="MediaBackdropsTVFanart">
 		<control type="largeimage">
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<info>Fanart.Image</info>
 			<visible>!Skin.HasSetting(notvfanart) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
 		</control>
@@ -206,12 +206,12 @@
 	<include name="Background_Wallpaper">
 
 		<control type="visualisation">
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<visible>Skin.HasSetting(homevis) + Player.HasMedia</visible>
 		</control>
 		
 		<control type="videowindow">
-			<include>FullscreenDimensions</include>
+			<include>FullScreenDimensions</include>
 			<visible>Skin.HasSetting(videohome) + Player.HasVideo</visible>
 		</control> 
 

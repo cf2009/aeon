@@ -9,7 +9,7 @@
 	</control>
 	
 	<control type="largeimage" id="102">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
         <visible>!Control.IsVisible(103) + Control.IsVisible(57) + !IsEmpty(listitem.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
@@ -17,7 +17,7 @@
 	</control>
 
 	<control type="largeimage" id="103">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
         <visible>Control.IsVisible(57) + !IsEmpty(container.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[container.property(fanart_image)]</texture>
@@ -27,7 +27,7 @@
 	<include>Furniture_WallBackground</include>
 	
 	<control type="group">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>		
 		<include>Furniture_MediaPanel</include>

@@ -11,7 +11,7 @@
 	<include>Furniture_WallBackground</include>
 	
 	<control type="group">
-		<include>FullscreenDimensions</include>
+		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		
 		<include>Furniture_Time</include>
