@@ -63,9 +63,7 @@
 					<onclick>Skin.SetBool(listgamessquare)</onclick>
 					<altclick>Skin.Reset(listgamessquare)</altclick>
 					<visible>Control.IsVisible(50)</visible>
-				</control>				
-
-				<include>Objects_ThumbsButton</include>					
+				</control>								
 
 				<include>Objects_WallGridButton</include>
 				

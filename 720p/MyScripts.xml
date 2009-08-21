@@ -51,7 +51,6 @@
 					<include>Objects_MediaMenuButton</include>
 				</control>
 
-				<include>Objects_ThumbsButton</include>	
 
 				<include>Objects_WallGridButton</include>
 				
