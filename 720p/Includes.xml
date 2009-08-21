@@ -10,7 +10,6 @@
 <include file="Includes_MainMenu.xml" />
 <include file="Includes_Assistant_LabelsButtons.xml" />
 <include file="Includes_Settings_LabelsButtons.xml" />
-<include file="Includes_Settings_Presets.xml" />
 <include file="Includes_Settings_Welcome.xml" />
 <include file="Includes_MediaFlags.xml" />
 <include file="Includes_ViewSelect.xml" />
