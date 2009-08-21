@@ -51,7 +51,7 @@
 				<posx>67</posx>
 				<animation effect="fade" start="0" end="100" delay="1500" time="400">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				<include>Conditions_Weather</include>				
+				<visible>Container(300).HasFocus(10) + !Skin.HasSetting(noweatherpopup)</visible>				
 				<control type="image">
 					<posy>0</posy>
 					<width>283</width>
@@ -95,7 +95,7 @@
 			</control>
 			<control type="group">
 				<posx>370</posx>
-				<include>Conditions_Weather</include>				
+				<visible>Container(300).HasFocus(10) + !Skin.HasSetting(noweatherpopup)</visible>				
 				<animation effect="fade" start="0" end="100" delay="1600" time="400">Visible</animation>				
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<control type="image">
@@ -122,7 +122,7 @@
 			</control>
 			<control type="group">
 				<posx>586</posx>
-				<include>Conditions_Weather</include>				
+				<visible>Container(300).HasFocus(10) + !Skin.HasSetting(noweatherpopup)</visible>				
 				<animation effect="fade" start="0" end="100" delay="1700" time="400">Visible</animation>	
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<control type="image">
@@ -149,7 +149,7 @@
 			</control>
 			<control type="group">
 				<posx>802</posx>
-				<include>Conditions_Weather</include>				
+				<visible>Container(300).HasFocus(10) + !Skin.HasSetting(noweatherpopup)</visible>				
 				<animation effect="fade" start="0" end="100" delay="1800" time="400">Visible</animation>					
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<control type="image">
@@ -176,7 +176,7 @@
 			</control>
 			<control type="group">
 				<posx>1018</posx>
-				<include>Conditions_Weather</include>				
+				<visible>Container(300).HasFocus(10) + !Skin.HasSetting(noweatherpopup)</visible>				
 				<animation effect="fade" start="0" end="100" delay="1900" time="400">Visible</animation>					
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<control type="image">

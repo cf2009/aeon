@@ -876,7 +876,7 @@
 			<texture>home/nowplaying_shadow.png</texture>
 			<visible>Player.HasAudio</visible>
 			<include>Animation_VisibleChange200</include>
-			<include>Conditions_HiddenByAeonAssistant</include>
+			<visible>![Window.IsActive(605) | Window.IsActive(604) | Window.Next(AppearanceSettings)]</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="0" end="100" delay="500" time="400" />
 			</animation>

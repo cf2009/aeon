@@ -11,7 +11,7 @@
 	<control type="group">
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
-		<include>Conditions_HiddenByInfoPages</include>
+		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>

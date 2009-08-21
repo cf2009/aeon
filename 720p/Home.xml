@@ -45,7 +45,7 @@
 		<posy>0</posy>
 		<width>1280</width>
 		<height>720</height>
-		<include>Conditions_HiddenByAeonAssistant</include>
+		<visible>![Window.IsActive(605) | Window.IsActive(604) | Window.Next(AppearanceSettings)]</visible>
 		<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Animation_CommonFade</include>

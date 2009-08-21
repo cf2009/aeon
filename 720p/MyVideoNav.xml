@@ -33,7 +33,7 @@
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>		
-		<include>Conditions_HiddenByInfoPages</include>
+		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
 		<include>ListFade</include>
