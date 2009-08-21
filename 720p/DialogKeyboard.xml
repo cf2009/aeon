@@ -11,7 +11,7 @@
 		<height>22</height>
 		<font>Font_KeyboardTitle</font>
 		<align>center</align>
-		<include>dialogheadingcolor</include>
+		<include>dialogheader</include>
 	</control>
 	
 	<control type="group">
@@ -37,7 +37,7 @@
 			<font>Font_KeyboardEdit</font>
 			<align>center</align>
 			<onup>49</onup>
-			<include>dialogheadingcolor</include>
+			<include>dialogheader</include>
 		</control>
 
 		<control type="group">

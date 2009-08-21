@@ -27,7 +27,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<onup>49</onup>
-			<include>dialogheadingcolor</include>
+			<include>dialogheader</include>
 		</control>
 
 		<control type="group">
