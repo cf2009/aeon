@@ -1,5 +1,4 @@
 <includes>
-
 	<include name="ViewChangeLabel">
 		<width>427</width>
 		<height>40</height>
@@ -8,51 +7,20 @@
 		<font>Font_ViewChangeLabel</font>
 		<textcolor>Colour_OffWhite</textcolor>
 	</include>
-	
-	<include name="ViewChangeAnimTop">
-		<visible>Control.HasFocus(69)</visible>	
-		<animation type="Visible">
-			<effect type="fade" delay="400" start="0" end="100" time="400" />
-			<effect type="slide" delay="400" start="0,-240" end="0,0" time="400" easing="out" tween="cubic" />
-		</animation>
-		<animation effect="fade" delay="500" start="100" end="0" time="400">Hidden</animation>		
-	</include>
-	
-	<include name="ViewChangeAnimBottom">
-		<visible>Control.HasFocus(69)</visible>		
-		<animation type="Visible">
-			<effect type="fade" delay="400" start="0" end="100" time="400" />
-			<effect type="slide" delay="400" start="0,240" end="0,0" time="400" easing="out" tween="cubic" />
-		</animation>
-		<animation effect="fade" delay="500"start="100" end="0" time="400">Hidden</animation>		
-	</include>
-
 	<include name="ViewChangeAnimLeft">
-		<visible>Control.HasFocus(69)</visible>		
+		<visible>Control.HasFocus(69)</visible>
 		<animation type="Visible">
 			<effect type="fade" delay="400" start="0" end="100" time="400" />
 			<effect type="slide" delay="400" start="-427,0" end="0,0" time="400" easing="out" tween="cubic" />
 		</animation>
-		<animation effect="fade" delay="500" start="100" end="0" time="400">Hidden</animation>		
+		<animation effect="fade" delay="500" start="100" end="0" time="400">Hidden</animation>
 	</include>
-
-	<include name="ViewChangeAnimRight">
-		<visible>Control.HasFocus(69)</visible>		
-		<animation type="Visible">
-			<effect type="fade" delay="400" start="0" end="100" time="400" />
-			<effect type="slide" delay="400" start="427,0" end="0,0" time="400" easing="out" tween="cubic" />
-		</animation>
-		<animation effect="fade" delay="500" start="100" end="0" time="400">Hidden</animation>		
-	</include>	
-
 	<include name="StripShowButton">
-		<onleft>Container.SetViewMode(51)</onleft>	
+		<onleft>Container.SetViewMode(51)</onleft>
 	</include>
-	
 	<include name="MultiplexButton">
-		<onleft>Container.SetViewMode(52)</onleft>	
-	</include>	
-	
+		<onleft>Container.SetViewMode(52)</onleft>
+	</include>
 	<include name="ViewChange">
 		<control type="image">
 			<include>FullScreenDimensions</include>
@@ -71,14 +39,19 @@
 			<onright>Container.SetViewMode(57)</onright>
 			<onright>SetFocus(900)</onright>
 			<include condition="Window.IsActive(2)">StripShowButton</include>
-			<include condition="Window.IsActive(25)">MultiplexButton</include>			
+			<include condition="Window.IsActive(25)">MultiplexButton</include>
 			<onleft>SetFocus(900)</onleft>
 			<ondown>Container.SetViewMode(53)</ondown>
-			<ondown>SetFocus(900)</ondown>		
+			<ondown>SetFocus(900)</ondown>
 		</control>
-
+	<!-- Up list -->
 		<control type="group">
-			<include>ViewChangeAnimTop</include>
+			<visible>Control.HasFocus(69)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="400" start="0" end="100" time="400" />
+				<effect type="slide" delay="400" start="0,-240" end="0,0" time="400" easing="out" tween="cubic" />
+			</animation>
+			<animation effect="fade" delay="500" start="100" end="0" time="400">Hidden</animation>
 			<control type="image">
 				<posx>536</posx>
 				<posy>41</posy>
@@ -90,26 +63,32 @@
 				<include>ViewChangeLabel</include>
 				<posx>427</posx>
 				<posy>160</posy>
-				<label>31752</label>			
-			</control>			
+				<label>31752</label>
+			</control>
 		</control>
+	<!-- down wall -->
 		<control type="group">
-			<include>ViewChangeAnimBottom</include>
+			<visible>Control.HasFocus(69)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="400" start="0" end="100" time="400" />
+				<effect type="slide" delay="400" start="0,240" end="0,0" time="400" easing="out" tween="cubic" />
+			</animation>
+			<animation effect="fade" delay="500"start="100" end="0" time="400">Hidden</animation>
 			<control type="image">
 				<posx>523</posx>
 				<posy>493</posy>
 				<width>235</width>
 				<height>154</height>
-				<texture>viewselect/vs_icon_wall.png</texture>			
-			</control>			
-
+				<texture>viewselect/vs_icon_wall.png</texture>
+			</control>
 			<control type="label">
 				<include>ViewChangeLabel</include>
 				<posx>427</posx>
 				<posy>640</posy>
-				<label>31750</label>				
-			</control>			
-		</control>		
+				<label>31750</label>
+			</control>
+		</control>
+	<!-- Left multiplex -->
 		<control type="group">
 			<include>ViewChangeAnimLeft</include>
 			<visible>Window.IsActive(25)</visible>
@@ -118,15 +97,16 @@
 				<posy>277</posy>
 				<width>186</width>
 				<height>126</height>
-				<texture>viewselect/vs_icon_multiplex.png</texture>				
+				<texture>viewselect/vs_icon_multiplex.png</texture>
 			</control>
 			<control type="label">
 				<include>ViewChangeLabel</include>
 				<posx>0</posx>
 				<posy>400</posy>
-				<label>31757</label>			
+				<label>31757</label>
 			</control>
 		</control>
+	<!-- Left stripshow -->
 		<control type="group">
 			<include>ViewChangeAnimLeft</include>
 			<visible>Window.IsActive(2)</visible>
@@ -135,34 +115,39 @@
 				<posy>277</posy>
 				<width>186</width>
 				<height>126</height>
-				<texture>viewselect/vs_icon_stripshow.png</texture>				
+				<texture>viewselect/vs_icon_stripshow.png</texture>
 			</control>
 			<control type="label">
 				<include>ViewChangeLabel</include>
 				<posx>0</posx>
 				<posy>400</posy>
-				<label>31578</label>			
-			</control>		
-		</control>		
+				<label>31578</label>
+			</control>
+		</control>
+	<!-- Right showcase -->
 		<control type="group">
-			<include>ViewChangeAnimRight</include>		
+			<visible>Control.HasFocus(69)</visible>
+			<animation type="Visible">
+				<effect type="fade" delay="400" start="0" end="100" time="400" />
+				<effect type="slide" delay="400" start="427,0" end="0,0" time="400" easing="out" tween="cubic" />
+			</animation>
+			<animation effect="fade" delay="500" start="100" end="0" time="400">Hidden</animation>
 			<control type="image">
 				<posx>975</posx>
 				<posy>277</posy>
 				<width>186</width>
 				<height>126</height>
-				<texture>viewselect/vs_icon_showcase.png</texture>				
+				<texture>viewselect/vs_icon_showcase.png</texture>
 			</control>
 			<control type="label">
 				<include>ViewChangeLabel</include>
 				<posx>854</posx>
 				<posy>400</posy>
 				<label>31751</label>
-			</control>			
-		</control>		
-		
+			</control>
+		</control>
 		<control type="button">
-			<visible>Control.HasFocus(69)</visible>		
+			<visible>Control.HasFocus(69)</visible>
 			<include>FullScreenDimensions</include>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -173,11 +158,10 @@
 			<animation type="Visible">
 				<effect type="fade" delay="400" start="0" end="100" time="400" />
 			</animation>
-			<animation effect="fade" start="100" delay="500" end="0" time="400">Hidden</animation>				
+			<animation effect="fade" start="100" delay="500" end="0" time="400">Hidden</animation>
 		</control>
-		
 		<control type="button">
-			<visible>Control.HasFocus(69)</visible>		
+			<visible>Control.HasFocus(69)</visible>
 			<include>FullScreenDimensions</include>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -188,10 +172,7 @@
 			<animation type="Visible">
 				<effect type="fade" delay="400" start="0" end="100" time="400" />
 			</animation>
-			<animation effect="fade" start="100" delay="500" end="0" time="400">Hidden</animation>				
+			<animation effect="fade" start="100" delay="500" end="0" time="400">Hidden</animation>
 		</control>
-
-		
 	</include>
-
 </includes>
