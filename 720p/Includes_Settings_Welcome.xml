@@ -24,7 +24,10 @@
 	<texture>-</texture>
 	<align>center</align>
 	<include>Colour_DarkGrey</include>
-	<include>Animation_WelcomeFade</include>
+	<animation effect="fade" time="600">Visible</animation>
+	<animation effect="fade" time="600">Hidden</animation>
+	<animation effect="fade" time="600">WindowOpen</animation>
+	<animation effect="fade" time="600">WindowClose</animation>
 </include>
 
 <include name="Settings_Welcome_Text">
@@ -34,7 +37,10 @@
 	<width>1280</width>
 	<font>Font_Welcome</font>
 	<align>center</align>
-	<include>Animation_WelcomeFade</include>
+	<animation effect="fade" time="600">Visible</animation>
+	<animation effect="fade" time="600">Hidden</animation>
+	<animation effect="fade" time="600">WindowOpen</animation>
+	<animation effect="fade" time="600">WindowClose</animation>
 </include>
 
 <include name="Settings_Welcome_TiltedPreview1">

@@ -22,7 +22,8 @@
 			<include>FullScreenDimensions</include>
 			<texture>wall/wall_background.png</texture>
 			<visible>Control.IsVisible(53) + ![Skin.HasSetting(smallmoviewall) + Window.IsActive(25)]</visible>
-			<include>Animation_WindowFade200</include>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
 			<animation effect="fade" start="100" end="70" time="400" condition="Skin.HasSetting(transparentwall)">Conditional</animation>
 		</control>
 
@@ -30,7 +31,8 @@
 			<include>FullScreenDimensions</include>
 			<texture>wall/wall_background_small.png</texture>
 			<visible>Control.IsVisible(53) + Skin.HasSetting(smallmoviewall) + Window.IsActive(25)</visible>
-			<include>Animation_WindowFade200</include>
+			<animation effect="fade" time="200">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
 			<animation effect="fade" start="100" end="70" time="400" condition="Skin.HasSetting(transparentwall)">Conditional</animation>
 		</control>		
 		
@@ -117,7 +119,9 @@
 		<width>440</width>
 		<height>20</height>
 		<font>Font_WallLabelMain</font>
-		<include>Animation_CommonFadeIn</include>		
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="500">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
 	</include>
 	
 	<include name="WallWidthBig">

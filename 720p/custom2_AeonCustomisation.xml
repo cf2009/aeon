@@ -157,8 +157,9 @@
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
 				<animation effect="slide" start="0,0" end="0,150" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-				<include>Animation_CommonFadeFocus</include>
-			</control> 
+				<include>Animation_CommonFade</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+			</control>
 
 			<control type="button" id="31">
 				<description>Time panel furniture select button - Normal version</description>
@@ -176,7 +177,8 @@
 				<pulseonselect>true</pulseonselect>
 				<visible>!Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,-210" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(highertime)">Conditional</animation>
-				<include>Animation_CommonFadeFocus</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
 			</control>
 		
 			<control type="button" id="31">
@@ -195,8 +197,9 @@
 				<pulseonselect>true</pulseonselect>
 				<visible>Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,-362" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(highertime)">Conditional</animation>
-				<include>Animation_CommonFadeFocus</include>
-			</control>		
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
+			</control>
 			
 			<control type="button" id="32">
 				<description>RSS furniture select button - Normal version</description>
@@ -214,7 +217,8 @@
 				<pulseonselect>true</pulseonselect>
 				<visible>!Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,188" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowerrss)">Conditional</animation>
-				<include>Animation_CommonFadeFocus</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
 			</control>
 		
 			<control type="button" id="32">
@@ -233,7 +237,8 @@
 				<pulseonselect>true</pulseonselect>
 				<visible>Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,36" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowerrss)">Conditional</animation>
-				<include>Animation_CommonFadeFocus</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
 			</control>
 
 <!-- Furniture select buttons end -->
@@ -252,7 +257,8 @@
 				<texturefocus>settings/settings_osd_progress.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
-				<include>Animation_CommonFadeFocus</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
 			</control> 
 
 			<control type="button" id="61">
@@ -269,7 +275,8 @@
 				<texturefocus>settings/settings_osd_progress.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
-				<include>Animation_CommonFadeFocus</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
 			</control>
 		
 			<control type="button" id="62">
@@ -286,7 +293,8 @@
 				<texturefocus>settings/settings_osd_titletime.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
-				<include>Animation_CommonFadeFocus</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
 			</control>
 		
 			<control type="button" id="40">
@@ -301,19 +309,20 @@
 				<texturefocus>settings/settings_resetalert.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
-				<include>Animation_CommonFadeFocus</include>
+				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<include>Animation_CommonFade</include>
 				<onclick>Skin.Reset(CustomMusic)</onclick>
 				<onclick>Skin.Reset(CustomMusicFolder)</onclick>
 				<onclick>Skin.Reset(CustomGames)</onclick>
-				<onclick>Skin.Reset(CustomGamesFolder)</onclick>					
+				<onclick>Skin.Reset(CustomGamesFolder)</onclick>
 				<onclick>Skin.Reset(CustomPictures)</onclick>
-				<onclick>Skin.Reset(CustomPicturesFolder)</onclick>					
+				<onclick>Skin.Reset(CustomPicturesFolder)</onclick>
 				<onclick>Skin.Reset(CustomMovies)</onclick>
-				<onclick>Skin.Reset(CustomMoviesFolder)</onclick>					
+				<onclick>Skin.Reset(CustomMoviesFolder)</onclick>
 				<onclick>Skin.Reset(CustomTV)</onclick>
 				<onclick>Skin.Reset(CustomTVFolder)</onclick>
 				<onclick>Skin.Reset(CustomVideo)</onclick>
-				<onclick>Skin.Reset(CustomVideoFolder)</onclick>					
+				<onclick>Skin.Reset(CustomVideoFolder)</onclick>
 			</control>
 
 			<include>Furniture_SettingsFrontPanel</include>

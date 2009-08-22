@@ -212,7 +212,7 @@
 		<width>44</width>
 		<height>30</height>
 		<include>Animation_MediaMenuSlide</include>
-		<include>common-fade-quick</include>
+		<include>Animation_CommonFadeQuick</include>
 	</include>
 
 	<include name="Objects_MediaLabel">
@@ -224,7 +224,7 @@
 		<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
 		<align>left</align> 
 		<aligny>center</aligny>
-		<include>common-fade-quick</include>
+		<include>Animation_CommonFadeQuick</include>
 		<include>Animation_MediaMenuSlide</include>
 	</include>
 	
@@ -753,7 +753,7 @@
 		<height>49</height>
 		<textcolor>FFbec0c2</textcolor>
 		<font>Font_SettingsSectionTitle</font>
-		<include>Animation_CommonFadeOpenClose</include>	
+		<include>Animation_CommonFadeQuick</include>	
 	</include>
 
 	<include name="Objects_SettingsSectionMenuButtonVars">
@@ -767,7 +767,7 @@
 		<textoffsetx>30</textoffsetx>
 		<aligny>top</aligny>
 		<pulseonselect>no</pulseonselect>
-		<include>Animation_CommonFadeOpenClose</include>
+		<include>Animation_CommonFadeQuick</include>
 	</include>
 
 	<include name="Objects_SettingsSectionMenuButton">
@@ -790,7 +790,7 @@
 		<height>58</height>
 		<font>Font_SettingsSectionMenuButtonSubtitle</font>
 		<aligny>top</aligny>
-		<include>Animation_CommonFadeOpenClose</include>		
+		<include>Animation_CommonFadeQuick</include>		
 	</include>
 	
 	<include name="Objects_SettingsDefaultRadioButton">
@@ -918,7 +918,7 @@
 		<align>center</align>
 		<aligny>top</aligny>
 		<textoffsety>21</textoffsety>
-		<include>Animation_KeyboardFade</include>
+		<include>Animation_CommonFade</include>
 		<font>Font_KeyboardKeys</font>
 	</include>
 
@@ -939,7 +939,7 @@
 		<align>center</align>
 		<aligny>top</aligny>
 		<textoffsety>21</textoffsety>
-		<include>Animation_KeyboardFade</include>
+		<include>Animation_CommonFade</include>
 		<font>Font_KeyboardShapes</font>
 	</include>
 	

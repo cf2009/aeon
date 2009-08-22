@@ -1,5 +1,11 @@
 <includes>
 
+<include name="StripShowHideAnimation">
+	<animation type="Conditional" reversible="true" condition="Control.HasFocus(195)">	
+		<effect type="slide" start="0,0" end="0,300" time="400" tween="cubic" easing="in" />
+	</animation>
+</include>
+
 	<include name="StripShowIconDimensionsMax">
 		<posx>20</posx>
 		<posy>20</posy>
@@ -34,7 +40,7 @@
 			<width>1280</width>
 			<height>253</height>
 			<visible>Control.IsVisible(51)</visible>
-			<include>Animation_HideStripShow</include>			
+			<include>StripShowHideAnimation</include>			
 			<control type="image" id="304">
 				<width>1280</width>
 				<height>266</height>
@@ -78,7 +84,7 @@
 			<animation effect="slide" start="-100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 			<visible>!Control.IsVisible(105)</visible>
 			<include>Animation_CommonFade</include>
-			<include>Animation_HideStripShow</include>			
+			<include>StripShowHideAnimation</include>			
 		</control>
 		
 		<control type="image">
@@ -91,7 +97,7 @@
 			<animation effect="slide" start="100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 			<visible>!Control.IsVisible(105)</visible>
 			<include>Animation_CommonFade</include>
-			<include>Animation_HideStripShow</include>
+			<include>StripShowHideAnimation</include>
 		</control>	
 
 		<control type="panel" id="51">
@@ -108,7 +114,7 @@
 			<ondown>60</ondown>
 			<orientation>horizontal</orientation>
 			<visible>Window.IsActive(2)</visible>
-			<include>Animation_HideStripShow</include>			
+			<include>StripShowHideAnimation</include>			
 			<itemlayout width="192" height="192" condition="!Skin.HasSetting(stripshowmax)">
 				<control type="image">
 					<include>StripShowIconDimensionsMax</include>
@@ -198,7 +204,7 @@
 
 		<control type="group">
 			<posy>475</posy>
-			<include>Animation_HideStripShow</include>			
+			<include>StripShowHideAnimation</include>			
 			<control type="image">
 				<posx>1026</posx>
 				<width>192</width>
@@ -236,7 +242,7 @@
 
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
-			<include>Animation_HideStripShow</include>
+			<include>StripShowHideAnimation</include>
 			<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" easing="inout" delay="5000" condition="Control.IsVisible(108)">Conditional</animation>
 			<control type="label">
 				<posx>64</posx>
@@ -361,7 +367,7 @@
 			<ondown>195</ondown>
 			<onleft>60</onleft>
 			<onright>60</onright>
-			<include>Animation_HideStripShow</include>
+			<include>StripShowHideAnimation</include>
 			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 		</control>		
 		

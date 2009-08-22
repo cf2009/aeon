@@ -35,7 +35,7 @@
 			<height>49</height>
 			<label>31231</label>
 			<textcolor>FFbec0c2</textcolor>
-			<include>Animation_CommonFadeOpenClose</include>
+			<include>Animation_CommonFadeQuick</include>
 			<font>Font_SettingsSectionTitle</font>
 		</control>
 

@@ -105,7 +105,7 @@
 		<label>-</label>
 		<font>objects</font>
 		<textcolor>59FFFFFF</textcolor>
-		<include>common-fade-quick</include>
+		<include>Animation_CommonFadeQuick</include>
 		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(53)</visible>
 	</control>
 </include>
@@ -121,7 +121,7 @@
 	<orientation>horizontal</orientation>
 	<onup>21</onup>
 	<ondown>21</ondown>
-	<include>common-fade-quick</include>
+	<include>Animation_CommonFadeQuick</include>
 </include>
 
 <include name="browsermenugroup">
@@ -133,7 +133,7 @@
 	<orientation>horizontal</orientation>
 	<onup>450</onup>
 	<ondown>450</ondown>
-	<include>common-fade-quick</include>
+	<include>Animation_CommonFadeQuick</include>
 </include>
 
 <include name="selectmenugroup">
@@ -145,7 +145,7 @@
 	<orientation>horizontal</orientation>
 	<onup>450</onup>
 	<ondown>450</ondown>
-	<include>common-fade-quick</include>
+	<include>Animation_CommonFadeQuick</include>
 </include>
 
 </includes>

@@ -246,7 +246,14 @@
 				<font>Font_Time</font>
 				<label>$LOCALIZE[31040] "$INFO[MusicPlayer.Title]" $LOCALIZE[31041] $INFO[MusicPlayer.Artist] ($INFO[Player.Time] / $INFO[Player.Duration])</label>
 				<include>Colour_RSSLight</include>
-				<include>Animation_WindowRSS</include>
+				<animation type="visible" reversible="false">
+					<effect type="slide" start="1100,0" end="0,0" time="200" delay="600" easing="out" tween="quadratic" />
+					<effect type="fade" start="0" end="100" time="200" delay="600" />
+				</animation>
+				<animation type="hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="200" />
+				</animation>
+				<include>Animation_CommonFade</include>
 			</control>
 			
 			<control type="fadelabel">
@@ -260,7 +267,14 @@
 				<label>$LOCALIZE[31040] "$INFO[MusicPlayer.Title]"</label>
 				<label>$LOCALIZE[31041] $INFO[MusicPlayer.Artist] ($INFO[Player.Time] / $INFO[Player.Duration])</label>
 				<include>Colour_RSSLight</include>
-				<include>Animation_WindowRSS</include>
+				<animation type="visible" reversible="false">
+					<effect type="slide" start="1100,0" end="0,0" time="200" delay="600" easing="out" tween="quadratic" />
+					<effect type="fade" start="0" end="100" time="200" delay="600" />
+				</animation>
+				<animation type="hidden" reversible="false">
+					<effect type="fade" start="100" end="0" time="200" />
+				</animation>
+				<include>Animation_CommonFade</include>
 			</control>			
 			
 			<control type="image">

@@ -7,7 +7,10 @@
 		<posy>561</posy>
 		<width>1280</width>
 		<height>159</height>
-		<include>Animation_OSDFade</include>	
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<animation effect="fade" delay="200" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
 		<visible>!Window.IsActive(125)</visible>
 	
 	<control type="image">
