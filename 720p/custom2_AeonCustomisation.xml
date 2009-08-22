@@ -10,7 +10,6 @@
 			<animation effect="fade" start="0" end="100" time="200" condition="Window.Previous(Home) | Skin.HasSetting(bmtransit)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.Next(Home) | Window.Next(25) | Window.Next(24) | Window.Next(1) | Window.Next(2) | Window.Next(500) | Window.Next(501) | Window.Next(502)">WindowClose</animation>
 		</control>
-		
 		<control type="group">
 			<include>FullScreenDimensions</include>
 			<animation type="WindowOpen" reversible="false" condition="Window.Previous(Home) | Skin.HasSetting(bmtransit)">
@@ -21,9 +20,8 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
-		
 			<include>Furniture_SettingsBackPanel</include>
-			
+		<!-- Menu -->
 			<control type="group">
 				<include>Settings_ButtonGroupDimensions</include>
 				<include>Animation_CommonFade</include>
@@ -191,7 +189,7 @@
 					<onup>9</onup>
 					<ondown>11</ondown>
 					<onleft>60</onleft>
-					<onright>60</onright>				
+					<onright>60</onright>
 					<visible allowhiddenfocus="true">!Control.HasFocus(10)</visible>
 				</control>
 				<control type="button" id="10">
@@ -202,7 +200,7 @@
 					<onup>9</onup>
 					<ondown>11</ondown>
 					<onleft>60</onleft>
-					<onright>60</onright>				
+					<onright>60</onright>
 					<visible>Control.HasFocus(10)</visible>
 				</control>
 				<control type="label">
@@ -220,7 +218,7 @@
 					<textcolor>FF262728</textcolor>
 					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 					<visible>Control.HasFocus(10)</visible>
-				</control>			
+				</control>
 				<control type="button" id="11">
 					<description>Advanced</description>
 					<posy>290</posy>
@@ -255,33 +253,28 @@
 					<textcolor>FF262728</textcolor>
 					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 					<visible>Control.HasFocus(11)</visible>
-				</control>			
+				</control>
 			</control>
 			<control type="image">
 				<description>Internal Panel (rear texture)</description>
 				<include>Furniture_SettingsInternalBackPanel</include>
 				<include>Animation_SettingsInternalPanel</include>
 			</control>
-
-<!-- Virtual Home page environment starts -->
-			
+		<!-- Virtual Home page environment starts -->
 			<control type="group">
 				<posx>332</posx>
 				<posy>58</posy>
 				<width>840</width>
 				<height>472</height>
 				<include>Animation_CommonFade</include>
-
 				<control type="image" id="87">
 					<visible>[Container(300).OnNext | Container(300).OnPrevious] | [Container(301).OnNext | Container(301).OnPrevious]</visible>
 					<animation effect="fade" time="300">Hidden</animation>
 				</control>
-	
 				<control type="image" id="88">
 					<visible>Control.IsVisible(300) | Control.IsVisible(301)</visible>
 					<animation effect="fade" time="300">Hidden</animation>
 				</control>
-		
 				<control type="multiimage">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -294,7 +287,6 @@
 					<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
 					<visible>Control.IsVisible(300)</visible>
 				</control>
-				
 				<control type="multiimage">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -306,11 +298,9 @@
 					<include>BackgroundFade</include>
 					<imagepath background="true">$INFO[Container(301).ListItem.Icon]</imagepath>
 					<visible>Control.IsVisible(301)</visible>
-				</control>				
-
+				</control>
 				<include>Furniture_VirtualTime</include>
 				<include>Furniture_VirtualRSS</include>
-
 				<control type="image">
 					<description>Darken screen for Backdrop type select</description>
 					<posx>0</posx>
@@ -321,7 +311,6 @@
 					<visible>Control.HasFocus(92)</visible>
 					<include>Animation_VisibleChange400</include>
 				</control>
-								
 				<control type="group">
 					<posx>0</posx>
 					<posy>-13</posy>
@@ -329,7 +318,6 @@
 					<height>472</height>
 					<animation effect="slide" start="0,0" end="0,150" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Control.HasFocus(92)">Conditional</animation>
 					<include>Animation_CommonFade</include>
-
 					<control type="image">
 						<posx>0</posx>
 						<posy>211</posy>
@@ -338,19 +326,15 @@
 						<texture>home/homemenu_back.png</texture>
 						<include>Animation_CommonFade</include>
 					</control>
-
 					<control type="group">
 						<posx>0</posx>
 						<posy>239</posy>
 						<width>840</width>
 						<height>40</height>
 						<defaultcontrol>300</defaultcontrol>
-						
 						<include>VirtualMainMenu</include>
 						<include>VirtualMainMenuOptions</include>
-						
 					</control>
-
 					<control type="image">
 						<posx>0</posx>
 						<posy>211</posy>
@@ -359,20 +343,16 @@
 						<texture>home/homemenu_gradient.png</texture>
 						<include>Animation_CommonFade</include>
 						<visible>!Skin.HasSetting(nohomegradient)</visible>
-						<colordiffuse>d0FFFFFF</colordiffuse>						
-					</control>	
-					
+						<colordiffuse>d0FFFFFF</colordiffuse>
+					</control>
 				</control>
 			</control>
-			
-<!-- Virtual OSD environment starts -->
-
+		<!-- Virtual OSD environment starts -->
 			<control type="image" id="213">
 				<texture>-</texture>
 				<visible>![Control.HasFocus(10) | Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62)]</visible>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			</control>
-			
 			<control type="group">
 				<posx>332</posx>
 				<posy>58</posy>
@@ -380,7 +360,6 @@
 				<height>472</height>
 				<include>Animation_CommonFade</include>
 				<visible>Control.HasFocus(10) | Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62)</visible>
-
 				<control type="multiimage">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -392,11 +371,8 @@
 					<include>BackgroundFade</include>
 					<imagepath>backdrops/virtualosd</imagepath>
 				</control>
-				
-				<include>Furniture_VirtualOSD</include>				
-
-			</control>			
-
+				<include>Furniture_VirtualOSD</include>
+			</control>
 			<control type="button" id="30">
 				<description>Home Menu furniture select button</description>
 				<posx>307</posx>
@@ -415,7 +391,6 @@
 				<include>Animation_CommonFade</include>
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 			</control>
-
 			<control type="button" id="31">
 				<description>Time panel furniture select button - Normal version</description>
 				<posx>863</posx>
@@ -435,7 +410,6 @@
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
-		
 			<control type="button" id="31">
 				<description>Time panel furniture select button - Lower version</description>
 				<posx>863</posx>
@@ -455,7 +429,6 @@
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
-			
 			<control type="button" id="32">
 				<description>RSS furniture select button - Normal version</description>
 				<posx>357</posx>
@@ -475,7 +448,6 @@
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
-		
 			<control type="button" id="32">
 				<description>RSS furniture select button - Lower version</description>
 				<posx>357</posx>
@@ -495,9 +467,7 @@
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
-
-<!-- Furniture select buttons end -->
-
+		<!-- Furniture select buttons end -->
 			<control type="button" id="60">
 				<description>Home Menu furniture select button</description>
 				<posx>307</posx>
@@ -515,7 +485,6 @@
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control> 
-
 			<control type="button" id="61">
 				<description>Home Menu furniture select button</description>
 				<posx>307</posx>
@@ -533,7 +502,6 @@
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
-		
 			<control type="button" id="62">
 				<description>Home Menu furniture select button</description>
 				<posx>307</posx>
@@ -551,7 +519,6 @@
 				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
-		
 			<control type="button" id="40">
 				<description>The Big Red Purge Button</description>
 				<posx>332</posx>
@@ -580,9 +547,7 @@
 				<onclick>Skin.Reset(CustomVideo)</onclick>
 				<onclick>Skin.Reset(CustomVideoFolder)</onclick>
 			</control>
-
 			<include>Furniture_SettingsFrontPanel</include>
-
 			<control type="image">
 				<posx>331</posx>
 				<posy>43</posy>
@@ -591,7 +556,7 @@
 				<texture>settings/settings_intframe_top.png</texture>
 				<include>Animation_SettingsInternalPanel</include>
 			</control>
-
+		<!-- Main instruction labels -->
 			<control type="group">
 				<description>Main instruction labels</description>
 				<include>FullScreenDimensions</include>
@@ -730,7 +695,7 @@
 						<include>Labels_MainLabelSmallVars</include>
 						<label>31113</label>
 						<visible>Control.HasFocus(62) + Skin.HasSetting(osdshowtime)</visible>
-					</control>		
+					</control>
 				</control>
 				<control type="group">
 					<description>31097</description>
@@ -772,7 +737,7 @@
 					</control>
 				</control>
 			</control>
-
+		<!-- Backdrop type select button -->
 			<control type="button" id="92">
 				<description>Backdrop type select button / Single backdrop icon</description>
 				<posx>674</posx>
@@ -793,7 +758,6 @@
 					<effect type="fade" start="0" end="100" time="600" />
 				</animation>
 			</control>
-			
 			<control type="image">
 				<posx>685</posx>
 				<posy>400</posy>
@@ -806,7 +770,6 @@
 					<effect type="slide" start="0,-100" end="0,0" time="600" tween="back" easing="out" />
 				</animation>
 			</control>
-			
 			<control type="image">
 				<posx>685</posx>
 				<posy>155</posy>
@@ -817,14 +780,10 @@
 				<animation type="Visible">
 					<effect type="fade" start="0" end="100" time="600" />
 					<effect type="slide" start="0,100" end="0,0" time="600" tween="back" easing="out" />
-				</animation>			
-			</control>	
-			
+				</animation>
+			</control>
 		</control>
-
 	<!--<include>Background_ContextBlack</include>-->
 	<include>Furniture_Debug</include>
-	
 </controls>
-
 </window>

@@ -23,7 +23,6 @@
 			<effect type="fade" time="400" start="100" end="0" />
 			<effect type="slide" time="400" start="0,0" end="0,151" easing="in" tween="cubic" />
 		</animation>
-
 		<control type="progress">
 			<description>Progressbar</description>
 			<posx>0</posx>
@@ -36,17 +35,15 @@
 			<midtexture>osd/osd_progressmid.png</midtexture>
 			<righttexture>-</righttexture>
 			<overlaytexture>-</overlaytexture>
-			<include>Animation_CommonFade</include>				
+			<include>Animation_CommonFade</include>
 		</control>
-		
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1280</width>			
+			<width>1280</width>
 			<height>151</height>
 			<texture>osd/fullscreen_bottom.png</texture>
 		</control>
-
 		<control type="label">
 			<posx>0</posx>
 			<posy>45</posy>
@@ -58,7 +55,6 @@
 			<label>31006</label>
 			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>			
 		</control>
-		
 		<control type="label">
 			<posx>0</posx>
 			<posy>75</posy>
@@ -70,7 +66,6 @@
 			<label>[COLOR FFFFFFFF]$INFO[VideoPlayer.Title][/COLOR]</label>
 			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>			
 		</control>
-
 		<control type="label" id="212">
 			<posx>0</posx>
 			<posy>92</posy>
@@ -80,8 +75,7 @@
 			<aligny>center</aligny>
 			<font>Font_OSDMusicArtist</font>
 			<label>[COLOR 91FFFFFF]$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration][/COLOR]</label>
-		</control>		
-	
+		</control>
 	</control>
 	</controls>
 </window>
