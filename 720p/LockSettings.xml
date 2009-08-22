@@ -8,13 +8,11 @@
 	<include>Animation_DialogPopup</include>
 	<visible>Window.IsActive(131)</visible>
 	<controls>
-	
 	<control type="group">
 		<posx>206</posx>
 		<posy>202</posy>
 		<width>869</width>
-		<height>317</height>	
-	
+		<height>317</height>
 		<control type="image">
 			<description>background image</description>
 			<posx>0</posx>
@@ -23,7 +21,6 @@
 			<height>317</height>
 			<texture>dialogs/scrapersettings_back.png</texture>
 		</control>
-		
 		<control type="label" id="2">
 			<description>Settings Label</description>
 			<posx>0</posx>
@@ -42,7 +39,6 @@
 			<label>12016</label>
 			<font>font12</font>
 		</control>
-		
 		<control type="spincontrol" id="60">
 			<description>Next page button</description>
 			<posx>371</posx>
@@ -55,7 +51,6 @@
 			<onup>28</onup>
 			<showonepage>false</showonepage>
 		</control>
-		
 		<control type="grouplist" id="5">
 			<description>control area</description>
 			<posx>10</posx>
@@ -74,7 +69,7 @@
 			<height>41</height>
 			<font>Font_ContextMenuButton</font>
 			<textcolor>FF939597</textcolor>
-			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<focusedcolor>FFFFFFFF</focusedcolor>
 			<textoffsetx>20</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus>dialogs/setcontent_button_focus.png</texturefocus>
@@ -143,48 +138,48 @@
 			<height>5</height>
 			<texture>separatorOSD.png</texture>
 		</control>
-		<control type="group" id="9001">		
-		<control type="button" id="28">
-			<description>ok button</description>
-			<posx>689</posx>
-			<posy>240</posy>
-			<width>156</width>
-			<height>41</height>
-			<font>Font_SetContentMenu</font>
-			<label>186</label>
-			<align>left</align>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
-			<textoffsetx>20</textoffsetx>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<onup>29</onup>
-			<ondown>29</ondown>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+		<control type="group" id="9001">
+			<control type="button" id="28">
+				<description>ok button</description>
+				<posx>689</posx>
+				<posy>240</posy>
+				<width>156</width>
+				<height>41</height>
+				<font>Font_SetContentMenu</font>
+				<label>186</label>
+				<align>left</align>
+				<textcolor>FFf5f5f5</textcolor>
+				<focusedcolor>FF262728</focusedcolor>
+				<selectedcolor>FF262728</selectedcolor>
+				<textoffsetx>20</textoffsetx>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>29</onup>
+				<ondown>29</ondown>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+			</control>
+			<control type="button" id="29">
+				<description>cancel button</description>
+				<posx>689</posx>
+				<posy>199</posy>
+				<width>156</width>
+				<height>41</height>
+				<font>Font_SetContentMenu</font>
+				<label>222</label>
+				<align>left</align>
+				<textcolor>FFf5f5f5</textcolor>
+				<focusedcolor>FF262728</focusedcolor>
+				<selectedcolor>FF262728</selectedcolor>
+				<textoffsetx>20</textoffsetx>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+			</control>
 		</control>
-		<control type="button" id="29">
-			<description>cancel button</description>
-			<posx>689</posx>
-			<posy>199</posy>
-			<width>156</width>
-			<height>41</height>
-			<font>Font_SetContentMenu</font>
-			<label>222</label>
-			<align>left</align>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
-			<textoffsetx>20</textoffsetx>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<onup>28</onup>
-			<ondown>28</ondown>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
-		</control>
-		</control>	
 		<control type="image">
 			<description>foreground image</description>
 			<posx>0</posx>
@@ -192,8 +187,7 @@
 			<width>869</width>
 			<height>317</height>
 			<texture>dialogs/setcontent_front.png</texture>
-		</control>	
-		
+		</control>
 	</control>
 	</controls>
 </window>

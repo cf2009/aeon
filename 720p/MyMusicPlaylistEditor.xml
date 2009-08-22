@@ -2,57 +2,44 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-
 	<control type="multiimage">
 		<include>BackgroundVarsGlobal</include>
 		<include>BackgroundVarsMusic</include>
 	</control>
-
 	<control type="group">
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
-
 		<control type="group">
-	
 			<control type="image">
 				<include>Objects_MediaLogo</include>
 				<texture>windows/logo_music.png</texture>
-			</control>	
-	
+			</control>
 			<control type="label">
 				<include>Objects_MediaLabel</include>
 				<label>EDITOR</label>
 			</control>
-
 			<control type="grouplist" id="7000">
 				<include>Animation_MediaMenuSlide</include>
 				<include>Objects_MediaMenuGroup</include>
-
 				<control type="button" id="6">
 					<label>21385</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
-
 				<control type="button" id="7">
 					<label>190</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
-
 				<control type="button" id="8">
 					<label>192</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
-				
-				<include>Objects_MediaDebugButtons</include>				
+				<include>Objects_MediaDebugButtons</include>
 			</control>
-
 		</control>
-
 		<control type="group">
-
 			<control type="list" id="50">
 				<viewtype label="List">list</viewtype>
 				<posx>0</posx>
@@ -78,7 +65,7 @@
 					</control>
 					<control type="label">
 						<include>ListLabel_Main_Playlist</include>
-						<include>listcolornofocus</include>	
+						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
@@ -102,7 +89,7 @@
 						<include>ListLabel_Main_Playlist</include>
 						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
-					</control>			
+					</control>
 					<control type="label">
 						<include>ListLabel_Main_Playlist</include>
 						<include>listcolorfocus</include>
@@ -111,49 +98,46 @@
 					</control>
 				</focusedlayout>
 			</control>
-
 			<control type="scrollbar" id="61">
-			  <description>My first scroll bar control</description>
-			  <posx>540</posx>
-			  <posy>195</posy>
-			  <width>67</width>
-			  <height>392</height>
-			  <texturesliderbackground>windows/scrollbarback_playlist.png</texturesliderbackground>
-			  <texturesliderbar>-</texturesliderbar>
-			  <texturesliderbarfocus>-</texturesliderbarfocus>
-			  <textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
-			  <textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
-			  <pulseonselect></pulseonselect>
-			  <orientation>vertical</orientation>
-			  <showonepage>true</showonepage>
-			  <onup>61</onup>
-			  <ondown>61</ondown>
-			  <onleft>50</onleft>
-			  <onright>62</onright>
-			  <include>Animation_CommonFade</include>
+				<description>My first scroll bar control</description>
+				<posx>540</posx>
+				<posy>195</posy>
+				<width>67</width>
+				<height>392</height>
+				<texturesliderbackground>windows/scrollbarback_playlist.png</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+				<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+				<pulseonselect></pulseonselect>
+				<orientation>vertical</orientation>
+				<showonepage>true</showonepage>
+				<onup>61</onup>
+				<ondown>61</ondown>
+				<onleft>50</onleft>
+				<onright>62</onright>
+				<include>Animation_CommonFade</include>
 			</control>
-			
 			<control type="scrollbar" id="62">
-			  <description>My first scroll bar control</description>
-			  <posx>673</posx>
-			  <posy>195</posy>
-			  <width>67</width>
-			  <height>392</height>
-			  <texturesliderbackground>windows/scrollbarback_playlist.png</texturesliderbackground>
-			  <texturesliderbar>-</texturesliderbar>
-			  <texturesliderbarfocus>-</texturesliderbarfocus>
-			  <textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
-			  <textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
-			  <pulseonselect></pulseonselect>
-			  <orientation>vertical</orientation>
-			  <showonepage>true</showonepage>
-			  <onup>62</onup>
-			  <ondown>62</ondown>
-			  <onleft>61</onleft>
-			  <onright>100</onright>
-			  <include>Animation_CommonFade</include>
-			</control>		
-			
+				<description>My first scroll bar control</description>
+				<posx>673</posx>
+				<posy>195</posy>
+				<width>67</width>
+				<height>392</height>
+				<texturesliderbackground>windows/scrollbarback_playlist.png</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+				<textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+				<pulseonselect></pulseonselect>
+				<orientation>vertical</orientation>
+				<showonepage>true</showonepage>
+				<onup>62</onup>
+				<ondown>62</ondown>
+				<onleft>61</onleft>
+				<onright>100</onright>
+				<include>Animation_CommonFade</include>
+			</control>
 			<control type="list" id="100">
 				<viewtype label="List">list</viewtype>
 				<posx>717</posx>
@@ -203,7 +187,7 @@
 						<include>ListLabel_Main_Playlist</include>
 						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
-					</control>			
+					</control>
 					<control type="label">
 						<include>ListLabel_Main_Playlist</include>
 						<include>listcolorfocus</include>
@@ -212,11 +196,9 @@
 					</control>
 				</focusedlayout>
 			</control>
-		</control>	
+		</control>
 	</control>
-	
 	<!--<include>Background_ContextBlack</include>-->
 	<include>Furniture_Debug</include>
-	
 	</controls>
 </window>
