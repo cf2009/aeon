@@ -170,7 +170,7 @@
 		<font>Font_ListObjects</font>
 		<align>left</align>
 		<aligny>center</aligny>
-		<include>listobjects</include>
+		<textcolor>ff969696</textcolor>
 		<visible>Control.IsVisible(50)</visible>
 		<animation effect="slide" start="60,0" end="60,0" time="0" condition="[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | [Window.IsActive(25) + Skin.HasSetting(videotv)]]">Conditional</animation>		
 	</include>
