@@ -486,7 +486,18 @@
 					<onup>304</onup>
 					<ondown>306</ondown>
 					<label>BKSP</label>
-					<include>Objects_TripleKeyOff</include>				
+					<posy>0</posy>
+					<width>152</width>
+					<height>68</height>
+					<texturefocus>keyboard/keyboard_triplenf.png</texturefocus>		
+					<texturenofocus>keyboard/keyboard_triplenf.png</texturenofocus>
+					<textcolor>77FFFFFF</textcolor>
+					<focusedcolor>77FFFFFF</focusedcolor>
+					<selectedcolor>77FFFFFF</selectedcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsety>21</textoffsety>
+					<font>Font_KeyboardKeys</font>
 				</control>
 				
 			</control>
@@ -514,7 +525,18 @@
 					<onright>305</onright>
 					<onup>90</onup>
 					<ondown>49</ondown>
-					<include>Objects_SpaceBarOff</include>				
+					<posy>0</posy>
+					<width>278</width>
+					<height>68</height>
+					<texturefocus>keyboard/keyboard_spacef.png</texturefocus>
+					<texturenofocus>keyboard/keyboard_spacenf.png</texturenofocus>
+					<textcolor>77FFFFFF</textcolor>
+					<focusedcolor>77FFFFFF</focusedcolor>
+					<selectedcolor>77FFFFFF</selectedcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsety>21</textoffsety>
+					<font>Font_KeyboardKeys</font>
 				</control>
 
 				<control type="button" id="305">
@@ -887,8 +909,20 @@
 					<posx>378</posx>
 					<label>$INFO[Control.GetLabel(8)]</label>
 					<visible>Control.HasFocus(8)</visible>
-					<include>Objects_TripleKeyOn</include>				
-				</control>				
+					<posy>0</posy>
+					<width>152</width>
+					<height>68</height>
+					<texturefocus>keyboard/keyboard_triplef.png</texturefocus>
+					<texturenofocus>keyboard/keyboard_triplef.png</texturenofocus>
+					<textcolor>FFFFFFFF</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<selectedcolor>FFFFFFFF</selectedcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsety>21</textoffsety>
+					<include>Animation_CommonFade</include>
+					<font>Font_KeyboardKeys</font>
+				</control>
 
 			</control>
 			
@@ -908,7 +942,19 @@
 					<description>'1' button</description>
 					<posx>84</posx>
 					<label>$INFO[Control.GetLabel(32)]</label>
-					<include>Objects_SpaceBarOn</include>
+					<posy>0</posy>
+					<width>278</width>
+					<height>68</height>
+					<texturefocus>keyboard/keyboard_spacef.png</texturefocus>
+					<texturenofocus>keyboard/keyboard_spacef.png</texturenofocus>
+					<textcolor>FFFFFFFF</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<selectedcolor>FFFFFFFF</selectedcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsety>21</textoffsety>
+					<include>Animation_CommonFade</include>
+					<font>Font_KeyboardKeys</font>
 					<visible>Control.HasFocus(32)</visible>
 				</control>
 

@@ -136,19 +136,49 @@
 		</control>
 		
 		<control type="grouplist" id="9000">
-			<include>Objects_BookmarkMenu</include>
+			<posx>3</posx>
+			<posy>159</posy>
+			<width>570</width>
+			<height>29</height>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<alttexturenofocus>-</alttexturenofocus>
+			<alttexturefocus>-</alttexturefocus>
+			<pulseonselect>false</pulseonselect>
+			<include>Colour_Grey</include>
+			<disabledcolor>3cFFFFFF</disabledcolor>
+			<textoffsetx>0</textoffsetx>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<font>Font_FSInfoData</font>
+			<include>Animation_CommonFade</include>
 			<ondown>11</ondown>
 			<onup>11</onup>
+			
 			<control type="button" id="2">
-			<label>294</label>
-			<include>Objects_BookmarkButton</include>
+				<label>294</label>
+				<include>Colour_Grey</include>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<textoffsetx>0</textoffsetx>
+				<align>left</align>
+				<aligny>center</aligny>
+				<width>205</width>
+				<height>29</height>
+				<font>Font_FSInfoData</font>
 			</control>
-
 			<control type="button" id="3">
-			<label>296</label>
-			<include>Objects_BookmarkButton</include>
+				<label>296</label>
+				<include>Colour_Grey</include>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<textoffsetx>0</textoffsetx>
+				<align>left</align>
+				<aligny>center</aligny>
+				<width>205</width>
+				<height>29</height>
+				<font>Font_FSInfoData</font>
 			</control>
-
 		</control>
 
 		<control type="image">

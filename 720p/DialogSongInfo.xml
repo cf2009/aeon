@@ -154,7 +154,15 @@
 			
 			<control type="button" id="12">
 			<label>31429</label>
-			<include>Objects_FSInfoButtonWide</include>
+			<include>Colour_Grey</include>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<textoffsetx>0</textoffsetx>
+			<align>left</align>
+			<aligny>center</aligny>
+			<width>140</width>
+			<height>29</height>
+			<font>Font_FSInfoData</font>
 			<onup>IncreaseRating</onup>
 			<ondown>DecreaseRating</ondown>			
 			</control>
