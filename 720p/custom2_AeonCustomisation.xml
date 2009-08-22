@@ -51,13 +51,27 @@
 				</control>
 		
 				<control type="multiimage">
-					<include>BackgroundVarsVirtual</include>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>840</width>
+					<height>471</height>
+					<timeperimage>20000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+					<include>BackgroundFade</include>
 					<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
 					<visible>Control.IsVisible(300)</visible>
 				</control>
 				
 				<control type="multiimage">
-					<include>BackgroundVarsVirtual</include>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>840</width>
+					<height>471</height>
+					<timeperimage>20000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+					<include>BackgroundFade</include>
 					<imagepath background="true">$INFO[Container(301).ListItem.Icon]</imagepath>
 					<visible>Control.IsVisible(301)</visible>
 				</control>				
@@ -134,7 +148,14 @@
 				<visible>Control.HasFocus(10) | Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62)</visible>
 
 				<control type="multiimage">
-					<include>BackgroundVarsVirtual</include>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>840</width>
+					<height>471</height>
+					<timeperimage>20000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+					<include>BackgroundFade</include>
 					<imagepath>backdrops/virtualosd</imagepath>
 				</control>
 				

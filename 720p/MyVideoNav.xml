@@ -25,7 +25,15 @@
 	</control>
 	
 	<include condition="Skin.HasSetting(videotv)">MediaBackdropsTVFanart</include>
-	<include>MediaBackdropsMultiplex</include>	
+	<control type="multiimage">
+		<include>FullScreenDimensions</include>
+		<timeperimage>20000</timeperimage>
+		<randomize>true</randomize>
+		<fadetime>1000</fadetime>
+		<visible>Control.IsVisible(52) + !Skin.HasSetting(nocurtains)</visible>
+		<include>BackgroundFade</include>
+		<imagepath>special://skin/media/backdrops/multiplex/curtains.png</imagepath>
+	</control>
 
 	<include>Furniture_WallBackground</include>
 	
