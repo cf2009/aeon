@@ -660,7 +660,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_FSInfoData</font>
-		<include>Colour_OffWhite</include>	
+		<textcolor>Colour_OffWhite</textcolor>	
 	</include>
 	
 	<include name="Objects_BookmarkMenu">
@@ -868,7 +868,7 @@
 		<aligny>center</aligny>
 		<align>left</align>
 		<font>Font_OSDSeek</font>
-		<include>Colour_OffWhite</include>
+		<textcolor>Colour_OffWhite</textcolor>
 		<include>Animation_CommonFade</include>
 	</include>
 
@@ -1062,7 +1062,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_ViewChangeLabel</font>
-		<include>Colour_OffWhite</include>
+		<textcolor>Colour_OffWhite</textcolor>
 		<include>Animation_VisibleChange400</include>
 	</include>
 

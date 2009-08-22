@@ -54,7 +54,7 @@
 			<width>700</width>
 			<font>Font_FSInfoTitle</font>
 			<label>$INFO[Videoplayer.Title]</label>
-			<include>Colour_OffWhite</include>
+			<textcolor>Colour_OffWhite</textcolor>
 		</control>
 
 		<control type="label">
@@ -106,7 +106,7 @@
 			<aligny>center</aligny>
 			<font>Font_FSInfoData</font>
 			<label fallback="31005">$INFO[Videoplayer.Time]</label>
-			<include>Colour_OffWhite</include>
+			<textcolor>Colour_OffWhite</textcolor>
 		</control>
 		
 		<control type="label">
@@ -119,7 +119,7 @@
 			<aligny>center</aligny>
 			<font>Font_FSInfoData</font>
 			<label fallback="31005">$INFO[Videoplayer.Duration]</label>
-			<include>Colour_OffWhite</include>
+			<textcolor>Colour_OffWhite</textcolor>
 		</control>
 		
 		<control type="label">
@@ -132,7 +132,7 @@
 			<aligny>center</aligny>
 			<font>Font_FSInfoData</font>
 			<label fallback="31005">$INFO[Player.FinishTime]</label>
-			<include>Colour_OffWhite</include>
+			<textcolor>Colour_OffWhite</textcolor>
 		</control>
 		
 		<control type="grouplist" id="9000">
@@ -279,7 +279,7 @@
 			<align>left</align>
 			<font>Font_FSIMDBData</font>
 			<label>[UPPERCASE]$INFO[Control.GetLabel(11)][/UPPERCASE]</label>
-			<include>Colour_OffWhite</include>
+			<textcolor>Colour_OffWhite</textcolor>
 		</control>
 		 
 	</control>

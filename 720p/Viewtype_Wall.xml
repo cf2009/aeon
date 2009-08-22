@@ -518,7 +518,7 @@
 			<control type="label" id="72">
 				<posy>19</posy>
 				<label>$INFO[ListItem.Label2]</label>
-				<include>Colour_DarkGrey</include>
+				<textcolor>Colour_DarkGrey</textcolor>
 				<include>WallLabelVars</include>
 				<visible>![Window.IsActive(2) | Window.IsActive(24) | Window.IsActive(25)]</visible>				
 			</control>
@@ -526,7 +526,7 @@
 			<control type="label" id="72">
 				<posy>19</posy>
 				<label>$INFO[ListItem.PictureResolution]</label>
-				<include>Colour_DarkGrey</include>
+				<textcolor>Colour_DarkGrey</textcolor>
 				<include>WallLabelVars</include>
 				<visible>Window.IsActive(2)</visible>
 			</control>
@@ -534,7 +534,7 @@
 			<control type="label" id="72">
 				<posy>19</posy>
 				<label>$INFO[ListItem.Year]</label>
-				<include>Colour_DarkGrey</include>
+				<textcolor>Colour_DarkGrey</textcolor>
 				<include>WallLabelVars</include>
 				<visible>Window.IsActive(24) | Window.IsActive(25)</visible>				
 			</control>			
@@ -561,7 +561,7 @@
 				<posy>19</posy>
 				<align>right</align>
 				<label>$INFO[ListItem.Label2]</label>
-				<include>Colour_DarkGrey</include>
+				<textcolor>Colour_DarkGrey</textcolor>
 				<include>WallLabelVars</include>
 				<visible>![Window.IsActive(2) | Window.IsActive(24) | Window.IsActive(25)]</visible>				
 			</control>
@@ -570,7 +570,7 @@
 				<posy>19</posy>
 				<align>right</align>
 				<label>$INFO[ListItem.PictureResolution]</label>
-				<include>Colour_DarkGrey</include>
+				<textcolor>Colour_DarkGrey</textcolor>
 				<include>WallLabelVars</include>
 				<visible>Window.IsActive(2)</visible>				
 			</control>
@@ -579,7 +579,7 @@
 				<posy>19</posy>
 				<align>right</align>				
 				<label>$INFO[ListItem.Year]</label>
-				<include>Colour_DarkGrey</include>
+				<textcolor>Colour_DarkGrey</textcolor>
 				<include>WallLabelVars</include>
 				<visible>Window.IsActive(24) | Window.IsActive(25)</visible>				
 			</control>				

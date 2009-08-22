@@ -6,7 +6,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_ViewChangeLabel</font>
-		<include>Colour_OffWhite</include>
+		<textcolor>Colour_OffWhite</textcolor>
 	</include>
 	
 	<include name="ViewChangeAnimTop">

@@ -23,7 +23,7 @@
 	<font>Font_WelcomeSelect</font>
 	<texture>-</texture>
 	<align>center</align>
-	<include>Colour_DarkGrey</include>
+	<textcolor>Colour_DarkGrey</textcolor>
 	<animation effect="fade" time="600">Visible</animation>
 	<animation effect="fade" time="600">Hidden</animation>
 	<animation effect="fade" time="600">WindowOpen</animation>

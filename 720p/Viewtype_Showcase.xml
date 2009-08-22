@@ -1,8 +1,15 @@
 <includes>
 
-    <include name="ShowcaseVisible">
-        <visible>Control.IsVisible(57)</visible>
-    </include>
+	<include name="ShowcaseColour_LabelLightShade">
+		<textcolor>d01a1a1c</textcolor>	
+	</include>
+	<include name="ShowcaseColour_LabelNightShade">
+		<textcolor>FFe1e1e1</textcolor>	
+	</include>
+
+	<include name="ShowcaseVisible">
+		<visible>Control.IsVisible(57)</visible>
+	</include>
 
 	<include name="ShowcaseSpotNight">
 	    <texture>showcase/showcase_spot.png</texture>
@@ -215,8 +222,8 @@
         <posy>693</posy>
         <width>600</width>
         <font>Font_ShowcaseMainLabel</font>
-        <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
-        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>
+        <include condition="!Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelLightShade</include>
+        <include condition="Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelNightShade</include>
 		<visible>!ControlGroup(7000).HasFocus()</visible>		
         <animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
     </include>
@@ -227,8 +234,8 @@
         <posy>693</posy>
         <width>880</width>
         <font>Font_ShowcaseMainLabel</font>
-        <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
-        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>		
+        <include condition="!Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelLightShade</include>
+        <include condition="Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelNightShade</include>		
 		<visible>!ControlGroup(7000).HasFocus()</visible>
         <animation effect="slide" end="0,-11" time="200" condition="!Container.Content(seasons) + [!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
     </include>
@@ -239,8 +246,8 @@
         <posy>685</posy>
         <width>600</width>
         <font>Font_ShowcaseMainLabel</font>
-        <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
-        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>
+        <include condition="!Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelLightShade</include>
+        <include condition="Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelNightShade</include>
 		<visible>ControlGroup(7000).HasFocus()</visible>		
     </include>	
 	
@@ -251,8 +258,8 @@
         <width>600</width>
         <font>Font_ShowcaseDetailLabel</font>
 		<visible>!ControlGroup(7000).HasFocus()</visible>		
-        <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
-        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>
+        <include condition="!Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelLightShade</include>
+        <include condition="Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelNightShade</include>
     </include>
 	
     <control type="image" id="82">
