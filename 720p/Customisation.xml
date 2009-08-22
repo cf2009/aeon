@@ -29,7 +29,199 @@
 		<font>Font_SettingsSectionTitle</font>
 	</control>
 
-	<include>Settings_AeonSettingsButtons</include>
+		<control type="group">
+			<include>Settings_ButtonGroupDimensionsXBMC</include>
+			<include>Animation_CommonFade</include>
+			<control type="button" id="6">
+				<description>Backdrops</description>
+				<posy>0</posy>
+				<label>31232</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onclick>SetFocus(400)</onclick>
+				<onleft>400</onleft>
+				<onright>400</onright>
+				<onup>10</onup>
+				<ondown>7</ondown>
+				<visible allowhiddenfocus="true">![Control.HasFocus(6) | ControlGroup(20).HasFocus]</visible>
+			</control>
+			<control type="button" id="6">
+				<description>Backdrops</description>
+				<posy>0</posy>
+				<label>31232</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onclick>SetFocus(400)</onclick>
+				<onleft>400</onleft>
+				<onright>400</onright>
+				<onup>10</onup>
+				<ondown>7</ondown>
+				<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
+			</control>
+			<control type="label">
+				<description>Backdrops Unfocused</description>
+				<posy>32</posy>
+				<label>31233</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>![Control.HasFocus(6) | ControlGroup(20).HasFocus]</visible>
+			</control>
+			<control type="label">
+				<description>Backdrops Focused</description>
+				<posy>32</posy>
+				<label>31233</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
+			</control>
+			<control type="button" id="7">
+				<posy>58</posy>
+				<label>31234</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onup>6</onup>
+				<ondown>8</ondown>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<visible allowhiddenfocus="true">![Control.HasFocus(7) | ControlGroup(11).HasFocus]</visible>
+			</control>
+			<control type="button" id="7">
+				<posy>58</posy>
+				<label>31234</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onup>6</onup>
+				<ondown>8</ondown>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<visible>Control.HasFocus(7) | ControlGroup(11).HasFocus</visible>
+			</control>
+			<control type="label">
+				<description>Furniture Sub Unfocused</description>
+				<posy>90</posy>
+				<label>31235</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>![Control.HasFocus(7) | ControlGroup(11).HasFocus]</visible>
+			</control>
+			<control type="label">
+				<description>Furniture Sub Unfocused</description>
+				<posy>90</posy>
+				<label>31235</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(7) | ControlGroup(11).HasFocus</visible>
+			</control>
+			<control type="button" id="8">
+				<posy>116</posy>
+				<label>31236</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onup>7</onup>
+				<ondown>9</ondown>
+				<onleft>600</onleft>
+				<onright>600</onright>
+				<onclick>SetFocus(600)</onclick>
+				<visible allowhiddenfocus="true">![Control.HasFocus(8) | ControlGroup(12).HasFocus]</visible>
+			</control>
+			<control type="button" id="8">
+				<posy>116</posy>
+				<label>31236</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onup>7</onup>
+				<ondown>9</ondown>
+				<onleft>600</onleft>
+				<onright>600</onright>
+				<visible>Control.HasFocus(8) | ControlGroup(12).HasFocus</visible>
+			</control>
+			<control type="label">
+				<description>My Programs Sub Unfocused</description>
+				<posy>148</posy>
+				<label>31237</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>![Control.HasFocus(8) | ControlGroup(12).HasFocus]</visible>
+			</control>
+			<control type="label">
+				<description>My Programs Sub Unfocused</description>
+				<posy>148</posy>
+				<label>31237</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(8) | ControlGroup(12).HasFocus</visible>
+			</control>
+			<control type="button" id="9">
+				<description>Purge</description>
+				<posy>174</posy>
+				<label>31240</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onup>8</onup>
+				<ondown>10</ondown>
+				<onleft>700</onleft>
+				<onright>700</onright>
+				<visible allowhiddenfocus="true">![Control.HasFocus(9) | ControlGroup(13).HasFocus]</visible>
+			</control>
+			<control type="button" id="9">
+				<description>Purge</description>
+				<posy>174</posy>
+				<label>31240</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onup>8</onup>
+				<ondown>10</ondown>
+				<onleft>40</onleft>
+				<onright>40</onright>
+				<visible>Control.HasFocus(9) | ControlGroup(13).HasFocus</visible>
+			</control>
+			<control type="label">
+				<description>My Weather Sub Unfocused</description>
+				<posy>206</posy>
+				<label>31241</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>![Control.HasFocus(9) | ControlGroup(13).HasFocus]</visible>
+			</control>
+			<control type="label">
+				<description>My Weather Sub Unfocused</description>
+				<posy>206</posy>
+				<label>31241</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(9) | ControlGroup(13).HasFocus</visible>
+			</control>
+			<control type="button" id="10">
+				<description>Purge</description>
+				<posy>232</posy>
+				<label>31244</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onup>9</onup>
+				<ondown>11</ondown>
+				<onleft>800</onleft>
+				<onright>800</onright>
+				<visible allowhiddenfocus="true">![Control.HasFocus(10) | ControlGroup(14).HasFocus]</visible>
+			</control>
+			<control type="button" id="10">
+				<description>Purge</description>
+				<posy>232</posy>
+				<label>31244</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onup>9</onup>
+				<ondown>6</ondown>
+				<onleft>40</onleft>
+				<onright>40</onright>
+				<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
+			</control>
+			<control type="label">
+				<description>My Weather Sub Unfocused</description>
+				<posy>264</posy>
+				<label>31245</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>![Control.HasFocus(10) | ControlGroup(14).HasFocus]</visible>
+			</control>
+			<control type="label">
+				<description>My Weather Sub Unfocused</description>
+				<posy>264</posy>
+				<label>31245</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
+			</control>
+		</control>
 	
 	<control type="grouplist" id="20">
 		<include>Objects_SettingsControlAreaVars</include>

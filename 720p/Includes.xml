@@ -7,7 +7,6 @@
 	<include file="Includes_Furniture.xml" />
 	<include file="Includes_MainMenu.xml" />
 	<include file="Includes_Assistant_LabelsButtons.xml" />
-	<include file="Includes_Settings_LabelsButtons.xml" />
 	<include file="Includes_Settings_Welcome.xml" />
 	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_ViewSelect.xml" />
@@ -47,5 +46,39 @@
 		<textcolor>FF868686</textcolor>
 		<focusedcolor>Colour_OffWhite</focusedcolor>
 		<disabledcolor>d0202020</disabledcolor>
+	</include>
+	
+<!-- Labels -->
+	<include name="Labels_MainLabelGroup">
+		<posx>220</posx>
+		<posy>565</posy>
+		<width>1280</width>
+		<height>720</height>
+		<animation effect="fade" time="500">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+		<animation effect="fade" time="500">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<animation effect="slide" start="0,-8" end="0,-8" time="0" condition="Window.IsActive(4)">Conditional</animation>		
+	</include>
+	<include name="Labels_MainLabelBigVars">
+		<width>800</width>
+		<height>200</height>
+		<posx>150</posx>
+		<posy>0</posy>
+		<textcolor>d0f5f5f5</textcolor>
+		<font>Font_SettingsMainLabelBig</font>
+	</include>
+	<include name="Labels_MainLabelSmallVars">
+		<width>800</width>
+		<posx>150</posx>
+		<posy>40</posy>
+		<textcolor>d0f5f5f5</textcolor>
+		<font>Font_SettingsMainLabelSmall</font>
+	</include>
+	<include name="Settings_ButtonGroupDimensionsXBMC">
+		<posx>42</posx>
+		<posy>120</posy>
+		<width>217</width>
+		<height>720</height>
 	</include>
 </includes>
