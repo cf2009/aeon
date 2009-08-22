@@ -37,7 +37,8 @@
 			<control type="group">
 				<posx>332</posx>
 				<posy>58</posy>
-				<include>Furniture_SettingsVHPVars</include>
+				<width>840</width>
+				<height>472</height>
 				<include>Animation_CommonFade</include>
 
 				<control type="image" id="87">
@@ -93,7 +94,8 @@
 				<control type="group">
 					<posx>0</posx>
 					<posy>-13</posy>
-					<include>Furniture_SettingsVHPVars</include>
+					<width>840</width>
+					<height>472</height>
 					<animation effect="slide" start="0,0" end="0,150" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu) + !Control.HasFocus(92)">Conditional</animation>
 					<include>Animation_CommonFade</include>
 
@@ -143,7 +145,8 @@
 			<control type="group">
 				<posx>332</posx>
 				<posy>58</posy>
-				<include>Furniture_SettingsVHPVars</include>
+				<width>840</width>
+				<height>472</height>
 				<include>Animation_CommonFade</include>
 				<visible>Control.HasFocus(10) | Control.HasFocus(60) | Control.HasFocus(61) | Control.HasFocus(62)</visible>
 
@@ -322,7 +325,8 @@
 				<description>The Big Red Purge Button</description>
 				<posx>332</posx>
 				<posy>58</posy>
-				<include>Furniture_SettingsVHPVars</include>
+				<width>840</width>
+				<height>472</height>
 				<onup>9</onup>
 				<ondown>9</ondown>
 				<onleft>9</onleft>
