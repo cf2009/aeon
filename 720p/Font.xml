@@ -14,7 +14,7 @@
 	  <name>Font_Submenu</name>
 	  <filename>aeon_rss.ttf</filename>
 	  <size>19</size>
-	</font>	
+	</font>
 	
 	<font>
 	  <name>Font_Time</name>
@@ -72,7 +72,7 @@
 	  <filename>aeon_player.ttf</filename>
 	  <size>17</size>
 	  <linespacing>1.05</linespacing>
-	</font>	
+	</font>
 	
 	<font>
 	  <name>Font_WeatherTitle</name>
@@ -91,7 +91,7 @@
 	  <name>Font_WeatherTemp</name>
 	  <filename>aeon_title.ttf</filename>
 	  <size>55</size>
-	</font>		
+	</font>
 
 <!-- Media windows -->
 
@@ -117,13 +117,13 @@
 		<name>Font_ListSmall</name>
 		<filename>scoutlight.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 	
 	<font>
 		<name>font13</name>
 		<filename>aeon_list.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ListDetail</name>
@@ -135,7 +135,7 @@
 		<name>Font_ListDetailTV</name>
 		<filename>scout.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ListTrack</name>
@@ -147,13 +147,13 @@
 		<name>Font_ListSub</name>
 		<filename>scout.ttf</filename>
 		<size>18</size>
-	</font>	
+	</font>
 	
 	<font>
 		<name>Font_ListObjects</name>
 		<filename>scoutlight.ttf</filename>
 		<size>17</size>
-	</font>	
+	</font>
 	
 <!-- Settings screens -->
 
@@ -226,7 +226,7 @@
 	  <name>Font_FileBrowserHeading</name>
 	  <filename>aeon_settings.ttf</filename>
 	  <size>31</size>
-	</font>	
+	</font>
 
     <font>
       <name>Font_ContextMenuButton</name>
@@ -262,7 +262,7 @@
 	  <name>Font_ProgressLabelMid</name>
 	  <filename>aeon_settings.ttf</filename>
 	  <size>27</size>
-	</font>	
+	</font>
 
 	<font>
 	  <name>Font_ProgressLabelBig</name>
@@ -274,13 +274,13 @@
 	  <name>Font_ProgressLabelYesNo</name>
 	  <filename>aeon_settings.ttf</filename>
 	  <size>46</size>
-	</font>	
+	</font>
 	
 	<font>
 		<name>Font_AddSourceEdit</name>
 		<filename>aeon_edit.ttf</filename>
 		<size>20</size>
-	</font>		
+	</font>
 	
 <!-- File Browser -->
 
@@ -336,13 +336,13 @@
       <name>Font_StripshowLabelSmall</name>
       <filename>aeon_title.ttf</filename>
       <size>24</size>
-    </font>	
+    </font>
 	
     <font>
       <name>Font_StripshowDetail</name>
       <filename>aeon_title.ttf</filename>
       <size>18</size>
-    </font>	
+    </font>
 	
 <!-- Multiplex -->
 
@@ -356,39 +356,39 @@
       <name>Font_MultiplexTVLabel</name>
       <filename>aeon_settings.ttf</filename>
       <size>55</size>
-    </font>	
+    </font>
 	
     <font>
       <name>Font_MultiplexSeasonLabel</name>
       <filename>aeon_settings.ttf</filename>
       <size>31</size>
-    </font>		
+    </font>
 
     <font>
       <name>Font_MultiplexPlot</name>
       <filename>scoutlightnc.ttf</filename>
       <size>23</size>
-	  <linespacing>1</linespacing>	  
+	  <linespacing>1</linespacing>  
     </font>
 	
     <font>
       <name>Font_MultiplexPlotSmall</name>
       <filename>scoutlightnc.ttf</filename>
       <size>21</size>
-	  <linespacing>1</linespacing>	  
+	  <linespacing>1</linespacing>  
     </font>
 	
     <font>
       <name>Font_MultiplexInfoLabel</name>
       <filename>scoutlight.ttf</filename>
       <size>18</size>
-    </font>	
+    </font>
 	
     <font>
       <name>Font_MultiplexInfoValue</name>
       <filename>scout.ttf</filename>
       <size>18</size>
-    </font>	
+    </font>
 
 - <!--  Multiplex Old  --> 
 
@@ -473,7 +473,7 @@
       <name>Font_FSInfoPlot</name>
       <filename>scoutnocaps.ttf</filename>
       <size>22</size>
-	  <linespacing>1</linespacing>	  
+	  <linespacing>1</linespacing>  
     </font>
 
     <font>
@@ -486,7 +486,7 @@
       <name>Font_BookmarksAvailable</name>
       <filename>aeon_settings.ttf</filename>
       <size>20</size>
-    </font>	
+    </font>
 	
     <font>
       <name>Font_FSIMDBData</name>
@@ -554,7 +554,7 @@
 		<name>Font_OSDMusicTitle</name>
 		<filename>aeon_settings.ttf</filename>
 		<size>38</size>
-	</font>		
+	</font>
 
 <!-- VirtualOSD -->
 
@@ -574,7 +574,7 @@
 		<name>Font_OSDMusicTitle_Virtual</name>
 		<filename>aeon_settings.ttf</filename>
 		<size>25</size>
-	</font>		
+	</font>
 	
 <!-- View Change -->
 
@@ -582,13 +582,13 @@
 		<name>Font_ViewChangeLabel</name>
 		<filename>aeon_title.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ViewChangeSelect</name>
 		<filename>aeon_title.ttf</filename>
 		<size>30</size>
-	</font>		
+	</font>
 
 <!-- Keyboard -->
 
@@ -614,13 +614,13 @@
 		<name>Font_ListPlay</name>
 		<filename>aeon_shapes.ttf</filename>
 		<size>60</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_KeyboardEdit</name>
 		<filename>aeon_player.ttf</filename>
 		<size>21</size>
-	</font>	
+	</font>
 
 <!-- OSD -->
 
@@ -724,7 +724,7 @@
 	  <name>Font_WeatherTemp</name>
 	  <filename>aeon_title.ttf</filename>
 	  <size>55</size>
-	</font>		
+	</font>
 
 <!-- Media windows -->
 
@@ -750,7 +750,7 @@
 		<name>font13</name>
 		<filename>aeon_list.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ListDetail</name>
@@ -847,13 +847,13 @@
 	  <name>Font_ProgressLabelYesNo</name>
 	  <filename>aeon_settings.ttf</filename>
 	  <size>46</size>
-	</font>	
+	</font>
 	
 	<font>
 		<name>Font_AddSourceEdit</name>
 		<filename>aeon_edit.ttf</filename>
 		<size>20</size>
-	</font>		
+	</font>
 	
 <!-- File Browser -->
 
@@ -1021,7 +1021,7 @@
 		<name>Font_OSDMusicTitle</name>
 		<filename>aeon_settings.ttf</filename>
 		<size>38</size>
-	</font>	
+	</font>
 
 <!-- VirtualOSD -->
 
@@ -1041,7 +1041,7 @@
 		<name>Font_OSDMusicTitle_Virtual</name>
 		<filename>aeon_settings.ttf</filename>
 		<size>25</size>
-	</font>		
+	</font>
 
 <!-- View Change -->
 
@@ -1049,13 +1049,13 @@
 		<name>Font_ViewChangeLabel</name>
 		<filename>aeon_title.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ViewChangeSelect</name>
 		<filename>aeon_title.ttf</filename>
 		<size>30</size>
-	</font>		
+	</font>
 
 <!-- Keyboard -->
 
@@ -1069,13 +1069,13 @@
 		<name>Font_KeyboardShapes</name>
 		<filename>aeon_shapes.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_KeyboardEdit</name>
 		<filename>aeon_edit.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 <!-- OSD -->
 
@@ -1173,7 +1173,7 @@
 	  <name>Font_WeatherTemp</name>
 	  <filename>aeon_main_kr.ttf</filename>
 	  <size>55</size>
-	</font>		
+	</font>
 
 <!-- Media windows -->
 
@@ -1199,7 +1199,7 @@
 		<name>font13</name>
 		<filename>aeon_rss_kr.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ListDetail</name>
@@ -1296,13 +1296,13 @@
 	  <name>Font_ProgressLabelYesNo</name>
 	  <filename>aeon_main_kr.ttf</filename>
 	  <size>32</size>
-	</font>	
+	</font>
 	
 	<font>
 		<name>Font_AddSourceEdit</name>
 		<filename>aeon_main_kr.ttf</filename>
 		<size>20</size>
-	</font>		
+	</font>
 	
 <!-- File Browser -->
 
@@ -1476,7 +1476,7 @@
 		<name>Font_OSDMusicTitle</name>
 		<filename>aeon_main_kr.ttf</filename>
 		<size>30</size>
-	</font>		
+	</font>
 
 <!-- VirtualOSD -->
 
@@ -1496,7 +1496,7 @@
 		<name>Font_OSDMusicTitle_Virtual</name>
 		<filename>aeon_main_kr.ttf</filename>
 		<size>20</size>
-	</font>	
+	</font>
 
 <!-- View Change -->
 
@@ -1504,13 +1504,13 @@
 		<name>Font_ViewChangeLabel</name>
 		<filename>aeon_main_kr.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ViewChangeSelect</name>
 		<filename>aeon_main_kr.ttf</filename>
 		<size>30</size>
-	</font>		
+	</font>
 
 <!-- Keyboard -->
 
@@ -1524,13 +1524,13 @@
 		<name>Font_KeyboardShapes</name>
 		<filename>aeon_main_kr.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_KeyboardEdit</name>
 		<filename>aeon_main_kr.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 <!-- OSD -->
 
@@ -1628,7 +1628,7 @@
 	  <name>Font_WeatherTemp</name>
 	  <filename>aeon_title_cy.ttf</filename>
 	  <size>55</size>
-	</font>		
+	</font>
 
 <!-- Media windows -->
 
@@ -1654,7 +1654,7 @@
 		<name>font13</name>
 		<filename>aeon_list_cy.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ListDetail</name>
@@ -1745,7 +1745,7 @@
 	  <name>Font_ProgressLabelMid</name>
 	  <filename>aeon_settings_cy.ttf</filename>
 	  <size>27</size>
-	</font>	
+	</font>
 
 	<font>
 	  <name>Font_ProgressLabelBig</name>
@@ -1757,13 +1757,13 @@
 	  <name>Font_ProgressLabelYesNo</name>
 	  <filename>aeon_settings_cy.ttf</filename>
 	  <size>46</size>
-	</font>	
+	</font>
 	
 	<font>
 		<name>Font_AddSourceEdit</name>
 		<filename>aeon_info_cy.ttf</filename>
 		<size>20</size>
-	</font>		
+	</font>
 	
 <!-- File Browser -->
 
@@ -1869,7 +1869,7 @@
       <name>Font_BookmarksAvailable</name>
       <filename>aeon_settings_cy.ttf</filename>
       <size>20</size>
-    </font>	
+    </font>
 	
     <font>
       <name>Font_FSIMDBData</name>
@@ -1937,7 +1937,7 @@
 		<name>Font_OSDMusicTitle</name>
 		<filename>aeon_settings_cy.ttf</filename>
 		<size>38</size>
-	</font>		
+	</font>
 
 <!-- VirtualOSD -->
 
@@ -1957,7 +1957,7 @@
 		<name>Font_OSDMusicTitle_Virtual</name>
 		<filename>aeon_settings_cy.ttf</filename>
 		<size>25</size>
-	</font>		
+	</font>
 	
 <!-- View Change -->
 
@@ -1965,13 +1965,13 @@
 		<name>Font_ViewChangeLabel</name>
 		<filename>aeon_title_cy.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ViewChangeSelect</name>
 		<filename>aeon_title_cy.ttf</filename>
 		<size>30</size>
-	</font>		
+	</font>
 
 <!-- Keyboard -->
 
@@ -1985,13 +1985,13 @@
 		<name>Font_KeyboardShapes</name>
 		<filename>aeon_shapes.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_KeyboardEdit</name>
 		<filename>aeon_info_cy.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 <!-- OSD -->
 
@@ -2089,7 +2089,7 @@
 	  <name>Font_WeatherTemp</name>
 	  <filename>aeon_title_ce.ttf</filename>
 	  <size>55</size>
-	</font>		
+	</font>
 
 <!-- Media windows -->
 
@@ -2115,7 +2115,7 @@
 		<name>font13</name>
 		<filename>aeon_list_ce.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ListDetail</name>
@@ -2206,7 +2206,7 @@
 	  <name>Font_ProgressLabelMid</name>
 	  <filename>aeon_settings_ce.ttf</filename>
 	  <size>27</size>
-	</font>	
+	</font>
 
 	<font>
 	  <name>Font_ProgressLabelBig</name>
@@ -2218,13 +2218,13 @@
 	  <name>Font_ProgressLabelYesNo</name>
 	  <filename>aeon_settings_ce.ttf</filename>
 	  <size>46</size>
-	</font>	
+	</font>
 	
 	<font>
 		<name>Font_AddSourceEdit</name>
 		<filename>aeon_settings_ce.ttf</filename>
 		<size>20</size>
-	</font>		
+	</font>
 	
 <!-- File Browser -->
 
@@ -2330,7 +2330,7 @@
       <name>Font_BookmarksAvailable</name>
       <filename>aeon_settings_ce.ttf</filename>
       <size>20</size>
-    </font>	
+    </font>
 	
     <font>
       <name>Font_FSIMDBData</name>
@@ -2398,7 +2398,7 @@
 		<name>Font_OSDMusicTitle</name>
 		<filename>aeon_settings_ce.ttf</filename>
 		<size>38</size>
-	</font>		
+	</font>
 
 <!-- VirtualOSD -->
 
@@ -2418,7 +2418,7 @@
 		<name>Font_OSDMusicTitle_Virtual</name>
 		<filename>aeon_settings_ce.ttf</filename>
 		<size>25</size>
-	</font>			
+	</font>
 	
 <!-- View Change -->
 
@@ -2426,13 +2426,13 @@
 		<name>Font_ViewChangeLabel</name>
 		<filename>aeon_title_ce.ttf</filename>
 		<size>16</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_ViewChangeSelect</name>
 		<filename>aeon_title_ce.ttf</filename>
 		<size>30</size>
-	</font>		
+	</font>
 
 <!-- Keyboard -->
 
@@ -2446,13 +2446,13 @@
 		<name>Font_KeyboardShapes</name>
 		<filename>aeon_shapes.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 	<font>
 		<name>Font_KeyboardEdit</name>
 		<filename>aeon_edit_ce.ttf</filename>
 		<size>19</size>
-	</font>	
+	</font>
 
 <!-- OSD -->
 

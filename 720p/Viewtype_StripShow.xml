@@ -1,7 +1,7 @@
 <includes>
 
 <include name="StripShowHideAnimation">
-	<animation type="Conditional" reversible="true" condition="Control.HasFocus(195)">	
+	<animation type="Conditional" reversible="true" condition="Control.HasFocus(195)">
 		<effect type="slide" start="0,0" end="0,300" time="400" tween="cubic" easing="in" />
 	</animation>
 </include>
@@ -19,17 +19,17 @@
 		<posx>20</posx>
 		<posy>20</posy>
 		<width>96</width>
-		<height>96</height>	
+		<height>96</height>
 		<visible>!Control.IsVisible(105)</visible>
-		<animation effect="fade" start="0" end="100" time="200">Visible</animation>		
-	</include>	
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+	</include>
 	
 	<include name="StripShowIconBackLight">
-		<texture>stripshow/lite/stripshow_iconback.png</texture>	
+		<texture>stripshow/lite/stripshow_iconback.png</texture>
 	</include>
 	
 	<include name="StripShowIconBackNight">
-		<texture>stripshow/stripshow_iconback.png</texture>	
+		<texture>stripshow/stripshow_iconback.png</texture>
 	</include>
 
 	<include name="Viewtype_StripShow">
@@ -40,15 +40,15 @@
 			<width>1280</width>
 			<height>253</height>
 			<visible>Control.IsVisible(51)</visible>
-			<include>StripShowHideAnimation</include>			
+			<include>StripShowHideAnimation</include>
 			<control type="image" id="304">
 				<width>1280</width>
 				<height>266</height>
 				<include condition="!Skin.HasSetting(darkstripshow)">StripShowIconBackLight</include>
-				<include condition="Skin.HasSetting(darkstripshow)">StripShowIconBackNight</include>				
+				<include condition="Skin.HasSetting(darkstripshow)">StripShowIconBackNight</include>
 				<visible>!Control.IsVisible(105)</visible>
-				<animation effect="slide" start="0,0" end="0,176" time="600" easing="out" tween="cubic">Hidden</animation>		
-				<animation effect="fade" start="0" end="100" time="200">Visible</animation>	
+				<animation effect="slide" start="0,0" end="0,176" time="600" easing="out" tween="cubic">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 			</control>
 			
 			<control type="image">
@@ -60,7 +60,7 @@
 				<visible>Control.IsVisible(105) + !Control.IsVisible(304)</visible>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" easing="inout" delay="5000" condition="Control.IsVisible(108)">Conditional</animation>
-			</control>			
+			</control>
 			
 			<control type="image">
 				<posx>60</posx>
@@ -69,7 +69,7 @@
 				<height>198</height>
 				<texture>stripshow/stripshow_iconframe.png</texture>
 				<visible>!Control.IsVisible(105)</visible>
-				<animation effect="fade" start="60" end="60" time="0" condition="!Skin.HasSetting(darkstripshow)">Conditional</animation>				
+				<animation effect="fade" start="60" end="60" time="0" condition="!Skin.HasSetting(darkstripshow)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 			</control>
 		</control>
@@ -84,7 +84,7 @@
 			<animation effect="slide" start="-100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 			<visible>!Control.IsVisible(105)</visible>
 			<include>Animation_CommonFade</include>
-			<include>StripShowHideAnimation</include>			
+			<include>StripShowHideAnimation</include>
 		</control>
 		
 		<control type="image">
@@ -98,7 +98,7 @@
 			<visible>!Control.IsVisible(105)</visible>
 			<include>Animation_CommonFade</include>
 			<include>StripShowHideAnimation</include>
-		</control>	
+		</control>
 
 		<control type="panel" id="51">
 			<viewtype label="STRIPSHOW">icon</viewtype>
@@ -114,12 +114,12 @@
 			<ondown>60</ondown>
 			<orientation>horizontal</orientation>
 			<visible>Window.IsActive(2)</visible>
-			<include>StripShowHideAnimation</include>			
+			<include>StripShowHideAnimation</include>
 			<itemlayout width="192" height="192" condition="!Skin.HasSetting(stripshowmax)">
 				<control type="image">
 					<include>StripShowIconDimensionsMax</include>
 					<texture>common/black.png</texture>
-				</control>				
+				</control>
 				<control type="image">
 					<include>StripShowIconDimensionsMax</include>
 					<texture>defaultpicture.png</texture>
@@ -131,40 +131,40 @@
 					<include>StripShowIconDimensionsMax</include>
 					<bordertexture border="-53">stripshow/stripshow_iconborder_max.png</bordertexture>
 					<texture>-</texture>
-				</control>			
+				</control>
 				<control type="image">
 					<include>StripShowIconDimensionsMax</include>
 					<texture>common/black.png</texture>
 					<colordiffuse>58FFFFFF</colordiffuse>
-				</control>					
+				</control>
 			</itemlayout>
 			<focusedlayout width="192" height="192" condition="!Skin.HasSetting(stripshowmax)">
 				<control type="image">
 					<include>StripShowIconDimensionsMax</include>
 					<texture>common/black.png</texture>
-					<animation effect="zoom" center="96,96" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>					
-				</control>			
+					<animation effect="zoom" center="96,96" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+				</control>
 				<control type="image">
 					<include>StripShowIconDimensionsMax</include>
 					<texture>defaultpicture.png</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<info>ListItem.Icon</info>
 					<visible>Window.IsActive(2)</visible>
-					<animation effect="zoom" center="96,96" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>					
+					<animation effect="zoom" center="96,96" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
 				<control type="image">
 					<include>StripShowIconDimensionsMax</include>
 					<bordertexture border="-39">stripshow/stripshow_iconborder_max.png</bordertexture>
 					<texture>common/blank.png</texture>
-					<animation effect="zoom" center="96,96" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>					
-					<visible>!Container(51).Column(5) + !Control.IsVisible(105)</visible>					
-				</control>			
+					<animation effect="zoom" center="96,96" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+					<visible>!Container(51).Column(5) + !Control.IsVisible(105)</visible>
+				</control>
 			</focusedlayout>
 			<itemlayout width="96" height="96" condition="Skin.HasSetting(stripshowmax)">
 				<control type="image">
 					<include>StripShowIconDimensionsMin</include>
 					<texture>common/black.png</texture>
-				</control>			
+				</control>
 				<control type="image">
 					<include>StripShowIconDimensionsMin</include>
 					<texture>defaultpicture.png</texture>
@@ -176,21 +176,21 @@
 					<include>StripShowIconDimensionsMin</include>
 					<texture>common/black.png</texture>
 					<colordiffuse>58FFFFFF</colordiffuse>
-				</control>				
+				</control>
 			</itemlayout>
 			<focusedlayout width="96" height="96" condition="Skin.HasSetting(stripshowmax)">
 				<control type="image">
 					<include>StripShowIconDimensionsMin</include>
 					<texture>common/black.png</texture>
-					<animation effect="zoom" center="68,68" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>					
-				</control>			
+					<animation effect="zoom" center="68,68" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+				</control>
 				<control type="image">
 					<include>StripShowIconDimensionsMin</include>
 					<texture>defaultpicture.png</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<info>ListItem.Icon</info>
 					<visible>Window.IsActive(2)</visible>
-					<animation effect="zoom" center="68,68" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>					
+					<animation effect="zoom" center="68,68" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
 				<control type="image">
 					<include>StripShowIconDimensionsMin</include>
@@ -198,17 +198,17 @@
 					<texture>common/blank.png</texture>
 					<animation effect="zoom" center="68,68" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 					<visible>!Container(51).Column(11) + !Control.IsVisible(105)</visible>
-				</control>			
-			</focusedlayout>			
+				</control>
+			</focusedlayout>
 		</control>
 
 		<control type="group">
 			<posy>475</posy>
-			<include>StripShowHideAnimation</include>			
+			<include>StripShowHideAnimation</include>
 			<control type="image">
 				<posx>1026</posx>
 				<width>192</width>
-				<height>192</height>	
+				<height>192</height>
 				<bordertexture border="-39">stripshow/stripshow_iconborder_max.png</bordertexture>
 				<texture>common/blank.png</texture>
 				<animation effect="zoom" center="1128,84" start="100" end="110" time="450" easing="out" tween="cubic" reversible="false">Visible</animation>
@@ -219,19 +219,19 @@
 			<control type="image">
 				<posx>1119</posx>
 				<width>96</width>
-				<height>96</height>	
+				<height>96</height>
 				<bordertexture border="-32">stripshow/stripshow_iconborder_min.png</bordertexture>
 				<texture>common/blank.png</texture>
 				<animation effect="zoom" center="1167,48" start="100" end="120" time="450" easing="out" tween="cubic" reversible="false">Visible</animation>
 				<visible>Container(51).Column(11) + Container(51).Row(0) + Control.HasFocus(51) + !Container(51).OnNext + !Control.IsVisible(105)</visible>
-				<visible>Skin.HasSetting(stripshowmax)</visible>			
+				<visible>Skin.HasSetting(stripshowmax)</visible>
 			</control>
 
 			<control type="image">
 				<posx>1119</posx>
 				<posy>96</posy>
 				<width>96</width>
-				<height>96</height>	
+				<height>96</height>
 				<bordertexture border="-32">stripshow/stripshow_iconborder_min.png</bordertexture>
 				<texture>common/blank.png</texture>
 				<animation effect="zoom" center="1167,144" start="100" end="120" time="450" easing="out" tween="cubic" reversible="false">Visible</animation>
@@ -252,7 +252,7 @@
 				<visible>!Control.IsVisible(105) + !Control.HasFocus(60)</visible>
 				<visible>[Skin.HasSetting(stripshowmax) + [Container(51).Column(6) | Container(51).Column(7) | Container(51).Column(8) | Container(51).Column(9) | Container(51).Column(10) | Container(51).Column(11)]] | [!Skin.HasSetting(stripshowmax) + [Container(51).Column(3) | Container(51).Column(4) | Container(51).Column(5)]]</visible>
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
-				<animation effect="fade" start="0" end="100" time="200">Visible</animation>		
+				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 			</control>
 			
 			<control type="label">
@@ -264,8 +264,8 @@
 				<visible>!Control.IsVisible(105) + !Control.HasFocus(60)</visible>
 				<visible>[Skin.HasSetting(stripshowmax) + [Container(51).Column(0) | Container(51).Column(1) | Container(51).Column(2) | Container(51).Column(3) | Container(51).Column(4) | Container(51).Column(5)]] | [!Skin.HasSetting(stripshowmax) + [Container(51).Column(0) | Container(51).Column(1) | Container(51).Column(2)]]</visible>
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
-				<animation effect="fade" start="0" end="100" time="200">Visible</animation>		
-			</control>			
+				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			</control>
 			
 			<control type="label" id="108">
 				<posx>20</posx>
@@ -274,7 +274,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Control.IsVisible(105)</visible>
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
-				<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>		
+				<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>
 			</control>
 			
 			<control type="label" id="108">
@@ -299,7 +299,7 @@
 				<visible>Control.IsVisible(105)</visible>
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
 				<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>
-			</control>			
+			</control>
 
 			<control type="label" id="108">
 				<width>400</width>
@@ -311,7 +311,7 @@
 				<visible>Control.IsVisible(105)</visible>
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
 				<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>
-			</control>		
+			</control>
 			
 			<control type="label" id="108">
 				<width>400</width>
@@ -323,7 +323,7 @@
 				<visible>Control.IsVisible(105)</visible>
 				<animation effect="fade" end="0" time="200">WindowClose</animation>
 				<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>
-			</control>			
+			</control>
 			
 			<control type="image">
 				<posx>0</posx>
@@ -369,7 +369,7 @@
 			<onright>60</onright>
 			<include>StripShowHideAnimation</include>
 			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-		</control>		
+		</control>
 		
 	</include>
 

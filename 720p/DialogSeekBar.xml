@@ -7,7 +7,7 @@
 			<posy>620</posy>
 			<width>1280</width>
 			<height>159</height>
-			<include>Animation_CommonFade</include>	
+			<include>Animation_CommonFade</include>
 			<control type="image">
 				<description>Panel</description>
 				<posx>0</posx>
@@ -49,7 +49,7 @@
 				<align>center</align>
 				<font>Font_OSDSeek</font>
 				<textcolor>FF363636</textcolor>
-				<include>Animation_CommonFade</include>	
+				<include>Animation_CommonFade</include>
 				<label>PAUSED</label>
 				<visible>Player.Paused</visible>
 			</control>

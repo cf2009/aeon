@@ -53,7 +53,7 @@
 			<aligny>center</aligny>
 			<font>Font_OSDMusicArtist</font>
 			<label>31006</label>
-			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
 		</control>
 		<control type="label">
 			<posx>0</posx>
@@ -64,7 +64,7 @@
 			<aligny>center</aligny>
 			<font>Font_OSDMusicTitle</font>
 			<label>[COLOR FFFFFFFF]$INFO[VideoPlayer.Title][/COLOR]</label>
-			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
 		</control>
 		<control type="label" id="212">
 			<posx>0</posx>

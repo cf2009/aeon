@@ -26,7 +26,7 @@
 			<posx>143</posx>
 			<posy>406</posy>
 			<visible>ControlGroup(940).HasFocus()</visible>
-			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<include>Animation_CommonFade</include>
 			<control type="image">
 				<width>994</width>
@@ -90,7 +90,7 @@
 			<posx>79</posx>
 			<posy>406</posy>
 			<visible>ControlGroup(941).HasFocus()</visible>
-			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<include>Animation_CommonFade</include>
 			<control type="image">
 				<width>1123</width>
@@ -153,7 +153,7 @@
 			<posx>282</posx>
 			<posy>406</posy>
 			<visible>ControlGroup(942).HasFocus()</visible>
-			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<include>Animation_CommonFade</include>
 			<control type="image">
 				<width>717</width>
@@ -205,7 +205,7 @@
 			<posx>79</posx>
 			<posy>406</posy>
 			<visible>ControlGroup(943).HasFocus()</visible>
-			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>			
+			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<include>Animation_CommonFade</include>
 			<control type="image">
 				<width>1123</width>

@@ -47,7 +47,7 @@
 					<width>781</width>
 					<height>40</height>
 					<texture>osd/osd_settings_buttonf.png</texture>
-				</control>		
+				</control>
 				<control type="label">
 					<posx>30</posx>
 					<posy>0</posy>

@@ -76,7 +76,7 @@
 			<control type="button">
 				<include>Objects_OSDButtonTop</include>
 				<texturenofocus>osd/osd_button_video.png</texturenofocus>
-				<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(500)">Conditional</animation>	
+				<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(500)">Conditional</animation>
 			</control>
 			<control type="button">
 				<include>Objects_OSDButtonTop</include>

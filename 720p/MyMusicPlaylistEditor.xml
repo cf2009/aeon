@@ -163,7 +163,7 @@
 					</control>
 					<control type="label">
 						<include>ListLabel_Main_Playlist</include>
-						<include>listcolornofocus</include>	
+						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>

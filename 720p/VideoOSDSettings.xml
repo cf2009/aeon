@@ -6,7 +6,7 @@
 	<posx>0</posx>
 	<posy>0</posy>
 	</coordinates>
-	<include>Animation_DialogPopup</include>		
+	<include>Animation_DialogPopup</include>
 	<controls>
 
 	<control type="image">
@@ -39,11 +39,11 @@
 		<radiowidth>94</radiowidth>
 		<radioposx>663</radioposx>
 		<radioheight>65</radioheight>
-		<textoffsetx>50</textoffsetx>		
+		<textoffsetx>50</textoffsetx>
 		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
 		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
 		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>		
+		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
 	</control>
 
 	<control type="spincontrolex" id="9">
@@ -54,7 +54,7 @@
 		<textureupfocus>settings/spin-up-focus.png</textureupfocus>
 		<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
 		<spinposx>0</spinposx>
-		<spinposy>-5</spinposy>		
+		<spinposy>-5</spinposy>
 		<spinwidth>40</spinwidth>
 		<spinheight>65</spinheight>
 		<reverse>yes</reverse>

@@ -264,7 +264,7 @@
 				<visible allowhiddenfocus="true">Control.HasFocus(802)</visible>
 				<onup>SetFocus(801)</onup>
 				<ondown>SetFocus(803)</ondown>
-				<onclick>XBMC.ReplaceWindow(Home)</onclick>	
+				<onclick>XBMC.ReplaceWindow(Home)</onclick>
 				<label>31657</label>
 			</control>
 		<!-- Screen Four: Info -->
@@ -293,7 +293,7 @@
 				<visible allowhiddenfocus="true">Control.HasFocus(803)</visible>
 				<onup>802</onup>
 				<ondown>804</ondown>
-				<onclick>XBMC.ReplaceWindow(Home)</onclick>	
+				<onclick>XBMC.ReplaceWindow(Home)</onclick>
 				<label>31657</label>
 			</control>
 		<!-- Screen Five: TV -->

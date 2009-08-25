@@ -113,7 +113,7 @@
 			<width>108</width>
 			<height>108</height>
 			<info>MusicPlayer.Cover</info>
-			<bordertexture border="-1">osd/osd_musicthumbframe.png</bordertexture>				
+			<bordertexture border="-1">osd/osd_musicthumbframe.png</bordertexture>
 		</control>
 	</control>
 	<control type="group">

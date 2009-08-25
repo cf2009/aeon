@@ -84,7 +84,7 @@
 				<textcolor>FFcbcbcb</textcolor>
 				<font>Font_SetContentMenu</font>
 				<label>31221</label>
-				<animation effect="fade" start="100" end="60" time="300" condition="!Control.HasFocus(10)">Conditional</animation>			
+				<animation effect="fade" start="100" end="60" time="300" condition="!Control.HasFocus(10)">Conditional</animation>
 			</control>
 			<control type="label" id="0">
 				<description>Name Label</description>

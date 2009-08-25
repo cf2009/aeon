@@ -77,7 +77,7 @@
 			<include>Animation_CommonFade</include>
 			<visible>!Skin.HasSetting(nohomegradient)</visible>
 			<colordiffuse>d0FFFFFF</colordiffuse>
-		</control>		
+		</control>
 
 	</control>
 

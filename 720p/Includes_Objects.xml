@@ -289,7 +289,7 @@
 	</include>
 	<include name="Objects_ListLayoutStrings">
 		<label>$LOCALIZE[31075]: $LOCALIZE[31071]</label>
-		<altlabel>$LOCALIZE[31075]: $LOCALIZE[31072]</altlabel>	
+		<altlabel>$LOCALIZE[31075]: $LOCALIZE[31072]</altlabel>
 	</include>
 	<include name="Objects_FanartToggleStrings">
 		<label>$LOCALIZE[31064]: $LOCALIZE[31077]</label>
@@ -560,7 +560,7 @@
 		<posx>7</posx>
 		<posy>68</posy>
 		<width>166</width>
-		<height>38</height>	
+		<height>38</height>
 	</include>
 	<include name="Objects_FSInfoYear">
 		<width>109</width>
@@ -701,7 +701,7 @@
 		<height>494</height>
 		<itemgap>0</itemgap>
 		<animation effect="fade" start="0" end="100" time="125">WindowOpen</animation>
-		<animation effect="fade" start="100" end="0" time="125">WindowClose</animation>		
+		<animation effect="fade" start="100" end="0" time="125">WindowClose</animation>
 	</include>
 <!-- OSD -->
 	<include name="Objects_OSDButtonGroup10">
@@ -754,7 +754,7 @@
 		<aligny>top</aligny>
 		<font>Font_OSDOptions</font>
 		<texturefocus>osd/osd_settings_buttonf.png</texturefocus>
-		<texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>		
+		<texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>
 	</include>
 <!-- Keyboard -->
 	<include name="Objects_DoubleKeyOff">
@@ -864,9 +864,9 @@
 		<aspectratio scalediffuse="false">scale</aspectratio>
 	</include>
 	<include name="EmptyLibraryLabelMovies">
-		<label>$LOCALIZE[31609][CR]$LOCALIZE[31610]</label>	
+		<label>$LOCALIZE[31609][CR]$LOCALIZE[31610]</label>
 	</include>
 	<include name="EmptyLibraryLabelMusic">
-		<label>$LOCALIZE[31609][CR]$LOCALIZE[31611]</label>	
+		<label>$LOCALIZE[31609][CR]$LOCALIZE[31611]</label>
 	</include>
 </includes>

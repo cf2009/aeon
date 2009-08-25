@@ -31,8 +31,8 @@
 				<textcolor>a7ffffff</textcolor>
 				<align>center</align>
 				<font>Font_ProgressLabelSmall</font>
-				<animation effect="slide" start="0,15" end="0,15" time="0" condition="IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>			
-				<animation effect="slide" start="0,0" end="0,0" time="0" condition="!IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>			
+				<animation effect="slide" start="0,15" end="0,15" time="0" condition="IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,0" time="0" condition="!IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>
 			</control>
 			<control type="label" id="3">
 				<posx>40</posx>
@@ -42,7 +42,7 @@
 				<textcolor>a7ffffff</textcolor>
 				<align>center</align>
 				<font>Font_ProgressLabelSmall</font>
-				<animation effect="slide" start="0,10" end="0,10" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>				
+				<animation effect="slide" start="0,10" end="0,10" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
 			</control>
 			<control type="label" id="4">
 				<posx>40</posx>
@@ -72,7 +72,7 @@
 				<ondown>11</ondown>
 				<include>Animation_CommonFade</include>
 				<animation effect="slide" start="0,-15" end="0,-15" time="0" condition="IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,0" time="0" condition="!IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>			
+				<animation effect="slide" start="0,0" end="0,0" time="0" condition="!IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>
 				<visible allowhiddenfocus="true">Control.HasFocus(10)</visible>
 			</control>
 			<control type="button" id="11">
@@ -93,9 +93,9 @@
 				<onup>10</onup>
 				<ondown>10</ondown>
 				<include>Animation_CommonFade</include>
-				<animation effect="slide" start="0,-15" end="0,-15" time="0" condition="IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>	
-				<animation effect="slide" start="0,0" end="0,0" time="0" condition="!IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>			
-				<visible allowhiddenfocus="true">Control.HasFocus(11)</visible>			
+				<animation effect="slide" start="0,-15" end="0,-15" time="0" condition="IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,0" time="0" condition="!IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>
+				<visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
 			</control>
 			<control type="label">
 				<posx>10</posx>

@@ -2,721 +2,706 @@
 	<defaultcontrol always="true">3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-
-	<control type="multiimage">
-		<include>FullScreenDimensions</include>
-		<imagepath>backdrops/default_settings</imagepath>
-		<info>Skin.String(CustomSettings)</info>
-		<animation effect="fade" start="0" end="100" time="200" condition="![Window.Previous(4) | Window.Previous(Home)]">WindowOpen</animation>
-		<animation effect="fade" start="100" end="0" time="200" condition="![Window.Next(4) | Window.Next(Home)]">WindowClose</animation>		
-	</control>
-
-	<control type="group">
-		<include>FullScreenDimensions</include>
-		<animation type="WindowOpen" reversible="false" condition="!Window.Previous(4)">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
-		</animation>		
-		<animation type="WindowClose" reversible="false" condition="!Window.Next(4)">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-		</animation>
-		<include>Furniture_SettingsBackPanel</include>
-	
-		<control type="label">
-			<description>sectiontitle</description>
-			<label>31300</label>
-			<include>Objects_SettingsSectionTitle</include>
-			<visible>Window.IsActive(17)</visible>
-		</control>
-		<control type="label">
-			<include>Objects_SettingsSectionTitle</include>
-			<label>31301</label>
-			<visible>Window.IsActive(12)</visible>
-		</control>
-		<control type="label">
-			<include>Objects_SettingsSectionTitle</include>
-			<label>31302</label>
-			<visible>Window.IsActive(19)</visible>
-		</control>
-		<control type="label">
-			<include>Objects_SettingsSectionTitle</include>
-			<label>31303</label>
-			<visible>Window.IsActive(18)</visible>
-		</control>
-		<control type="label">
-			<include>Objects_SettingsSectionTitle</include>
-			<label>31304</label>
-			<visible>Window.IsActive(16)</visible>
-		</control>
-		<control type="label">
-			<label>31305</label>
-			<include>Objects_SettingsSectionTitle</include>
-			<visible>Window.IsActive(15)</visible>
-		</control>
-		<control type="label">
-			<label>31306</label>
-			<include>Objects_SettingsSectionTitle</include>
-			<visible>Window.IsActive(14)</visible>
-		</control>
-		<control type="label">
-			<label>31307</label>
-			<include>Objects_SettingsSectionTitle</include>
-			<visible>Window.IsActive(13)</visible>
-		</control>
-		<control type="label">
-			<posx>308</posx>
-			<posy>70</posy>
-			<width>936</width>
-			<height>49</height>
-			<label>31308</label>
-			<textcolor>FFbec0c2</textcolor>
-			<include>Animation_CommonFadeQuick</include>
-			<include>Objects_SettingsSectionTitle</include>
-		</control>
-
-
-		<control type="grouplist" id="3">
-			<description>button area</description>
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<orientation>vertical</orientation>
-			<itemgap>0</itemgap>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<include>Animation_CommonFade</include>
-		</control>
-	
-		<control type="grouplist" id="5">
-			<description>control area</description>
-			<include>Objects_SettingsControlAreaVars</include>
-			<onup>-</onup>
-			<ondown>5</ondown>
-			<onleft>3</onleft>
-			<onright>3</onright>
-			<visible>Window.Previous(4) | Window.Previous(10) | Window.Previous(24) | Window.Previous(25) | Window.Previous(1) | Window.Previous(2) | Window.Previous(500) | Window.Previous(501) | Window.Previous(502) | Window.Previous(VideosSettings) | Window.Previous(Home)</visible>
-		</control>
-	
-		<control type="group">
-			<description>Videos subheadings</description>
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(MyVideosSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
-			<control type="label">
-				<description>General Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31320</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>General Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31320</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>Library Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31321</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>Library Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31321</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>Player Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31322</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>Player Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31322</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>Subtitles Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31323</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>Subtitles Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31323</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>Scraper Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31351</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(34)</visible>
-			</control>
-			<control type="label">
-				<description>Scraper Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31351</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(34)</visible>
-			</control>			
+		<control type="multiimage">
+			<include>FullScreenDimensions</include>
+			<imagepath>backdrops/default_settings</imagepath>
+			<info>Skin.String(CustomSettings)</info>
+			<animation effect="fade" start="0" end="100" time="200" condition="![Window.Previous(4) | Window.Previous(Home)]">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200" condition="![Window.Next(4) | Window.Next(Home)]">WindowClose</animation>
 		</control>
 		<control type="group">
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(MyPicturesSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
+			<include>FullScreenDimensions</include>
+			<animation type="WindowOpen" reversible="false" condition="!Window.Previous(4)">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false" condition="!Window.Next(4)">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<include>Furniture_SettingsBackPanel</include>
 			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31324</label>
+				<description>sectiontitle</description>
+				<label>31300</label>
+				<include>Objects_SettingsSectionTitle</include>
+				<visible>Window.IsActive(17)</visible>
+			</control>
+			<control type="label">
+				<include>Objects_SettingsSectionTitle</include>
+				<label>31301</label>
+				<visible>Window.IsActive(12)</visible>
+			</control>
+			<control type="label">
+				<include>Objects_SettingsSectionTitle</include>
+				<label>31302</label>
+				<visible>Window.IsActive(19)</visible>
+			</control>
+			<control type="label">
+				<include>Objects_SettingsSectionTitle</include>
+				<label>31303</label>
+				<visible>Window.IsActive(18)</visible>
+			</control>
+			<control type="label">
+				<include>Objects_SettingsSectionTitle</include>
+				<label>31304</label>
+				<visible>Window.IsActive(16)</visible>
+			</control>
+			<control type="label">
+				<label>31305</label>
+				<include>Objects_SettingsSectionTitle</include>
+				<visible>Window.IsActive(15)</visible>
+			</control>
+			<control type="label">
+				<label>31306</label>
+				<include>Objects_SettingsSectionTitle</include>
+				<visible>Window.IsActive(14)</visible>
+			</control>
+			<control type="label">
+				<label>31307</label>
+				<include>Objects_SettingsSectionTitle</include>
+				<visible>Window.IsActive(13)</visible>
+			</control>
+			<control type="label">
+				<posx>308</posx>
+				<posy>70</posy>
+				<width>936</width>
+				<height>49</height>
+				<label>31308</label>
+				<textcolor>FFbec0c2</textcolor>
+				<include>Animation_CommonFadeQuick</include>
+				<include>Objects_SettingsSectionTitle</include>
+			</control>
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<orientation>vertical</orientation>
+				<itemgap>0</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<include>Animation_CommonFade</include>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<include>Objects_SettingsControlAreaVars</include>
+				<onup>-</onup>
+				<ondown>5</ondown>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<visible>Window.Previous(4) | Window.Previous(10) | Window.Previous(24) | Window.Previous(25) | Window.Previous(1) | Window.Previous(2) | Window.Previous(500) | Window.Previous(501) | Window.Previous(502) | Window.Previous(VideosSettings) | Window.Previous(Home)</visible>
+			</control>
+			<control type="group">
+				<description>Videos subheadings</description>
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(MyVideosSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>General Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31320</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>General Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31320</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>Library Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31321</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>Library Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31321</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>Player Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31322</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>Player Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31322</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>Subtitles Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31323</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>Subtitles Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31323</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>Scraper Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31351</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(34)</visible>
+				</control>
+				<control type="label">
+					<description>Scraper Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31351</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(34)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(MyPicturesSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31324</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31324</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31325</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31325</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(31)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(AppearanceSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31326</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31326</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31327</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31327</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31328</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31328</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31329</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31329</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31330</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(34)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31330</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(34)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(NetworkSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31331</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31331</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31332</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31332</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31333</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31333</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31334</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31334</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31335</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(34)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31335</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(34)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(SystemSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31336</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31336</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31337</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31337</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31338</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31338</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31339</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31339</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31341</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(34)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31341</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(34)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(MyMusicSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31342</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Videos Sub Unfocused</description>
+					<posy>32</posy>
+					<label>31342</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31343</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Music Sub Unfocused</description>
+					<posy>90</posy>
+					<label>31343</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31344</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Programs Sub Unfocused</description>
+					<posy>148</posy>
+					<label>31344</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31345</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Pictures Sub Unfocused</description>
+					<posy>206</posy>
+					<label>31345</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31346</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(34)</visible>
+				</control>
+				<control type="label">
+					<description>My Weather Sub Unfocused</description>
+					<posy>264</posy>
+					<label>31346</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(34)</visible>
+				</control>
+				<control type="label">
+					<description>My Network Sub Unfocused</description>
+					<posy>322</posy>
+					<label>31347</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(35)</visible>
+				</control>
+				<control type="label">
+					<description>My Network Sub Unfocused</description>
+					<posy>322</posy>
+					<label>31347</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(35)</visible>
+				</control>
+				<control type="label">
+					<description>System Sub Unfocused</description>
+					<posy>380</posy>
+					<label>31348</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!ControlGroup(3).HasFocus(36)</visible>
+				</control>
+				<control type="label">
+					<description>System Sub Unfocused</description>
+					<posy>380</posy>
+					<label>31348</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>ControlGroup(3).HasFocus(36)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(MyWeatherSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>My Weather Sub</description>
+					<posy>32</posy>
+					<label>31349</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!Control.HasFocus(6)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<include>Settings_ButtonGroupDimensionsXBMC</include>
+				<visible>Window.IsActive(MyProgramsSettings)</visible>
+				<include>Animation_SettingsButtonFade</include>
+				<control type="label">
+					<description>My Weather Sub</description>
+					<posy>32</posy>
+					<label>31350</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!Control.HasFocus(6)</visible>
+				</control>
+			</control>
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>216</width>
+				<height>58</height>
+				<texturefocus>settings/settings_leftmenufocus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>Font_SettingsSectionMenuButton</font>
 				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(30)</visible>
+				<focusedcolor>FF262728</focusedcolor>
+				<selectedcolor>FF262728</selectedcolor>
+				<textoffsety>7</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<aligny>top</aligny>
+				<pulseonselect>no</pulseonselect>
+				<include>Animation_SettingsButtonFade</include>
+				<onclick>SetFocus(800)</onclick>
 			</control>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31324</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31325</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31325</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(31)</visible>
+			<control type="image">
+				<description>background image</description>
+				<posx>42</posx>
+				<posy>28</posy>
+				<width>1196</width>
+				<height>651</height>
+				<texture>settings/settings_panelfront.png</texture>
 			</control>
 		</control>
-		<control type="group">
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(AppearanceSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31326</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31326</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31327</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31327</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31328</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31328</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31329</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31329</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31330</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(34)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31330</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(34)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(NetworkSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31331</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31331</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31332</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31332</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31333</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31333</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31334</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31334</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31335</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(34)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31335</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(34)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(SystemSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31336</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31336</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31337</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31337</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31338</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31338</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31339</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31339</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31341</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(34)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31341</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(34)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(MyMusicSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31342</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Videos Sub Unfocused</description>
-				<posy>32</posy>
-				<label>31342</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(30)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31343</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Music Sub Unfocused</description>
-				<posy>90</posy>
-				<label>31343</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(31)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31344</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Programs Sub Unfocused</description>
-				<posy>148</posy>
-				<label>31344</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(32)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31345</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Pictures Sub Unfocused</description>
-				<posy>206</posy>
-				<label>31345</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(33)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31346</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(34)</visible>
-			</control>
-			<control type="label">
-				<description>My Weather Sub Unfocused</description>
-				<posy>264</posy>
-				<label>31346</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(34)</visible>
-			</control>
-			<control type="label">
-				<description>My Network Sub Unfocused</description>
-				<posy>322</posy>
-				<label>31347</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(35)</visible>
-			</control>
-			<control type="label">
-				<description>My Network Sub Unfocused</description>
-				<posy>322</posy>
-				<label>31347</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(35)</visible>
-			</control>
-			<control type="label">
-				<description>System Sub Unfocused</description>
-				<posy>380</posy>
-				<label>31348</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!ControlGroup(3).HasFocus(36)</visible>
-			</control>
-			<control type="label">
-				<description>System Sub Unfocused</description>
-				<posy>380</posy>
-				<label>31348</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>ControlGroup(3).HasFocus(36)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(MyWeatherSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
-			<control type="label">
-				<description>My Weather Sub</description>
-				<posy>32</posy>
-				<label>31349</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!Control.HasFocus(6)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<include>Settings_ButtonGroupDimensionsXBMC</include>
-			<visible>Window.IsActive(MyProgramsSettings)</visible>
-			<include>Animation_SettingsButtonFade</include>
-			<control type="label">
-				<description>My Weather Sub</description>
-				<posy>32</posy>
-				<label>31350</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>!Control.HasFocus(6)</visible>
-			</control>
-		</control>
-
-		<control type="button" id="10">
-			<description>Default Category Button</description>
+		<control type="button" id="7">
+			<description>Default Button</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>216</width>
-			<height>58</height>
-			<texturefocus>settings/settings_leftmenufocus.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<font>Font_SettingsSectionMenuButton</font>
-			<textcolor>FFf5f5f5</textcolor>
-			<focusedcolor>FF262728</focusedcolor>
-			<selectedcolor>FF262728</selectedcolor>
-			<textoffsety>7</textoffsety>
-			<textoffsetx>30</textoffsetx>
-			<aligny>top</aligny>
-			<pulseonselect>no</pulseonselect>
+			<width>936</width>
+			<height>49</height>
+			<font>Font_SettingsOptions</font>
+			<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
+			<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+			<textcolor>FFbbbbbb</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<pulseonselect>false</pulseonselect>
+			<textoffsetx>50</textoffsetx>
+			<aligny>center</aligny>
 			<include>Animation_SettingsButtonFade</include>
-			<onclick>SetFocus(800)</onclick>
 		</control>
-
-		<control type="image">
-			<description>background image</description>
-			<posx>42</posx>
-			<posy>28</posy>
-			<width>1196</width>
-			<height>651</height>
-			<texture>settings/settings_panelfront.png</texture>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>936</width>
+			<height>49</height>
+			<font>Font_SettingsOptions</font>
+			<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
+			<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+			<textcolor>FFbbbbbb</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<pulseonselect>false</pulseonselect>
+			<radiowidth>94</radiowidth>
+			<radioposx>850</radioposx>
+			<radioheight>65</radioheight>
+			<textoffsetx>50</textoffsetx>
+			<aligny>center</aligny>
+			<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
+			<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
+			<include>Animation_SettingsButtonFade</include>
 		</control>
-	</control>
-
-	<control type="button" id="7">
-		<description>Default Button</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>936</width>
-		<height>49</height>
-		<font>Font_SettingsOptions</font>
-		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
-		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-		<textcolor>FFbbbbbb</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
-		<pulseonselect>false</pulseonselect>
-		<textoffsetx>50</textoffsetx>
-		<aligny>center</aligny>
-		<include>Animation_SettingsButtonFade</include>
-	</control>
-
-	<control type="radiobutton" id="8">
-		<description>Default RadioButton</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>936</width>
-		<height>49</height>
-		<font>Font_SettingsOptions</font>
-		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
-		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-		<textcolor>FFbbbbbb</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
-		<pulseonselect>false</pulseonselect>
-		<radiowidth>94</radiowidth>
-		<radioposx>850</radioposx>
-		<radioheight>65</radioheight>
-		<textoffsetx>50</textoffsetx>
-		<aligny>center</aligny>
-		<textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-		<textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-		<include>Animation_SettingsButtonFade</include>
-	</control>
-
-	<control type="spincontrolex" id="9">
-		<description>Default SpinControlex</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>936</width>
-		<height>49</height>
-		<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
-		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-		<textcolor>FFbbbbbb</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
-		<textureup>settings/spin-up.png</textureup>
-		<texturedown>settings/spin-down.png</texturedown>
-		<textureupfocus>settings/spin-up-focus.png</textureupfocus>
-		<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-		<font>Font_SettingsOptions</font>
-		<disabledcolor>60d0d0d0</disabledcolor>
-		<aligny>center</aligny>
-		<spinposx>-2</spinposx>
-		<spinwidth>40</spinwidth>
-		<spinheight>65</spinheight>
-		<textoffsetx>50</textoffsetx>
-		<include>Animation_SettingsButtonFade</include>
-		<onright>SetFocus(1)</onright>
-	</control>
-
-	<!--<include>Background_ContextBlack</include>-->
-
-	<include>Settings_Welcome</include>
-	
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>936</width>
+			<height>49</height>
+			<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
+			<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+			<textcolor>FFbbbbbb</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<textureup>settings/spin-up.png</textureup>
+			<texturedown>settings/spin-down.png</texturedown>
+			<textureupfocus>settings/spin-up-focus.png</textureupfocus>
+			<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
+			<font>Font_SettingsOptions</font>
+			<disabledcolor>60d0d0d0</disabledcolor>
+			<aligny>center</aligny>
+			<spinposx>-2</spinposx>
+			<spinwidth>40</spinwidth>
+			<spinheight>65</spinheight>
+			<textoffsetx>50</textoffsetx>
+			<include>Animation_SettingsButtonFade</include>
+			<onright>SetFocus(1)</onright>
+		</control>
+		<!--<include>Background_ContextBlack</include>-->
+		<include>Settings_Welcome</include>
 	</controls>
 </window>
