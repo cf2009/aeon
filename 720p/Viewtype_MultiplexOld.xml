@@ -989,10 +989,10 @@
 			<description>My first scroll bar control</description>
 			<posx>67</posx>
 			<posy>673</posy>
-	        <width>1147</width>
+	<width>1147</width>
 			<height>41</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(52) + Control.HasFocus(60) + !Control.IsVisible(105)</visible>
-	        <texturesliderbackground>stripshow/stripshow_scrollbar.png</texturesliderbackground>
+	<texturesliderbackground>stripshow/stripshow_scrollbar.png</texturesliderbackground>
 			<texturesliderbar>-</texturesliderbar>
 			<texturesliderbarfocus>-</texturesliderbarfocus>
 			<textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>

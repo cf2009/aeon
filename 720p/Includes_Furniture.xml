@@ -79,7 +79,7 @@
 			<width>451</width>
 			<height>27</height>
 			<visible>!Skin.HasSetting(highertime) + Window.IsActive(Home) + !Control.IsVisible(51) + !Control.IsVisible(52) + !Control.IsVisible(57) + !Control.IsVisible(50) + !Control.IsVisible(53) + !Skin.HasSetting(notime)</visible>
-	     	<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,225" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<include>Animation_OpenCloseZoom</include>
 			<include>Furniture_TimePanel</include>
 		</control>
@@ -338,7 +338,7 @@
 				<midtexture>osd/osd_progressmid.png</midtexture>
 				<righttexture>-</righttexture>
 				<overlaytexture>-</overlaytexture>
-			    <include>Animation_CommonFade</include>
+				<include>Animation_CommonFade</include>
 				<visible>!Skin.HasSetting(noosdprogress) + !Control.IsVisible(213)</visible>
 			</control>
 			<control type="image">
@@ -349,7 +349,7 @@
 			</control>
 			<control type="group">
 				<visible>!Skin.HasSetting(osdbigtop)</visible>
-			    <include>Animation_CommonFade</include>
+				<include>Animation_CommonFade</include>
 				<control type="image">
 					<width>840</width>
 					<height>32</height>
@@ -377,7 +377,7 @@
 			</control>
 			<control type="group">
 				<visible>Skin.HasSetting(osdbigtop)</visible>
-			    <include>Animation_CommonFade</include>
+				<include>Animation_CommonFade</include>
 				<control type="image">
 					<width>840</width>
 					<height>88</height>
@@ -465,7 +465,7 @@
 			</control>
 			<control type="group" id="212">
 				<visible>Skin.HasSetting(osdshowtime)</visible>
-			    <include>Animation_CommonFade</include>
+				<include>Animation_CommonFade</include>
 				<control type="label">
 					<posx>0</posx>
 					<posy>432</posy>
