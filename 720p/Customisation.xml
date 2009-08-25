@@ -184,7 +184,7 @@
 				<label>31244</label>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>9</onup>
-				<ondown>11</ondown>
+				<ondown>6</ondown>
 				<onleft>800</onleft>
 				<onright>800</onright>
 				<visible allowhiddenfocus="true">![Control.HasFocus(10) | ControlGroup(14).HasFocus]</visible>
@@ -219,8 +219,8 @@
 		</control>
 		<control type="grouplist" id="20">
 			<include>Objects_SettingsControlAreaVars</include>
-			<onup>10</onup>
-			<ondown>10</ondown>
+			<onup>20</onup>
+			<ondown>20</ondown>
 			<onleft>6</onleft>
 			<onright>6</onright>
 			<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
@@ -347,18 +347,6 @@
 				<label>31286</label>
 				<onclick>Skin.ToggleSetting(albumratingtext)</onclick>
 				<selected>Skin.HasSetting(albumratingtext)</selected>
-			</control>
-			<control type="radiobutton" id="607">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31297</label>
-				<onclick>Skin.ToggleSetting(singlemusiclisticon)</onclick>
-				<selected>Skin.HasSetting(singlemusiclisticon)</selected>
-			</control>
-			<control type="radiobutton" id="608">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31298</label>
-				<onclick>Skin.ToggleSetting(singlemovielisticon)</onclick>
-				<selected>Skin.HasSetting(singlemovielisticon)</selected>
 			</control>
 			<control type="radiobutton" id="609">
 				<include>Objects_SettingsDefaultRadioButton</include>

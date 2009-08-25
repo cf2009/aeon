@@ -1,5 +1,5 @@
 <window id="12">
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol>3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="multiimage">
@@ -85,7 +85,7 @@
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<include>Objects_SettingsControlAreaVars</include>
-				<onup>-</onup>
+				<onup>5</onup>
 				<ondown>5</ondown>
 				<onleft>3</onleft>
 				<onright>3</onright>
