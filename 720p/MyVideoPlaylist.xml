@@ -13,16 +13,12 @@
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 	</control>
-	<include>Furniture_WallBackground</include>
 	<control type="group">
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
-		<include>Viewtype_Wall</include>
-		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>
 		<control type="group">
 			<control type="image">
 				<include>Objects_MediaLogo</include>
@@ -35,19 +31,12 @@
 			<control type="grouplist" id="7000">
 				<include>Animation_MediaMenuSlide</include>
 				<include>Objects_MediaMenuGroup</include>
-				<control type="button" id="900">
-					<label>$LOCALIZE[31050] $INFO[Container.ViewMode]</label>
-					<include>Objects_MediaMenuButton</include>
-					<onclick>SetFocus(69)</onclick>
-				</control>
-				<include>Objects_FlattenFlowButton</include>
-				<include>Objects_WallBackdropButton</include>
 				<control type="button" id="20">
 					<label>191</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
 				<control type="button" id="26">
-					<label>REPEAT</label>
+					<label>486</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
 				<control type="button" id="21">
@@ -61,7 +50,6 @@
 				<include>Objects_MediaDebugButtons</include>
 			</control>
 		</control>
-		<include>Viewtype_Showcase</include>
 		<include>Viewtype_List</include>
 	</control>
 	<include>Furniture_DarkGradient</include>
