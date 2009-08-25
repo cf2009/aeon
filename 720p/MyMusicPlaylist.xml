@@ -1,5 +1,5 @@
 <window id="500">
-	<defaultcontrol always="true">900</defaultcontrol>
+	<defaultcontrol always="true">7000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 	<control type="multiimage">
@@ -20,25 +20,18 @@
 			</control>
 			<control type="label">
 				<include>Objects_MediaLabel</include>
-				<label>PLAYLIST</label>
+				<label>136</label>
 			</control>
 			<control type="grouplist" id="7000">
 				<include>Animation_MediaMenuSlide</include>
 				<include>Objects_MediaMenuGroup</include>
-				<control type="button" id="900">
-					<label>View: $INFO[Container.ViewMode]</label>
-					<include>Objects_MediaMenuButton</include>
-					<onfocus>Skin.Reset(bmtransitnowplaying)</onfocus>
-					<onclick>SetFocus(69)</onclick>
-				</control>
-				<include>Objects_FlattenFlowButton</include>
 				<control type="togglebutton" id="20">
-					<label>ORDER: NORMAL</label>
-					<altlabel>ORDER: RANDOM</altlabel>
+					<label>ORDER: $LOCALIZE[630]</label>
+					<altlabel>ORDER: $LOCALIZE[590]</altlabel>
 					<include>Objects_MediaMenuButton</include>
 				</control>
 				<control type="button" id="26">
-					<label>REPEAT</label>
+					<label>486</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
 				<control type="button" id="21">
@@ -49,7 +42,6 @@
 					<label>192</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
-				<include>Objects_WallGridButton</include>
 				<control type="togglebutton" id="901">
 					<include>Objects_MediaMenuButton</include>
 					<label>31065</label>
@@ -68,7 +60,6 @@
 			</control>
 		</control>
 		<include>Viewtype_List</include>
-		<include>Viewtype_Showcase</include>
 	</control>
 	<include>Furniture_DarkGradient</include>
 	<include>ViewChange</include>
