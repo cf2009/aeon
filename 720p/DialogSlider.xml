@@ -1,0 +1,51 @@
+<window id="145">
+	<defaultcontrol>11</defaultcontrol>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<control type="group">
+			<posx>465</posx>
+			<posy>20</posy>
+			<control type="image">
+				<description>Panel</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>140</height>
+				<texture border="40">dialogs/select_back.png</texture>
+			</control>
+			<control type="label" id="10">
+				<description>Dialog header</description>
+				<posy>25</posy>
+				<posx>20</posx>
+				<width>260</width>
+				<height>20</height>
+				<align>center</align>
+				<include>Dialogs_Label1</include>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="12">
+				<description>Slider Value</description>
+				<posy>55</posy>
+				<posx>20</posx>
+				<width>260</width>
+				<height>20</height>
+				<textcolor>FFF5F5F5</textcolor>
+				<font>Font_ProgressLabel</font>
+				<posy>26</posy>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="sliderex" id="11">
+				<description>Slider</description>
+				<posy>65</posy>
+				<posx>45</posx>
+				<align>center</align>
+				<sliderwidth>210</sliderwidth>
+				<sliderheight>65</sliderheight>
+				<texturesliderbar>osd/osd_sliderback.png</texturesliderbar>
+				<textureslidernib>osd/osd_slidernub.png</textureslidernib>
+				<textureslidernibfocus>osd/osd_slidernubf.png</textureslidernibfocus>
+			</control>
+		</control>
+	</controls>
+</window>
