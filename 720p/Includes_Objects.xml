@@ -704,14 +704,6 @@
 		<animation effect="fade" start="100" end="0" time="125">WindowClose</animation>
 	</include>
 <!-- OSD -->
-	<include name="Objects_OSDButtonGroup10">
-		<width>790</width>
-		<posx>249</posx>
-	</include>
-	<include name="Objects_OSDButtonGroup9">
-		<width>712</width>
-		<posx>284</posx>
-	</include>
 	<include name="Objects_OSDButton">
 		<width>88</width>
 		<height>88</height>
