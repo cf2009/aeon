@@ -4,6 +4,9 @@
 		<posy>600</posy>
 		<width>509</width>
 		<height>91</height>
+		<animation effect="slide" end="0,-150" time="400" easing="inout" tween="cubic" condition="Window.IsActive(Home) + Skin.HasSetting(lowermainmenu)">Conditional</animation>
+		<animation effect="slide" end="0,-65" time="400" easing="inout" tween="cubic" condition="Window.IsActive(Home) + Player.HasAudio">Conditional</animation>
+		<animation effect="slide" end="0,-400" time="200" easing="inout" tween="circle" condition="Control.IsVisible(57)">Conditional</animation>
 	</include>
 	<include name="Dialogs_Tablet">
 		<control type="image">
@@ -24,6 +27,7 @@
 		</control>
 	</include>
 	<include name="Dialogs_HardDrive">
+		<animation effect="slide" end="0,600" time="400" easing="inout" tween="circle" condition="Window.IsVisible(2005) | Window.IsVisible(2006) | Window.IsVisible(2007)">Conditional</animation>
 		<control type="image">
 			<posx>12</posx>
 			<posy>4</posy>
@@ -43,9 +47,9 @@
 	</include>
 	<include name="Dialogs_Progress">
 		<description>Progressbar</description>
-		<posx>3</posx>
+		<posx>85</posx>
 		<posy>3</posy>
-		<width>85</width>
+		<width>411</width>
 		<height>85</height>
 		<reveal>true</reveal>
 		<texturebg>dialogs/scan_blank.png</texturebg>
@@ -56,11 +60,12 @@
 	</include>
 	<include name="Dialogs_LabelVars">
 		<posx>105</posx>
-		<width>390</width>
+		<width>376</width>
 		<height>21</height>
 		<textcolor>FF323232</textcolor>
 		<align>left</align>
 		<font>Font_ProgressLabel</font>
+		<scroll>true</scroll>
 	</include>
 	<include name="Dialogs_Pos1">
 		<posy>8</posy>
