@@ -384,12 +384,12 @@
 				<ondown>8</ondown>
 				<onleft>32</onleft>
 				<onright>31</onright>
-				<texturefocus>settings/settings_furniture_mainmenu.png</texturefocus>
+				<texturefocus border="20">settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
 				<animation effect="slide" start="0,0" end="0,150" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
 				<include>Animation_CommonFade</include>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 			</control>
 			<control type="button" id="31">
 				<description>Time panel furniture select button - Normal version</description>
@@ -402,12 +402,12 @@
 				<ondown>8</ondown>
 				<onleft>30</onleft>
 				<onright>32</onright>
-				<texturefocus>settings/settings_furniture_timepanel.png</texturefocus>
+				<texturefocus border="20">settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
 				<visible>!Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,-210" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(highertime)">Conditional</animation>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="button" id="31">
@@ -421,12 +421,12 @@
 				<ondown>8</ondown>
 				<onleft>30</onleft>
 				<onright>32</onright>
-				<texturefocus>settings/settings_furniture_timepanel.png</texturefocus>
+				<texturefocus>settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
 				<visible>Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,-362" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(highertime)">Conditional</animation>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="button" id="32">
@@ -440,12 +440,12 @@
 				<ondown>8</ondown>
 				<onleft>31</onleft>
 				<onright>30</onright>
-				<texturefocus>settings/settings_furniture_rss.png</texturefocus>
+				<texturefocus border="20">settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
 				<visible>!Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,188" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowerrss)">Conditional</animation>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="button" id="32">
@@ -459,12 +459,12 @@
 				<ondown>8</ondown>
 				<onleft>31</onleft>
 				<onright>30</onright>
-				<texturefocus>settings/settings_furniture_rss.png</texturefocus>
+				<texturefocus border="20">settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
 				<visible>Skin.HasSetting(lowermainmenu)</visible>
 				<animation effect="slide" start="0,0" end="0,36" time="200" easing="inout" tween="circle" condition="Skin.HasSetting(lowerrss)">Conditional</animation>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
 		<!-- Furniture select buttons end -->
@@ -479,10 +479,10 @@
 				<ondown>10</ondown>
 				<onleft>62</onleft>
 				<onright>61</onright>
-				<texturefocus>settings/settings_osd_progress.png</texturefocus>
+				<texturefocus border="20">settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control> 
 			<control type="button" id="61">
@@ -496,10 +496,10 @@
 				<ondown>10</ondown>
 				<onleft>60</onleft>
 				<onright>62</onright>
-				<texturefocus>settings/settings_osd_progress.png</texturefocus>
+				<texturefocus border="20">settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="button" id="62">
@@ -513,10 +513,10 @@
 				<ondown>10</ondown>
 				<onleft>61</onleft>
 				<onright>60</onright>
-				<texturefocus>settings/settings_osd_titletime.png</texturefocus>
+				<texturefocus border="20">settings/settings_furniture.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<pulseonselect>true</pulseonselect>
-				<animation effect="fade" time="200" start="0" end="100">Focus</animation>
+				<animation effect="fade" time="200" start="0" end="50">Focus</animation>
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="button" id="40">
