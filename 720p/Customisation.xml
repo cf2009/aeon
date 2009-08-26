@@ -292,12 +292,6 @@
 				<onclick>Skin.ToggleSetting(launcherforgames)</onclick>
 				<selected>Skin.HasSetting(launcherforgames)</selected>
 			</control>
-			<control type="radiobutton" id="503">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31252</label>
-				<onclick>Skin.ToggleSetting(nohomegradient)</onclick>
-				<selected>!Skin.HasSetting(nohomegradient)</selected>
-			</control>
 		</control>
 		<control type="grouplist" id="12">
 			<include>Objects_SettingsControlAreaVars</include>
