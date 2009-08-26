@@ -12,7 +12,7 @@
 	<control type="multiimage">
 		<include>BackgroundVarsGlobal</include>
 		<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
-		<visible>[!Skin.HasSetting(homevis) + Player.HasMedia]|[!Skin.HasSetting(videohome) + Player.HasVideo]</visible>
+		<visible>![Skin.HasSetting(homevis) + Player.HasAudio]|![Skin.HasSetting(videohome) + Player.HasVideo]</visible>
 	</control>
 	<control type="visualisation">
 		<include>FullScreenDimensions</include>
