@@ -1,0 +1,211 @@
+<window id="129">
+	<defaultcontrol always="true">15</defaultcontrol>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<control type="group">
+			<posx>247</posx>
+			<posy>248</posy>
+			<width>847</width>
+			<height>328</height>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>800</width>
+				<height>316</height>
+				<texture border="40">settings/settings_panelback.png</texture>
+			</control>
+			<control type="image">
+				<description>Darken screen</description>
+				<posx>28</posx>
+				<posy>40</posy>
+				<width>743</width>
+				<height>35</height>
+				<texture>common/black.png</texture>
+				<colordiffuse>45000000</colordiffuse>
+				<include>Animation_CommonFade</include>
+			</control>
+			<control type="label">
+				<description>heading label</description>
+				<posx>85</posx>
+				<posy>36</posy>
+				<width>250</width>
+				<height>35</height>
+				<align>center</align>
+				<font>Font_SettingsSectionTitle</font> 
+				<scroll>false</scroll>
+				<wrapmultiline>true</wrapmultiline>
+				<font>Font_SettingsSectionTitle</font>
+				<label>21421</label>
+			</control>
+			<control type="label">
+				<description>Rule match label</description>
+				<posx>177</posx>
+				<posy>90</posy>
+				<width>480</width>
+				<font>Font_SettingsOptions</font>
+				<label>21422</label>
+			</control>
+			<control type="group" id="9001">
+				<control type="spincontrolex" id="15">
+					<description>Rule Field</description>
+					<posx>167</posx>
+					<posy>110</posy>
+					<label>467</label>
+					<width>595</width>
+					<height>40</height>
+					<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
+					<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+					<textcolor>FFbbbbbb</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureup>settings/spin-up.png</textureup>
+					<texturedown>settings/spin-down.png</texturedown>
+					<textureupfocus>settings/spin-up-focus.png</textureupfocus>
+					<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
+					<font>Font_SettingsOptions</font>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<aligny>center</aligny>
+					<spinposx>-2</spinposx>
+					<spinwidth>40</spinwidth>
+					<spinheight>65</spinheight>
+					<textoffsetx>10</textoffsetx>
+					<include>Animation_SettingsButtonFade</include>
+					<onright>16</onright>
+					<onleft>9000</onleft>
+					<onup>9000</onup>
+					<ondown>16</ondown>
+				</control>
+				<control type="spincontrolex" id="16">
+					<description>Rule operator</description>
+					<posx>167</posx>
+					<posy>150</posy>
+					<width>595</width>
+					<height>40</height>
+					<texturefocus>settings/settings_radiobuttonofffocus.png</texturefocus>
+					<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+					<textcolor>FFbbbbbb</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureup>settings/spin-up.png</textureup>
+					<texturedown>settings/spin-down.png</texturedown>
+					<textureupfocus>settings/spin-up-focus.png</textureupfocus>
+					<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
+					<font>Font_SettingsOptions</font>
+					<disabledcolor>60d0d0d0</disabledcolor>
+					<aligny>center</aligny>
+					<spinposx>-2</spinposx>
+					<spinwidth>40</spinwidth>
+					<spinheight>65</spinheight>
+					<textoffsetx>10</textoffsetx>
+					<include>Animation_SettingsButtonFade</include>
+					<onright>9000</onright>
+					<onleft>900</onleft>
+					<onup>15</onup>
+					<ondown>17</ondown>
+				</control>
+			</control>
+			<control type="image">
+				<posx>28</posx>
+				<posy>200</posy>
+				<width>743</width>
+				<height>40</height>
+				<texture>common/black.png</texture>
+				<colordiffuse>33000000</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>167</posx>
+				<posy>200</posy>
+				<width>604</width>
+				<height>40</height>
+				<texture>common/black.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Control.HasFocus(17)</visible>
+				<colordiffuse>66000000</colordiffuse>
+			</control>
+			<control type="button" id="17">
+				<description>Value Button</description>
+				<textoffsetx>12</textoffsetx>
+				<posy>198</posy>
+				<posx>167</posx>
+				<width>595</width>
+				<height>40</height>
+				<font>Font_AddSourceEdit</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus>-</texturefocus>
+				<texturenofocus></texturenofocus>
+				<textcolor>FF6a6565</textcolor>
+				<selectedcolor>FFe4ec06</selectedcolor>
+				<focusedcolor>FFFFFFFF</focusedcolor>
+				<label>-</label>
+				<onup>16</onup>
+				<onleft>20</onleft>
+				<onright>20</onright>
+				<ondown>20</ondown>
+			</control>
+			<control type="button" id="20">
+				<description>Browse Button</description>
+				<posx>28</posx>
+				<posy>200</posy>
+				<width>139</width>
+				<height>40</height>
+				<font>Font_SetContentMenu</font>
+				<label>1024</label>
+				<align>left</align>
+				<textcolor>FFf5f5f5</textcolor>
+				<focusedcolor>FF262728</focusedcolor>
+				<selectedcolor>FF262728</selectedcolor>
+				<textoffsetx>20</textoffsetx>
+				<onup>19</onup>
+				<onleft>17</onleft>
+				<onright>17</onright>
+				<ondown>18</ondown>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+			</control>
+			<control type="group" id="9000">
+				<posx>28</posx>
+				<posy>110</posy>
+				<control type="button" id="18">
+					<description>Button: OK</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>139</width>
+					<height>41</height>
+					<font>Font_SetContentMenu</font>
+					<label>186</label>
+					<align>left</align>
+					<textcolor>FFf5f5f5</textcolor>
+					<focusedcolor>FF262728</focusedcolor>
+					<selectedcolor>FF262728</selectedcolor>
+					<textoffsetx>20</textoffsetx>
+					<onup>18</onup>
+					<onleft>9001</onleft>
+					<onright>18</onright>
+					<ondown>19</ondown>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+				</control>
+				<control type="button" id="19">
+					<description>Cancel Button</description>
+					<posx>0</posx>
+					<posy>41</posy>
+					<width>139</width>
+					<height>41</height>
+					<font>Font_SetContentMenu</font>
+					<label>222</label>
+					<align>left</align>
+					<textcolor>FFf5f5f5</textcolor>
+					<focusedcolor>FF262728</focusedcolor>
+					<selectedcolor>FF262728</selectedcolor>
+					<textoffsetx>20</textoffsetx>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>dialogs/setcontent_rightmenu_highlight.png</texturefocus>
+					<onup>18</onup>
+					<onleft>9001</onleft>
+					<onright>19</onright>
+					<ondown>20</ondown>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
