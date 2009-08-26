@@ -1,5 +1,5 @@
 <fonts>
-	<fontset id="Aeon_Standard" unicode="true">
+	<fontset id="Default" unicode="true">
 	<!-- Common -->
 		<font>
 			<name>Font_RSS</name>
