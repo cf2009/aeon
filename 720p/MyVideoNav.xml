@@ -64,7 +64,6 @@
 					<label>$LOCALIZE[31050] $INFO[Container.ViewMode]</label>
 					<include>Objects_MediaMenuButton</include>
 					<onclick>SetFocus(69)</onclick>
-					<visible>!Skin.HasSetting(videotv) | [Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>
 				</control>
 				<include>Objects_FlattenFlowButton</include>
 				<control type="button" id="3">
