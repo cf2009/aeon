@@ -843,9 +843,9 @@
 	</include>
 	<include name="Furniture_SettingsInternalBackPanel"><!-- 4 -->
 		<posx>234</posx>
-		<posy>40</posy>
+		<posy>42</posy>
 		<width>1035</width>
-		<height>638</height>
+		<height>634</height>
 		<texture>settings/settings_intframe_bottom.png</texture>
 	</include>
 	<include name="Furniture_SettingsTutorialSlide"><!-- 10 -->
