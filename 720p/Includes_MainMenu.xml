@@ -124,6 +124,7 @@
 					<onclick>Skin.SetBool(videomovies)</onclick>
 					<onclick>Skin.Reset(videotv)</onclick>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+					<visible>library.hascontent(movies)</visible>
 					<visible>!Skin.HasSetting(nomovies)</visible>
 					<visible>[Skin.HasSetting(onetouch) + Skin.HasSetting(nosubmenumovies)] | !Skin.HasSetting(onetouch)</visible>
 				</item>
@@ -134,6 +135,7 @@
 					<onclick>Skin.SetBool(videotv)</onclick>
 					<onclick>Skin.Reset(videomovies)</onclick>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+					<visible>library.hascontent(tvshows)</visible>
 					<visible>!Skin.HasSetting(notvshows)</visible>
 					<visible>[Skin.HasSetting(onetouch) + Skin.HasSetting(nosubmenutv)] | !Skin.HasSetting(onetouch)</visible>
 				</item>
@@ -149,6 +151,7 @@
 					<label>31017</label>
 					<include>BackgroundVarsWeather</include>
 					<onclick>xbmc.activatewindow(2600)</onclick>
+					<visible>System.HasNetwork</visible>
 					<visible>Skin.HasSetting(weather)</visible>
 				</item>
 				<item id="9">
@@ -192,6 +195,7 @@
 					<label>31209</label>
 					<include>BackgroundVarsSignOut</include>
 					<onclick>System.LogOff</onclick>
+					<visible>System.HasLoginScreen</visible>
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>
 				<item id="22">
@@ -283,6 +287,7 @@
 					<include>BackgroundVarsMovies</include>
 					<onclick>Skin.SetString(custom,CustomMovies)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<visible>library.hascontent(movies)</visible>
 					<visible>!Skin.HasSetting(nomovies)</visible>
 				</item>
 				<item id="7">
@@ -291,6 +296,7 @@
 					<include>BackgroundVarsTV</include>
 					<onclick>Skin.SetString(custom,CustomTV)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<visible>library.hascontent(tvshows)</visible>
 					<visible>!Skin.HasSetting(notvshows)</visible>
 				</item>
 				<item id="8">
@@ -320,9 +326,10 @@
 				<item id="10">
 					<description>Weather</description>
 					<label>31017</label>
-					<include>BackgroundVarsVideo</include>
+					<include>BackgroundVarsWeather</include>
 					<onclick>Skin.SetString(custom,CustomWeather)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<visible>System.HasNetwork</visible>
 					<visible>Skin.HasSetting(weather)</visible>
 				</item>
 				<item id="13">
@@ -346,6 +353,7 @@
 					<include>BackgroundVarsSignOut</include>
 					<onclick>Skin.SetString(custom,CustomSignOut)</onclick>
 					<onclick>SetFocus(92)</onclick>
+					<visible>System.HasLoginScreen</visible>
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>
 				<item id="22">
@@ -451,12 +459,14 @@
 					<label>31013</label>
 					<include>BackgroundVarsMovies</include>
 					<onclick>Skin.SetBool(nomovies)</onclick>
+					<visible>library.hascontent(movies)</visible>
 					<visible>!Skin.HasSetting(nomovies)</visible>
 				</item>
 				<item id="6">
 					<label2>31013</label2>
 					<include>BackgroundVarsMovies</include>
 					<onclick>Skin.Reset(nomovies)</onclick>
+					<visible>library.hascontent(movies)</visible>
 					<visible>Skin.HasSetting(nomovies)</visible>
 				</item>
 				<item id="7">
@@ -464,6 +474,7 @@
 					<label>31014</label>
 					<include>BackgroundVarsTV</include>
 					<onclick>Skin.SetBool(notvshows)</onclick>
+					<visible>library.hascontent(tvshows)</visible>
 					<visible>!Skin.HasSetting(notvshows)</visible>
 				</item>
 				<item id="7">
@@ -486,16 +497,19 @@
 					<visible>Skin.HasSetting(novideos)</visible>
 				</item>
 				<item id="10">
+					<description>Weather On</description>
 					<label>31017</label>
 					<include>BackgroundVarsWeather</include>
 					<onclick>Skin.Reset(weather)</onclick>
+					<visible>System.HasNetwork</visible>
 					<visible>Skin.HasSetting(weather)</visible>
 				</item>
 				<item id="10">
-					<description>My Pictures</description>
+					<description>Weather Off</description>
 					<label2>31017</label2>
 					<include>BackgroundVarsWeather</include>
 					<onclick>Skin.SetBool(weather)</onclick>
+					<visible>System.HasNetwork</visible>
 					<visible>!Skin.HasSetting(weather)</visible>
 				</item>
 				<item id="24">
@@ -557,6 +571,7 @@
 					<label>31209</label>
 					<include>BackgroundVarsSignOut</include>
 					<onclick>Skin.Reset(signout)</onclick>
+					<visible>System.HasLoginScreen</visible>
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>
 				<item id="23">
