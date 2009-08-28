@@ -19,8 +19,7 @@
 	<include name="ListLabel_Sub">
 		<posx>45</posx>
 		<posy>22</posy>
-		<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)">ListLabel_WidthMusic</include>
-		<include condition="![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Container.Content(episodes)]">ListLabel_Width</include>
+		<width>490</width>
 		<height>41</height>
 		<font>Font_ListSub</font>
 		<align>left</align>
@@ -150,7 +149,7 @@
 				<width>44</width>
 				<height>579</height>
 				<texture>list/listpanel_detailwide.png</texture>
-				<visible>[Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(movieslistfull)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(movieslistfull)] | Window.IsActive(500) | Window.IsActive(501) | [[Container.Content(albums)|Container.Content(songs)]] + !Skin.HasSetting(musiclistfull)]</visible>
+				<visible>[Window.IsActive(25) + Container.Content(movies) + !Skin.HasSetting(movieslistfull)] | [Window.IsActive(25) + Container.Content(movies) + !Skin.HasSetting(movieslistfull)] | Window.IsActive(500) | Window.IsActive(501) | [[Container.Content(albums)|Container.Content(songs)]] + !Skin.HasSetting(musiclistfull)]</visible>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 			<control type="image">
@@ -159,7 +158,7 @@
 				<width>97</width>
 				<height>567</height>
 				<texture>list/listpanel_detailwide.png</texture>
-				<visible>Window.IsActive(2) | [Window.IsActive(25) + Control.IsVisible(6201)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + Skin.HasSetting(movieslistfull)] | [[Container.Content(albums)|Container.Content(songs)] + Skin.HasSetting(musiclistfull)]</visible>
+				<visible>Window.IsActive(2) | [Window.IsActive(25) + Control.IsVisible(6201)] | [Window.IsActive(25) + Container.Content(movies) + Skin.HasSetting(movieslistfull)] | [[Container.Content(albums)|Container.Content(songs)] + Skin.HasSetting(musiclistfull)]</visible>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 		<!-- Other -->
@@ -298,7 +297,7 @@
 					</control>
 
 				</focusedlayout>
-				<itemlayout height="40">
+				<itemlayout condition="!Skin.HasSetting(pictureslistfull)" height="40">
 					<control type="image">
 						<posx>12</posx>
 						<posy>39</posy>
@@ -337,7 +336,7 @@
 						<visible>!Container.Content(albums)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout condition="!Skin.HasSetting(pictureslistfull)" height="40">
 					<control type="image">
 						<posx>12</posx>
 						<posy>39</posy>
@@ -992,18 +991,21 @@
 					</control>
 				<!-- Main Sub -->
 					<control type="label" id="623">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
 						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
 						<visible>!IsEmpty(ListItem.Duration)+!IsEmpty(ListItem.Director)]</visible>
 					</control>
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
 						<label>DIRECTOR: $INFO[ListItem.Director]</label>
 						<visible>IsEmpty(ListItem.Duration)+!IsEmpty(ListItem.Director)</visible>
 					</control>
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
 						<label>$INFO[ListItem.Duration]</label>
@@ -1073,6 +1075,7 @@
 					</control>
 				<!-- Main Sub -->
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
 						<include>List_ButtonFocusFade_2</include>
@@ -1080,6 +1083,7 @@
 						<visible>!IsEmpty(ListItem.Duration)+!IsEmpty(ListItem.Director)]</visible>
 					</control>
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolorfocus</include>
 						<include>List_ButtonFocusFade_1</include>
@@ -1087,6 +1091,7 @@
 						<visible>!IsEmpty(ListItem.Duration)+!IsEmpty(ListItem.Director)]</visible>
 					</control>
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
 						<include>List_ButtonFocusFade_2</include>
@@ -1094,6 +1099,7 @@
 						<visible>IsEmpty(ListItem.Duration)+!IsEmpty(ListItem.Director)</visible>
 					</control>
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolorfocus</include>
 						<include>List_ButtonFocusFade_1</include>
@@ -1101,6 +1107,7 @@
 						<visible>IsEmpty(ListItem.Duration)+!IsEmpty(ListItem.Director)</visible>
 					</control>
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
 						<include>List_ButtonFocusFade_2</include>
@@ -1108,6 +1115,7 @@
 						<visible>!IsEmpty(ListItem.Duration)+IsEmpty(ListItem.Director)</visible>
 					</control>
 					<control type="label">
+						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolorfocus</include>
 						<include>List_ButtonFocusFade_1</include>
