@@ -534,8 +534,8 @@
 				<include>Animation_CommonFade</include>
 				<onclick>Skin.Reset(CustomMusic)</onclick>
 				<onclick>Skin.Reset(CustomMusicFolder)</onclick>
-				<onclick>Skin.Reset(CustomGames)</onclick>
-				<onclick>Skin.Reset(CustomGamesFolder)</onclick>
+				<onclick>Skin.Reset(CustomPrograms)</onclick>
+				<onclick>Skin.Reset(CustomProgramsFolder)</onclick>
 				<onclick>Skin.Reset(CustomPictures)</onclick>
 				<onclick>Skin.Reset(CustomPicturesFolder)</onclick>
 				<onclick>Skin.Reset(CustomMovies)</onclick>

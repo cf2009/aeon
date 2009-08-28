@@ -86,29 +86,12 @@
 					<visible>!Skin.HasSetting(nomusic)</visible>
 					<visible>[Skin.HasSetting(onetouch) + Skin.HasSetting(nosubmenumusic)] | !Skin.HasSetting(onetouch)</visible>
 				</item>
-				<item id="1">
-					<description>Music</description>
-					<label>31010</label>
-					<include>BackgroundVarsMusic</include>
-					<onclick>SetFocus(941)</onclick>
-					<visible>!Skin.HasSetting(nomusic)</visible>
-					<visible>Skin.HasSetting(onetouch) + !Skin.HasSetting(nosubmenumusic)</visible>
-				</item>
 				<item id="2">
-					<description>Games MyPrograms Link</description>
-					<label>31011</label>
-					<include>BackgroundVarsGames</include>
+					<description>Programs</description>
+					<label>0</label>
+					<include>BackgroundVarsPrograms</include>
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
-					<visible>!Skin.HasSetting(nogames)</visible>
-					<visible>!Skin.HasSetting(launcherforgames)</visible>
-				</item>
-				<item id="2">
-					<description>Games Launcher Link</description>
-					<label>31011</label>
-					<include>BackgroundVarsGames</include>
-					<onclick>XBMC.ActivateWindow(1,plugin://programs/Launcher/)</onclick>
-					<visible>!Skin.HasSetting(nogames)</visible>
-					<visible>Skin.HasSetting(launcherforgames)</visible>
+					<visible>!Skin.HasSetting(noPrograms)</visible>
 				</item>
 				<item id="5">
 					<description>Pictures</description>
@@ -266,12 +249,12 @@
 					<visible>!Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="2">
-					<description>Games</description>
-					<label>31011</label>
-					<include>BackgroundVarsGames</include>
-					<onclick>Skin.SetString(custom,CustomGames)</onclick>
+					<description>Programs</description>
+					<label>0</label>
+					<include>BackgroundVarsPrograms</include>
+					<onclick>Skin.SetString(custom,CustomPrograms)</onclick>
 					<onclick>SetFocus(92)</onclick>
-					<visible>!Skin.HasSetting(nogames)</visible>
+					<visible>!Skin.HasSetting(noPrograms)</visible>
 				</item>
 				<item id="5">
 					<description>Pictures</description>
@@ -432,16 +415,16 @@
 					<visible>Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="2">
-					<label>31011</label>
-					<include>BackgroundVarsGames</include>
-					<onclick>Skin.SetBool(nogames)</onclick>
-					<visible>!Skin.HasSetting(nogames)</visible>
+					<label>0</label>
+					<include>BackgroundVarsPrograms</include>
+					<onclick>Skin.SetBool(noPrograms)</onclick>
+					<visible>!Skin.HasSetting(noPrograms)</visible>
 				</item>
 				<item id="2">
-					<label2>31011</label2>
-					<include>BackgroundVarsGames</include>
-					<onclick>Skin.Reset(nogames)</onclick>
-					<visible>Skin.HasSetting(nogames)</visible>
+					<label2>0</label2>
+					<include>BackgroundVarsPrograms</include>
+					<onclick>Skin.Reset(noPrograms)</onclick>
+					<visible>Skin.HasSetting(noPrograms)</visible>
 				</item>
 				<item id="5">
 					<label>31012</label>

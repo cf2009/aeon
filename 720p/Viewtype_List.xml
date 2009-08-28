@@ -1528,7 +1528,7 @@
 				<texture diffuse="list/list_movieicon_mask.png">defaultVideo.png</texture>
 				<info>ListItem.Icon</info>
 				<bordertexture border="-28">list/list_movieicon_frame.png</bordertexture>
-				<visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
+				<visible>[Window.IsActive(1) + !Skin.HasSetting(listProgramssquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
 			</control>
 			<control type="image">
 				<posy>510</posy>
@@ -1536,7 +1536,7 @@
 				<height>511</height>
 				<fadetime>400</fadetime>
 				<texture flipy="true" diffuse="list/list_movieicon_flipmask.png">$INFO[ListItem.Icon]</texture>
-				<visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
+				<visible>[Window.IsActive(1) + !Skin.HasSetting(listProgramssquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
 			</control>
 			<!--control type="largeimage">
 				<width>346</width>
@@ -1557,7 +1557,7 @@
 				<height>511</height>
 				<fadetime>400</fadetime>
 				<texture>list/list_movieicon_glass.png</texture>
-				<visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
+				<visible>[Window.IsActive(1) + !Skin.HasSetting(listProgramssquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
 			</control>
 			<!--control type="largeimage">
 				<width>346</width>
@@ -1573,7 +1573,7 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<texture diffuse="list/list_musicicon_mask.png">common/black.png</texture>
 				<bordertexture border="-32">list/list_musicicon_frame.png</bordertexture>
-				<visible>[Window.IsActive(1) + Skin.HasSetting(listgamessquare)] | Window.IsActive(2) | Container.Content(episodes) | [Window.IsActive(24) + Skin.HasSetting(listvideosquare)]</visible>
+				<visible>[Window.IsActive(1) + Skin.HasSetting(listProgramssquare)] | Window.IsActive(2) | Container.Content(episodes) | [Window.IsActive(24) + Skin.HasSetting(listvideosquare)]</visible>
 			</control>
 			<control type="image">
 				<posy>165</posy>
@@ -1582,7 +1582,7 @@
 				<fadetime>400</fadetime>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<texture diffuse="list/list_musicicon_mask.png">$INFO[ListItem.Icon]</texture>
-				<visible>[Window.IsActive(1) + Skin.HasSetting(listgamessquare)] | Window.IsActive(2) | Container.Content(episodes) | [Window.IsActive(24) + Skin.HasSetting(listvideosquare)]</visible>
+				<visible>[Window.IsActive(1) + Skin.HasSetting(listProgramssquare)] | Window.IsActive(2) | Container.Content(episodes) | [Window.IsActive(24) + Skin.HasSetting(listvideosquare)]</visible>
 			</control>
 			<control type="image">
 				<posy>165</posy>
@@ -1590,7 +1590,7 @@
 				<height>346</height>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<texture flipy="true" diffuse="list/list_musicicon_flipmask.png">common/black.png</texture>
-				<visible>[Window.IsActive(1) + Skin.HasSetting(listgamessquare)] | Window.IsActive(2) | Container.Content(episodes) | [Window.IsActive(24) + Skin.HasSetting(listvideosquare)]</visible>
+				<visible>[Window.IsActive(1) + Skin.HasSetting(listProgramssquare)] | Window.IsActive(2) | Container.Content(episodes) | [Window.IsActive(24) + Skin.HasSetting(listvideosquare)]</visible>
 			</control>
 			<control type="image">
 				<posy>165</posy>

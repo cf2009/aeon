@@ -125,7 +125,6 @@
 				<visible>Control.HasFocus(8) | ControlGroup(12).HasFocus</visible>
 			</control>
 			<control type="label">
-				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31237</label>
 				<textcolor>FFf5f5f5</textcolor>
@@ -133,7 +132,6 @@
 				<visible>![Control.HasFocus(8) | ControlGroup(12).HasFocus]</visible>
 			</control>
 			<control type="label">
-				<description>My Programs Sub Unfocused</description>
 				<posy>148</posy>
 				<label>31237</label>
 				<textcolor>FF262728</textcolor>
@@ -279,12 +277,6 @@
 				<label>31295</label>
 				<onclick>Skin.ToggleSetting(bighome)</onclick>
 				<selected>Skin.HasSetting(bighome)</selected>
-			</control>
-			<control type="radiobutton" id="502">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31253</label>
-				<onclick>Skin.ToggleSetting(launcherforgames)</onclick>
-				<selected>Skin.HasSetting(launcherforgames)</selected>
 			</control>
 		</control>
 		<control type="grouplist" id="12">

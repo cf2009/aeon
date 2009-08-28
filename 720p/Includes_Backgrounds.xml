@@ -40,11 +40,11 @@
 		<imagepath>special://skin/media/backdrops/default_music/default.png</imagepath>
 		<info>Skin.String(CustomMusic)</info>
 	</include>
-	<include name="BackgroundVarsGames">
-		<icon>special://skin/media/backdrops/default_games/default.png</icon>
-		<thumb>$INFO[Skin.String(CustomGames)]</thumb>
-		<imagepath>special://skin/media/backdrops/default_games/default.png</imagepath>
-		<info>Skin.String(CustomGames)</info>
+	<include name="BackgroundVarsPrograms">
+		<icon>special://skin/media/backdrops/default_programs/default.png</icon>
+		<thumb>$INFO[Skin.String(CustomPrograms)]</thumb>
+		<imagepath>special://skin/media/backdrops/default_programs/default.png</imagepath>
+		<info>Skin.String(CustomPrograms)</info>
 	</include>
 	<include name="BackgroundVarsPictures">
 		<icon>special://skin/media/backdrops/default_pictures/default.png</icon>
