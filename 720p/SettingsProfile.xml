@@ -3,7 +3,7 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="multiimage">
-			<include>FullScreenDimensions</include>
+			<include>BackgroundVarsGlobal</include>
 			<imagepath>backdrops/default_settings</imagepath>
 			<info>Skin.String(CustomSettings)</info>
 		</control>
