@@ -800,7 +800,11 @@
 				<info>Player.Progress</info>
 			</control>
 			<control type="label">
-				<include>List_NowPlaying</include>
+				<posx>960</posx>
+				<width>200</width>
+				<height>18</height>
+				<scroll>false</scroll>
+				<font>Font_ListPlaying</font>
 				<posy>595</posy>
 				<textcolor>a8FFFFFF</textcolor>
 				<scroll>true</scroll>

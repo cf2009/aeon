@@ -48,11 +48,11 @@
 					<onclick>SetFocus(69)</onclick>
 				</control>
 				<include>Objects_FlattenFlowButton</include>
-				<control type="button" id="3">
+				<control type="button" id="901">
 					<label>103</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
-				<control type="togglebutton" id="940">
+				<control type="togglebutton" id="902">
 					<include>Objects_MediaMenuButton</include>
 					<include>Objects_ListLayoutStrings</include>
 					<usealttexture>Skin.HasSetting(musiclistfull)</usealttexture>
@@ -61,12 +61,12 @@
 					<visible>Control.IsVisible(50)</visible>
 				</control>
 				<include>Objects_PanelDensityButton</include>
-				<control type="button" id="915">
+				<control type="button" id="903">
 					<label>589</label>
 					<include>Objects_MediaMenuButton</include>
 					<onclick>PlayerControl(Partymode(music))</onclick>
 				</control>
-				<control type="togglebutton" id="901">
+				<control type="togglebutton" id="904">
 					<include>Objects_MediaMenuButton</include>
 					<include>Objects_FanartToggleStrings</include>
 					<usealttexture>Skin.HasSetting(nomusicfanart)</usealttexture>
@@ -76,7 +76,7 @@
 				</control>
 				<include>Objects_WallGridButton</include>
 				<include>Objects_WallBackdropButton</include>
-				<control type="button" id="5">
+				<control type="button" id="905">
 					<label>31057</label>
 					<include>Objects_MediaMenuButton</include>
 					<onclick>XBMC.ReplaceWindow(MyMusicFiles)</onclick>

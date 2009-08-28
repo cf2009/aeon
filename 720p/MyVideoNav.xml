@@ -2,6 +2,14 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
+	<control type="image" id="6201">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>0</width>
+		<height>0</height>
+		<texture>-</texture>
+		<visible>Container.Content(tvshows)|Container.Content(episodes)|Container.Content(seasons)</visible>
+	</control>
 	<control type="image" id="109">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -15,7 +23,7 @@
 	<include condition="Skin.HasSetting(videomovies)">MediaBackdropsMovies</include>
 	<control type="largeimage" id="102">
 		<include>FullScreenDimensions</include>
-        <visible>[Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image))</visible>
+		<visible>[Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image))</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
@@ -38,7 +46,6 @@
 		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
-		<include>ListFade</include>
 		<include>Viewtype_Wall</include>
 		<include>Furniture_WallTime</include>
 		<include>Furniture_WallRSS</include>
