@@ -6,6 +6,7 @@
 		<height>41</height>
 		<font>Font_List</font>
 		<aligny>center</aligny>
+		<animation effect="slide" start="0,10" end="0,10" time="0" condition="Container.Content(seasons)">Conditional</animation>
 	</include>
 	<include name="ListLabel_MainSmall">
 		<posx>45</posx>
@@ -116,6 +117,7 @@
 			<colordiffuse>66FFFFFF</colordiffuse>
 		</control>
 		<control type="group">
+			<include>Animation_CommonFade</include>
 			<control type="image">
 				<posx>60</posx>
 				<posy>73</posy>
@@ -161,9 +163,9 @@
 				<visible>Window.IsActive(2) | [Window.IsActive(25) + Control.IsVisible(6201)] | [Window.IsActive(25) + Container.Content(movies) + Skin.HasSetting(movieslistfull)] | [[Container.Content(albums)|Container.Content(songs)] + Skin.HasSetting(musiclistfull)]</visible>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
-		<!-- Other -->
+		<!-- Default -->
 			<control type="list" id="50">
-				<visible>![Container.Content(artists)|Container.Content(albums)|Container.Content(songs) | Container.Content(tvshows)|Container.Content(episodes)|Container.Content(seasons)|Container.Content(movies)]</visible>
+				<visible>![Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(tvshows)|Container.Content(episodes)|Container.Content(seasons)|Container.Content(movies)]</visible>
 				<viewtype label="31752">list</viewtype>
 				<posx>60</posx>
 				<posy>105</posy>
@@ -175,6 +177,201 @@
 				<onright>61</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
+				<itemlayout height="40">
+					<control type="image">
+						<posx>12</posx>
+						<posy>39</posy>
+						<height>1</height>
+						<width>739</width>
+						<texture>list/listpanel_line.png</texture>
+					</control>
+				<!-- Track -->
+					<control type="label">
+						<include>ListLabel_TrackSmall</include>
+						<include>listcolornofocus</include>
+						<label>$INFO[ListItem.TrackNumber]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501)]</visible>
+					</control>
+				<!-- Main -->
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
+						<visible>!IsEmpty(ListItem.Artist) + !IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>
+						<visible>IsEmpty(ListItem.Artist) | IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
+						<visible>Container.Content(albums) + !IsEmpty(ListItem.Label2)</visible>
+					</control>
+				<!-- Detail -->
+					<control type="label">
+						<include>ListLabel_DetailSmall</include>
+						<include>detailcolornofocus</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+						<visible>!Container.Content(albums)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="image">
+						<posx>12</posx>
+						<posy>39</posy>
+						<height>1</height>
+						<width>739</width>
+						<texture>list/listpanel_line.png</texture>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>-5</posy>
+						<width>743</width>
+						<height>50</height>
+						<texture>list/listpanel_selectbar.png</texture>
+						<include>List_ButtonFocusFade_1</include>
+					</control>
+				<!-- Track -->
+					<control type="label">
+						<include>ListLabel_TrackSmall</include>
+						<include>listcolornofocus</include>
+						<include>List_ButtonFocusFade_2</include>
+						<info>ListItem.TrackNumber</info>
+						<visible>[Window.IsActive(500) | Window.IsActive(501)]</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_TrackSmall</include>
+						<include>listcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<info>ListItem.TrackNumber</info>
+						<visible>[Window.IsActive(500) | Window.IsActive(501)]</visible>
+					</control>
+				<!-- Main -->
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<include>List_ButtonFocusFade_2</include>
+						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501)] + !IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
+						<visible>[Window.IsActive(500) | Window.IsActive(501)] + !IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<include>List_ButtonFocusFade_2</include>
+						<info>ListItem.Label</info>
+						<visible>IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<info>ListItem.Label</info>
+						<visible>IsEmpty(ListItem.Artist)</visible>
+					</control>
+				<!-- Detail -->
+					<control type="label">
+						<include>ListLabel_DetailSmall</include>
+						<include>detailcolornofocus</include>
+						<include>List_ButtonFocusFade_2</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<include>ListLabel_DetailSmall</include>
+						<include>detailcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+					</control>
+				</focusedlayout>
+			</control>
+		<!-- Pictures -->
+			<control type="list" id="50">
+				<visible>Window.IsActive(2)</visible>
+				<viewtype label="31752">list</viewtype>
+				<posx>60</posx>
+				<posy>105</posy>
+				<width>771</width>
+				<height>520</height>
+				<pagecontrol>61</pagecontrol>
+				<scrolltime>0</scrolltime>
+				<onleft>7000</onleft>
+				<onright>61</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<itemlayout condition="!Skin.HasSetting(pictureslistfull)" height="40">
+					<control type="image">
+						<posx>12</posx>
+						<posy>39</posy>
+						<height>1</height>
+						<width>739</width>
+						<texture>list/listpanel_line.png</texture>
+					</control>
+				<!-- Main -->
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<info>ListItem.Label</info>
+					</control>
+				<!-- Detail -->
+					<control type="label">
+						<include>ListLabel_DetailSmall</include>
+						<include>detailcolornofocus</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="!Skin.HasSetting(pictureslistfull)" height="40">
+					<control type="image">
+						<posx>12</posx>
+						<posy>39</posy>
+						<height>1</height>
+						<width>739</width>
+						<texture>list/listpanel_line.png</texture>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>-5</posy>
+						<width>743</width>
+						<height>50</height>
+						<texture>list/listpanel_selectbar.png</texture>
+						<include>List_ButtonFocusFade_1</include>
+					</control>
+				<!-- Main -->
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<include>List_ButtonFocusFade_2</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<info>ListItem.Label</info>
+					</control>
+				<!-- Detail -->
+					<control type="label">
+						<include>ListLabel_DetailSmall</include>
+						<include>detailcolornofocus</include>
+						<include>List_ButtonFocusFade_2</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<include>ListLabel_DetailSmall</include>
+						<include>detailcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+					</control>
+				</focusedlayout>
 				<itemlayout condition="Skin.HasSetting(pictureslistfull)" height="65">
 					<control type="image">
 						<posx>12</posx>
@@ -183,29 +380,29 @@
 						<width>739</width>
 						<texture>list/listpanel_line.png</texture>
 					</control>
+				<!-- Main -->
 					<control type="label">
 						<include>ListLabel_Main</include>
 						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
 					</control>
-					<control type="label" id="623">
+				<!-- Main Sub -->
+					<control type="label">
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
 						<label>$INFO[ListItem.PictureDateTime]</label>
-						<visible>!IsEmpty(ListItem.PictureDateTime) + Window.IsActive(2)</visible>
+						<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
 					</control>
 				<!-- Detail -->
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
-						<visible>Window.IsActive(2)</visible>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
-						<visible>Window.IsActive(2)</visible>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
 						<animation type="Conditional" condition="true">
 							<effect type="slide" start="0,22" end="0,22" time="0" />
 							<effect type="fade" start="70" end="70" time="0" />
@@ -229,7 +426,7 @@
 						<include>List_ButtonFocusFade_1</include>
 						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
-					
+				<!-- Main -->
 					<control type="label">
 						<include>ListLabel_Main</include>
 						<include>listcolornofocus</include>
@@ -242,43 +439,38 @@
 						<info>ListItem.Label</info>
 						<include>List_ButtonFocusFade_1</include>
 					</control>
-					
-					<control type="label" id="623">
+				<!-- Main Sub -->
+					<control type="label">
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
-						<label>$INFO[ListItem.PictureDateTime]</label>
-						<visible>!IsEmpty(ListItem.PictureDateTime) + Window.IsActive(2)</visible>
 						<include>List_ButtonFocusFade_2</include>
+						<label>$INFO[ListItem.PictureDateTime]</label>
+						<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
 					</control>
-					<control type="label" id="623">
+					<control type="label">
 						<include>ListLabel_Sub</include>
 						<include>subcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
 						<label>$INFO[ListItem.PictureDateTime]</label>
-						<visible>!IsEmpty(ListItem.PictureDateTime) + Window.IsActive(2)</visible>
-						<include>List_ButtonFocusFade_1</include>
+						<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
 					</control>
-					
+				<!-- Detail -->
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
-						<visible>Window.IsActive(2)</visible>
 						<include>List_ButtonFocusFade_2</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolorfocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
-						<visible>Window.IsActive(2)</visible>
 						<include>List_ButtonFocusFade_1</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
 					</control>
-					
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
-						<visible>Window.IsActive(2)</visible>
-						<include>List_ButtonFocusFade_2</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
 						<animation type="Conditional" condition="true">
 							<effect type="slide" start="0,22" end="0,22" time="0" />
 							<effect type="fade" start="70" end="70" time="0" />
@@ -287,131 +479,15 @@
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolorfocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
-						<visible>Window.IsActive(2)</visible>
 						<include>List_ButtonFocusFade_1</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
 						<animation type="Conditional" condition="true">
 							<effect type="slide" start="0,22" end="0,22" time="0" />
 							<effect type="fade" start="70" end="70" time="0" />
 						</animation>
 					</control>
-
 				</focusedlayout>
-				<itemlayout condition="!Skin.HasSetting(pictureslistfull)" height="40">
-					<control type="image">
-						<posx>12</posx>
-						<posy>39</posy>
-						<height>1</height>
-						<width>739</width>
-						<texture>list/listpanel_line.png</texture>
-					</control>
-					<control type="label">
-						<include>ListLabel_TrackSmall</include>
-						<include>listcolornofocus</include>
-						<label>$INFO[ListItem.TrackNumber]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501)]</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501)] + !IsEmpty(ListItem.Artist)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
-						<info>ListItem.Label</info>
-						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
-						<label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
-						<visible>Container.Content(albums) + !IsEmpty(ListItem.Label2)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailSmall</include>
-						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-						<visible>!Container.Content(albums)</visible>
-					</control>
-				</itemlayout>
-				<focusedlayout condition="!Skin.HasSetting(pictureslistfull)" height="40">
-					<control type="image">
-						<posx>12</posx>
-						<posy>39</posy>
-						<height>1</height>
-						<width>739</width>
-						<texture>list/listpanel_line.png</texture>
-					</control>
-					<control type="image">
-						<posx>8</posx>
-						<posy>-5</posy>
-						<width>743</width>
-						<height>50</height>
-						<texture>list/listpanel_selectbar.png</texture>
-						<include>List_ButtonFocusFade_1</include>
-					</control>
-
-					<control type="label">
-						<include>ListLabel_TrackSmall</include>
-						<include>listcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<info>ListItem.TrackNumber</info>
-						<visible>[Window.IsActive(500) | Window.IsActive(501)]</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_TrackSmall</include>
-						<include>listcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<info>ListItem.TrackNumber</info>
-						<visible>[Window.IsActive(500) | Window.IsActive(501)]</visible>
-					</control>
-					
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501)] + !IsEmpty(ListItem.Artist)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501)] + !IsEmpty(ListItem.Artist)</visible>
-					</control>
-					
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<info>ListItem.Label</info>
-						<visible>IsEmpty(ListItem.Artist)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<info>ListItem.Label</info>
-						<visible>IsEmpty(ListItem.Artist)</visible>
-					</control>
-					
-					<control type="label">
-						<include>ListLabel_DetailSmall</include>
-						<include>detailcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailSmall</include>
-						<include>detailcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-					</control>
-				</focusedlayout>
-				</control>
+			</control>
 		<!-- Music -->
 			<control type="list" id="50">
 				<visible>Container.Content(artists)|Container.Content(albums)|Container.Content(songs)</visible>
@@ -477,7 +553,7 @@
 					<control type="label">
 						<include>ListLabel_DetailSmall</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 						<visible>Container.Content(songs)</visible>
 					</control>
 				</itemlayout>
@@ -546,7 +622,7 @@
 						<include>ListLabel_DetailSmall</include>
 						<include>detailcolorfocus</include>
 						<include>List_ButtonFocusFade_1</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 						<visible>Container.Content(songs)</visible>
 					</control>
 				</focusedlayout>
@@ -612,13 +688,13 @@
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 						<visible>Container.Content(albums)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 						<visible>Container.Content(songs)</visible>
 					</control>
 					<control type="image">
@@ -773,14 +849,14 @@
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
 						<include>List_ButtonFocusFade_2</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 						<visible>Container.Content(songs)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolorfocus</include>
 						<include>List_ButtonFocusFade_1</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
 						<visible>Container.Content(songs)</visible>
 					</control>
 					<control type="image">
@@ -829,41 +905,24 @@
 						<width>739</width>
 						<texture>list/listpanel_line.png</texture>
 					</control>
-					<control type="label">
-						<include>ListLabel_TrackSmall</include>
-						<include>listcolornofocus</include>
-						<label>$INFO[ListItem.TrackNumber]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)]</visible>
-					</control>
+				<!-- Main -->
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
 						<include>listcolornofocus</include>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)] + !IsEmpty(ListItem.Artist)</visible>
+						<info>ListItem.Title</info>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
 						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
-						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
-						<label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
-						<visible>Container.Content(albums) + !IsEmpty(ListItem.Label2)</visible>
-					</control>
+				<!-- Detail -->
 					<control type="label">
 						<include>ListLabel_DetailSmall</include>
 						<include>detailcolornofocus</include>
 						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
-						<visible>Container.Content(movies)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailSmall</include>
-						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-						<visible>![Container.Content(movies) | Container.Content(albums)]</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Skin.HasSetting(movieslistfull)" height="40">
@@ -881,91 +940,48 @@
 						<height>50</height>
 						<texture>list/listpanel_selectbar.png</texture>
 						<include>List_ButtonFocusFade_1</include>
-						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+					</control>
+				<!-- Main -->
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolornofocus</include>
+						<include>List_ButtonFocusFade_2</include>
+						<info>ListItem.Title</info>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<include>ListLabel_MainSmall</include>
+						<include>listcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<info>ListItem.Title</info>
+						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
 						<include>listcolornofocus</include>
 						<include>List_ButtonFocusFade_2</include>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)] + !IsEmpty(ListItem.Artist)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_TrackSmall</include>
-						<include>listcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<label>$INFO[ListItem.TrackNumber]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)]</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
 						<info>ListItem.Label</info>
-						<include>List_ButtonFocusFade_2</include>
-						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
+						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_MainSmall</include>
-						<include>listcolornofocus</include>
-						<label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
-						<include>List_ButtonFocusFade_2</include>
-						<visible>Container.Content(albums) + !IsEmpty(ListItem.Label2)</visible>
+						<include>listcolorfocus</include>
+						<include>List_ButtonFocusFade_1</include>
+						<info>ListItem.Label</info>
+						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
+				<!-- Detail -->
 					<control type="label">
 						<include>ListLabel_DetailSmall</include>
 						<include>detailcolornofocus</include>
 						<include>List_ButtonFocusFade_2</include>
 						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
-						<visible>!Control.IsVisible(76) + Container.Content(movies)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailSmall</include>
-						<include>detailcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-						<visible>!Control.IsVisible(76) + ![Container.Content(movies) | Container.Content(albums)]</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<label>$INFO[ListItem.Artist] - $INFO[ListItem.Title]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)] + !IsEmpty(ListItem.Artist)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_TrackSmall</include>
-						<include>listcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<label>$INFO[ListItem.TrackNumber]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Container.Content(songs)]</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolorfocus</include>
-						<info>ListItem.Label</info>
-						<include>List_ButtonFocusFade_1</include>
-						<visible>[![Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + IsEmpty(ListItem.Artist)] | Container.Content(artists)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_MainSmall</include>
-						<include>listcolorfocus</include>
-						<label>$INFO[ListItem.Label2] - $INFO[ListItem.Label]</label>
-						<include>List_ButtonFocusFade_1</include>
-						<visible>Container.Content(albums) + !IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailSmall</include>
 						<include>detailcolorfocus</include>
 						<include>List_ButtonFocusFade_1</include>
 						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
-						<visible>!Control.IsVisible(76) + Container.Content(movies)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailSmall</include>
-						<include>detailcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
-						<visible>!Control.IsVisible(76) + ![Container.Content(movies) | Container.Content(albums)]</visible>
 					</control>
 				</focusedlayout>
 				<itemlayout condition="Skin.HasSetting(movieslistfull)" height="65">
@@ -990,7 +1006,7 @@
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 				<!-- Main Sub -->
-					<control type="label" id="623">
+					<control type="label">
 						<width>515</width>
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
@@ -1015,7 +1031,7 @@
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 					</control>
 					<control type="image">
 						<description>IMDB rating</description>
@@ -1126,14 +1142,14 @@
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolornofocus</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 						<include>List_ButtonFocusFade_2</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 					</control>
 					<control type="label">
 						<include>ListLabel_DetailFull</include>
 						<include>detailcolorfocus</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 						<include>List_ButtonFocusFade_1</include>
+						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
 					</control>
 					<control type="image">
 						<description>IMDB rating</description>
@@ -1207,7 +1223,7 @@
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolornofocus</include>
-						<label>$INFO[ListItem.Episode] $LOCALIZE[31938]</label>
+						<label>$INFO[ListItem.Episode] $LOCALIZE[31938] - $INFO[ListItem.Property(WatchedEpisodes)] $LOCALIZE[31439]</label>
 						<visible>!IsEmpty(ListItem.Episode) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="label">
@@ -1230,12 +1246,7 @@
 						<visible>!IsEmpty(ListItem.Genre) + Container.Content(tvshows)</visible>
 						<animation effect="slide" start="0,19" end="0,19" time="0" condition="true">Conditional</animation>
 					</control>
-					<control type="label">
-						<include>ListLabel_DetailFull</include>
-						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
-						<visible>Container.Content(movies) | Container.Content(albums)</visible>
-					</control>
+				<!-- Detail -->
 					<control type="label">
 						<posx>656</posx>
 						<posy>10</posy>
@@ -1246,12 +1257,7 @@
 						<aligny>center</aligny>
 						<include>detailcolornofocus</include>
 						<label>[UPPERCASE]$INFO[ListItem.Premiered][/UPPERCASE]</label>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailFull</include>
-						<include>detailcolornofocus</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)</visible>
+						<visible>!Container.Content(seasons)</visible>
 					</control>
 					<control type="image">
 						<description>IMDB rating</description>
@@ -1261,7 +1267,7 @@
 						<height>13</height>
 						<info>ListItem.StarRating</info>
 						<colordiffuse>FF585858</colordiffuse>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>
+						<visible>!Container.Content(seasons)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="85">
@@ -1279,7 +1285,6 @@
 						<height>95</height>
 						<texture>list/listpanel_selectbar.png</texture>
 						<include>List_ButtonFocusFade_1</include>
-						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
 				<!-- Episode -->
 					<control type="label">
@@ -1334,14 +1339,14 @@
 						<include>ListLabel_SubTV</include>
 						<include>subcolornofocus</include>
 						<include>List_ButtonFocusFade_2</include>
-						<label>$INFO[ListItem.Episode] $LOCALIZE[31938]</label>
+						<label>$INFO[ListItem.Episode] $LOCALIZE[31938] - $INFO[ListItem.Property(WatchedEpisodes)] $LOCALIZE[31439]</label>
 						<visible>!IsEmpty(ListItem.Episode) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolorfocus</include>
 						<include>List_ButtonFocusFade_1</include>
-						<label>$INFO[ListItem.Episode,, $LOCALIZE[31938]]</label>
+						<label>$INFO[ListItem.Episode] $LOCALIZE[31938] - $INFO[ListItem.Property(WatchedEpisodes)] $LOCALIZE[31439]</label>
 						<visible>!IsEmpty(ListItem.Episode) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="label">
@@ -1392,20 +1397,6 @@
 					</control>
 				<!-- Detail -->
 					<control type="label">
-						<include>ListLabel_DetailFull</include>
-						<include>detailcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
-						<visible>!Control.IsVisible(76) + [Container.Content(movies) | Container.Content(albums)]</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailFull</include>
-						<include>detailcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<label fallback="-">[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
-						<visible>!Control.IsVisible(76) + [Container.Content(movies) | Container.Content(albums)]</visible>
-					</control>
-					<control type="label">
 						<posx>656</posx>
 						<posy>10</posy>
 						<width>95</width>
@@ -1429,20 +1420,6 @@
 						<include>List_ButtonFocusFade_1</include>
 						<label>[UPPERCASE]$INFO[ListItem.Premiered][/UPPERCASE]</label>
 					</control>
-					<control type="label">
-						<include>ListLabel_DetailFull</include>
-						<include>detailcolornofocus</include>
-						<include>List_ButtonFocusFade_2</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)</visible>
-					</control>
-					<control type="label">
-						<include>ListLabel_DetailFull</include>
-						<include>detailcolorfocus</include>
-						<include>List_ButtonFocusFade_1</include>
-						<label>[UPPERCASE]$INFO[ListItem.Duration][/UPPERCASE]</label>
-						<visible>[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)</visible>
-					</control>
 					<control type="image">
 						<description>IMDB rating</description>
 						<posx>623</posx>
@@ -1452,7 +1429,7 @@
 						<colordiffuse>FF585858</colordiffuse>
 						<include>List_ButtonFocusFade_2</include>
 						<info>ListItem.StarRating</info>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>
+						<visible>!Container.Content(seasons)</visible>
 					</control>
 					<control type="image">
 						<description>IMDB rating</description>
@@ -1463,7 +1440,7 @@
 						<colordiffuse>FF585858</colordiffuse>
 						<include>List_ButtonFocusFade_1</include>
 						<info>ListItem.StarRating</info>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>
+						<visible>!Container.Content(seasons)</visible>
 					</control>
 				</focusedlayout>
 			</control>
