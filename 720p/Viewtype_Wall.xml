@@ -29,7 +29,7 @@
 				<include>Animation_CommonFade</include>
 				<visible>system.getbool(lookandfeel.enablerssfeeds) | [!system.getbool(lookandfeel.enablerssfeeds) + Player.HasAudio]</visible>
 				<animation type="Conditional" condition="Skin.HasSetting(bighome)">
-					<effect type="slide" start="-500,0" end="-500,0" time="0" /> 
+					<effect type="slide" start="-500,0" end="-500,0" time="0" />
 					<effect type="zoom" start="125" end="125" time="0" />
 				</animation>
 			</control>
@@ -113,7 +113,7 @@
 				<include>Animation_CommonFade</include>
 				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 				<animation type="Conditional" condition="Skin.HasSetting(bighome)">
-					<effect type="slide" start="-500,0" end="-500,0" time="0" /> 
+					<effect type="slide" start="-500,0" end="-500,0" time="0" />
 					<effect type="zoom" start="125" end="125" time="0" />
 				</animation>
 			</control>
@@ -260,7 +260,7 @@
 			<onup>900</onup>
 			<ondown>900</ondown>
 			<orientation>horizontal</orientation>
-			<visible>Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+			<visible>Container.Content(episodes)|Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
 			<itemlayout width="133" height="133" condition="!Skin.HasSetting(smallmusicwall)">
 				<control type="image">
 					<include>WallIconDimensions</include>
@@ -449,7 +449,7 @@
 			<onup>900</onup>
 			<ondown>900</ondown>
 			<orientation>horizontal</orientation>
-			<visible>Window.IsActive(28) | Window.IsActive(1) | Window.IsActive(24)</visible>
+			<visible>Window.IsActive(28) | Window.IsActive(1) | Window.IsActive(24) | [Container.Content(tvshows)|Container.Content(seasons)]</visible>
 			<itemlayout width="123" height="179" condition="!Skin.HasSetting(smallmoviewall)">
 				<control type="image">
 					<include>WallIconMovieDimensions</include>
@@ -463,6 +463,7 @@
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 				</control>
+
 				<control type="image">
 					<include>WallIconMovieDimensions</include>
 					<bordertexture border="-5">wall/wall_movie_nfborder.png</bordertexture>
@@ -484,6 +485,7 @@
 					<fadetime>500</fadetime>
 					<animation effect="zoom" center="62,90" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
+
 				<control type="image">
 					<include>WallIconMovieDimensions</include>
 					<bordertexture border="-3">wall/wall_movie_nfborder.png</bordertexture>
@@ -516,6 +518,7 @@
 					<info>ListItem.Icon</info>
 					<fadetime>500</fadetime>
 				</control>
+
 				<control type="image">
 					<include>WallIconMovieDimensionsSmall</include>
 					<bordertexture border="-4">wall/wall_movie_nfborder.png</bordertexture>
@@ -537,6 +540,7 @@
 					<info>ListItem.Icon</info>
 					<animation effect="zoom" center="44,71" start="100" end="160" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
 				</control>
+
 				<control type="image">
 					<include>WallIconMovieDimensionsSmall</include>
 					<bordertexture border="-5">wall/wall_movie_nfborder.png</bordertexture>
@@ -582,8 +586,8 @@
 			<animation effect="fade" start="100" end="0" time="400" condition="[[Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + Container(53).Column(7)] | [[Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)] + Container(53).Column(8)] + !ControlGroup(7000).HasFocus()">Conditional</animation>
 			<animation effect="slide" start="-18" end="-18" time="0" condition="Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)">Conditional</animation>
 		</control>
-		<include condition="Window.IsActive(20) | Window.IsActive(2) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)">MusicWall</include>
-		<include condition="Window.IsActive(28) | Window.IsActive(1) | Window.IsActive(24) | Window.IsActive(25)">MovieWall</include>
+		<include>MusicWall</include>
+		<include>MovieWall</include>
 		<control type="group">
 			<posx>115</posx>
 			<posy>655</posy>
