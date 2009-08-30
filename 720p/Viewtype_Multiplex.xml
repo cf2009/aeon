@@ -358,10 +358,11 @@
 	<include name="MultiplexInfoPaneTV">
 		<control type="group">
 			<posx>0</posx>
-			<posy>65</posy>
+			<posy>45</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Skin.HasSetting(videotv) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplextvinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplextvinfotrigger)]]</visible>
+			<visible>[Container.Content(tvshows)|Container.Content(seasons)|Container.Content(episodes)]</visible>
+			<visible>Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplextvinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplextvinfotrigger)]]</visible>
 			<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="!Skin.HasSetting(multiplextvinfoon)">WindowOpen</animation>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
@@ -562,18 +563,6 @@
 			</control>
 		</control>
 	</include>
-	<include name="MultiplexMovieVarsWrap">
-		<posx>100</posx>
-		<posy>478</posy>
-		<width>1080</width>
-		<height>300</height>
-	</include>
-	<include name="MultiplexTVVarsWrap">
-		<posx>95</posx>
-		<posy>528</posy>
-		<width>1090</width>
-		<height>300</height>
-	</include>
 	<include name="MultiplexIconDimensionsWrap">
 		<posx>6</posx>
 		<posy>0</posy>
@@ -648,24 +637,31 @@
 			<animation effect="slide" start="0,-30" end="0,-30" time="0" condition="Container.Content(movies)">Conditional</animation>
 		</control>
 		<include condition="Skin.HasSetting(videomovies)">MultiplexInfoPaneMovies</include>
-		<include condition="Skin.HasSetting(videotv)">MultiplexInfoPaneTV</include>
+		<include>MultiplexInfoPaneTV</include>
+	<!-- Default -->
 		<control type="wraplist" id="52">
+			<visible>![Container.Content(tvshows)|Container.Content(episodes)|Container.Content(seasons) | Container.Content(movies)]</visible>
+		</control>
+	<!-- Movies -->
+		<control type="wraplist" id="52">
+			<visible>Container.Content(movies) | [[!Skin.HasSetting(multiplextvdvd)+!Container.Content(episodes)]+[Container.Content(tvshows)|Container.Content(seasons)]]</visible>
 			<viewtype label="31757">wrap</viewtype>
-			<include condition="Skin.HasSetting(videomovies)">MultiplexMovieVarsWrap</include>
-			<include condition="Skin.HasSetting(videotv)">MultiplexTVVarsWrap</include>
+			<posx>100</posx>
+			<posy>478</posy>
+			<width>1080</width>
+			<height>300</height>
 			<pagecontrol>60</pagecontrol>
 			<onleft>52</onleft>
 			<onright>52</onright>
-			<include condition="[Skin.HasSetting(videomovies) + !Skin.HasSetting(multiplexinfotrigger)] | [Skin.HasSetting(videotv) + !Skin.HasSetting(multiplextvinfotrigger)]">MultiplexInfoAutoUp</include>
-			<include condition="[Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexinfotrigger)] | [Skin.HasSetting(videotv) + Skin.HasSetting(multiplextvinfotrigger)]">MultiplexInfoTriggerUp</include>
+			<include condition="!Skin.HasSetting(multiplexinfotrigger)">MultiplexInfoAutoUp</include>
+			<include condition="Skin.HasSetting(multiplexinfotrigger)">MultiplexInfoTriggerUp</include>
 			<ondown>60</ondown>
 			<orientation>horizontal</orientation>
-			<include condition="Skin.HasSetting(videomovies)">MultiplexFocusMovies</include>
-			<include condition="Skin.HasSetting(videotv)">MultiplexFocusTV</include>
+			<include>MultiplexFocusMovies</include>
 			<scrolltime>200</scrolltime>
 			<visible>Window.IsActive(25)</visible>
 			<include>Animation_HideMultiplex</include>
-			<itemlayout width="120" height="300" condition="Container.Content(movies)">
+			<itemlayout width="120" height="300">
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
@@ -695,7 +691,7 @@
 					<info>ListItem.Icon</info>
 				</control>
 			</itemlayout>
-			<focusedlayout width="120" height="300" condition="Container.Content(movies)">
+			<focusedlayout width="120" height="300">
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
@@ -730,7 +726,27 @@
 					<include>MultiplexFocusZoom</include>
 				</control>
 			</focusedlayout>
-			<itemlayout width="219" height="300" condition="Skin.HasSetting(videotv)">
+		</control>
+	<!-- TV -->
+		<control type="wraplist" id="52">
+			<visible>Container.Content(episodes) | [[Container.Content(tvshows)|Container.Content(seasons)]+Skin.HasSetting(multiplextvdvd)]</visible>
+			<viewtype label="31757">wrap</viewtype>
+			<posx>95</posx>
+			<posy>528</posy>
+			<width>1090</width>
+			<height>300</height>
+			<pagecontrol>60</pagecontrol>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<include condition="!Skin.HasSetting(multiplextvinfotrigger)">MultiplexInfoAutoUp</include>
+			<include condition="Skin.HasSetting(multiplextvinfotrigger)">MultiplexInfoTriggerUp</include>
+			<ondown>60</ondown>
+			<orientation>horizontal</orientation>
+			<include>MultiplexFocusTV</include>
+			<scrolltime>200</scrolltime>
+			<visible>Window.IsActive(25)</visible>
+			<include>Animation_HideMultiplex</include>
+			<itemlayout width="219" height="300">
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
 					<texture diffuse="multiplex/multiplex_tvmask.png">common/black.png</texture>
@@ -811,7 +827,7 @@
 					<visible>Container.Content(seasons) + IsEmpty(ListItem.Season)</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout width="219" height="300" condition="Skin.HasSetting(videotv)">
+			<focusedlayout width="219" height="300">
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
 					<texture diffuse="multiplex/multiplex_tvmask.png">common/black.png</texture>

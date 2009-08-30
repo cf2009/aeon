@@ -91,7 +91,7 @@
 	<!-- Left multiplex -->
 		<control type="group">
 			<include>ViewChangeAnimLeft</include>
-			<visible>Window.IsActive(25)</visible>
+			<visible>[Container.Content(tvshows)|Container.Content(episodes)|Container.Content(seasons) | Container.Content(movies)]</visible>
 			<control type="image">
 				<posx>121</posx>
 				<posy>277</posy>
