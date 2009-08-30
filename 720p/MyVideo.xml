@@ -14,7 +14,6 @@
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 	</control>
-	<include>Furniture_WallBackground</include>
 	<control type="group">
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
@@ -22,8 +21,6 @@
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
 		<include>Viewtype_Wall</include>
-		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>
 		<control type="group" id="7000">
 			<control type="image">
 				<include>Objects_MediaLogo</include>

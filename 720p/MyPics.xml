@@ -57,7 +57,6 @@
 		<visible>Control.IsVisible(51) + [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)]</visible>
 		<include>Animation_CommonFade</include>
 	</control>
-	<include>Furniture_WallBackground</include>
 	<control type="group">
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
@@ -68,8 +67,6 @@
 		<include>Viewtype_Showcase</include>
 		<include>Viewtype_List</include>
 		<include>Objects_ShowcaseMenuPanel</include>
-		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>
 		<control type="group" id="7000">
 			<control type="label">
 				<label>31031</label>

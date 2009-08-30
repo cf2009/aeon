@@ -20,7 +20,6 @@
 		<texture>$INFO[container.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
 	</control>
-	<include>Furniture_WallBackground</include>
 	<control type="group">
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
@@ -28,8 +27,6 @@
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
 		<include>Viewtype_Wall</include>
-		<include>Furniture_WallTime</include>
-		<include>Furniture_WallRSS</include>
 		<control type="group">
 			<control type="image">
 				<include>Objects_MediaLogo</include>
