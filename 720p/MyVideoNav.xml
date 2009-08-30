@@ -39,15 +39,18 @@
 		<imagepath>special://skin/media/backdrops/multiplex/curtains.png</imagepath>
 	</control>
 
-	<control type="group">
+	<control type="group" id="25001">
+		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
 		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>
-		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
-		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
 		<include>Viewtype_Wall</include>
-		<control type="group">
+		<include>Viewtype_Showcase</include>
+		<include>Viewtype_List</include>
+		<include condition="!Skin.HasSetting(oldmultiplex)">Viewtype_Multiplex</include>
+		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
+		<control type="group" id="25002">
 			<control type="image">
 				<include>Objects_MediaLogo</include>
 				<texture>windows/logo_movies.png</texture>
@@ -137,10 +140,6 @@
 				<include>Objects_MediaDebugButtons</include>
 			</control>
 		</control>
-		<include>Viewtype_Showcase</include>
-		<include>Viewtype_List</include>
-		<include condition="!Skin.HasSetting(oldmultiplex)">Viewtype_Multiplex</include>
-		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
 	</control>
 	<include condition="Skin.HasSetting(videomovies)">Furniture_ShowcaseMediaFlags</include>
 	<include>Furniture_DarkGradient</include>

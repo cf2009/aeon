@@ -2,23 +2,23 @@
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-	<control type="label">
+	<control type="label" id="0001">
 		<description>Force Weather update on load</description>
 		<posx>0</posx>
 		<posy>-100</posy>
 		<label>$INFO[Weather.Conditions]</label>
 		<font>-</font>
 	</control>
-	<control type="multiimage">
+	<control type="multiimage" id="0002">
 		<include>BackgroundVarsGlobal</include>
 		<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
 		<visible>![Skin.HasSetting(homevis) + Player.HasAudio]|![Skin.HasSetting(videohome) + Player.HasVideo]</visible>
 	</control>
-	<control type="visualisation">
+	<control type="visualisation" id="0003">
 		<include>FullScreenDimensions</include>
 		<visible>Skin.HasSetting(homevis) + Player.HasMedia</visible>
 	</control>
-	<control type="videowindow">
+	<control type="videowindow" id="0004">
 		<include>FullScreenDimensions</include>
 		<visible>Skin.HasSetting(videohome) + Player.HasVideo</visible>
 	</control>
@@ -27,7 +27,8 @@
 	<include>Furniture_Time</include>
 	<include>Furniture_HomeRSS</include>
 	<include>Submenu</include>
-	<control type="group">
+	<control type="group" id="0005">
+		<description>Home Menu</description>
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>1280</width>
@@ -63,6 +64,6 @@
 		</control>
 	</control>
 	<!--<include>Background_ContextBlack</include>-->
-	<include>Furniture_Debug</include>
+	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	</controls>
 </window>
