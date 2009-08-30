@@ -345,5 +345,16 @@
 			<include>StripShowHideAnimation</include>
 			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 		</control>
+	<!-- Time -->
+		<control type="group">
+			<posx>900</posx>
+			<posy>0</posy>
+			<width>451</width>
+			<height>27</height>
+			<animation effect="slide" start="0,0" end="0,-27" time="200" condition="ControlGroup(7000).HasFocus()">Conditional</animation>
+			<include>Animation_CommonFade</include>
+			<include>Furniture_TimePanelHigh</include>
+			<visible>Control.IsVisible(51) + !Skin.HasSetting(notime)</visible>
+		</control>
 	</include>
 </includes>
