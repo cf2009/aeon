@@ -147,7 +147,7 @@
 			</control>
 		</control>
 	</control>
-	<include>Furniture_DarkGradient</include>
+	
 	<include>ViewChange</include>
 	<!--<include>Background_ContextBlack</include>-->
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
