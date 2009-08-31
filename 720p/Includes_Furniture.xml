@@ -500,12 +500,6 @@
 	</include>
 	<include name="Furniture_MediaPanel">
 		<control type="image">
-			<include>FullScreenDimensions</include>
-			<texture>list/list_filter.png</texture>
-			<colordiffuse>d0FFFFFF</colordiffuse>
-			<visible>Control.IsVisible(50)</visible>
-		</control>
-		<control type="image">
 			<posx>0</posx>
 			<posy>315</posy>
 			<width>1280</width>
@@ -528,27 +522,6 @@
 			<include>Animation_HideShowcase</include>
 			<include>Animation_HideMultiplex</include>
 			<visible>Control.IsVisible(57) | Control.IsVisible(52)</visible>
-		</control>
-		<control type="image">
-			<posx>144</posx>
-			<posy>583</posy>
-			<width>993</width>
-			<height>137</height>
-			<include>ShowcaseSpotLight</include>
-			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
-			<visible>Control.IsVisible(50)</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>315</posy>
-			<width>1280</width>
-			<height>405</height>
-			<texture>list/list_floor.png</texture>
-			<visible>Control.IsVisible(50)</visible>
-			<include>Animation_CommonFade</include>
-			<include>Animation_HideShowcase</include>
-			<include>Animation_HideMultiplex</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -811,17 +784,6 @@
 				<label>[UPPERCASE][COLOR a8FFFFFF]$INFO[MusicPlayer.Artist][/COLOR][CR][COLOR FFFFFFFF]$INFO[MusicPlayer.Title][/COLOR][/UPPERCASE]</label>
 				<visible>true</visible>
 			</control>
-		</control>
-	</include>
-	<include name="Furniture_DarkGradient">
-		<control type="image">
-			<posx>0</posx>
-			<posy>675</posy>
-			<width>1280</width>
-			<height>48</height>
-			<texture>showcase/showcase_gradient.png</texture>
-			<visible>Skin.HasSetting(darkshowcase) + [Control.IsVisible(57) | Control.IsVisible(52)]</visible>
-			<include>Animation_CommonFade</include>
 		</control>
 	</include>
 <!-- Settings windows -->

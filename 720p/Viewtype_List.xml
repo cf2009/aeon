@@ -1,4 +1,16 @@
 <includes>
+	<include name="ListFloorNight">
+		<texture>list/list_floor.png</texture>
+	</include>
+	<include name="ListFloorLight">
+		<texture>list/lite/list_floor.png</texture>
+	</include>
+	<include name="ListSpotNight">
+		<texture>list/list_spot.png</texture>
+	</include>
+	<include name="ListSpotLight">
+		<texture>list/lite/list_spot.png</texture>
+	</include>
 	<include name="ListLabel_Main">
 		<posx>45</posx>
 		<posy>0</posy>
@@ -109,6 +121,31 @@
 	<include name="Viewtype_List">
 		<control type="group" id="50000">
 			<visible>Control.IsVisible(50)</visible>
+			<control type="image">
+				<include>FullScreenDimensions</include>
+				<texture>list/list_filter.png</texture>
+				<colordiffuse>d0FFFFFF</colordiffuse>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>315</posy>
+				<width>1280</width>
+				<height>405</height>
+				<include condition="!Skin.HasSetting(darkshowcase)">ListFloorLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">ListFloorNight</include>
+				<visible>Control.IsVisible(50)</visible>
+				<include>Animation_CommonFade</include>
+			</control>
+			<control type="image" id="232">
+				<width>587</width>
+				<height>137</height>
+				<posx>693</posx>
+				<posy>583</posy>
+				<include condition="!Skin.HasSetting(darkfloor)">ListSpotLight</include>
+				<include condition="Skin.HasSetting(darkfloor)">ListSpotNight</include>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
 			<include>Furniture_MediaPanel</include>
 			<control type="image" id="232">
 				<width>587</width>
@@ -1644,5 +1681,6 @@
 				<visible>[Window.IsActive(25) | Window.IsActive(502)] + Control.IsVisible(50) + stringcompare(container(50).numitems,0)</visible>
 			</control>
 		</control>
+		<include>Flag_listview</include>
 	</include>
 </includes>
