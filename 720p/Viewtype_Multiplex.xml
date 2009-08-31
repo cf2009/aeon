@@ -664,6 +664,7 @@
 				<scrolltime>200</scrolltime>
 				<visible>Window.IsActive(25)</visible>
 				<include>Animation_HideMultiplex</include>
+				<preloaditems>4</preloaditems>
 				<itemlayout width="120" height="300">
 					<control type="image">
 						<include>MultiplexIconDimensionsWrap</include>
@@ -749,6 +750,7 @@
 				<scrolltime>200</scrolltime>
 				<visible>Window.IsActive(25)</visible>
 				<include>Animation_HideMultiplex</include>
+				<preloaditems>4</preloaditems>
 				<itemlayout width="219" height="300">
 					<control type="image">
 						<include>MultiplexIconDimensionsTVWrap</include>
@@ -993,6 +995,10 @@
 				<texture>showcase/showcase_gradient.png</texture>
 				<visible>Skin.HasSetting(darkshowcase) + Control.IsVisible(52)</visible>
 				<include>Animation_CommonFade</include>
+			</control>
+			<control type="group">
+				<visible>Container.Content(movies)</visible>
+				<include>Flag_showcaseview</include>
 			</control>
 		</control>
 	</include>
