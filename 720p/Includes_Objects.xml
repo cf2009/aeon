@@ -268,25 +268,6 @@
 			<visible>Control.IsVisible(57) | Control.IsVisible(52) + Container.Content(movies)</visible>
 		</control>
 	</include>
-	<include name="Objects_PanelDensityButton">
-		<control type="togglebutton" id="942">
-			<include>Objects_MediaMenuButton</include>
-			<label>$LOCALIZE[31065]: $LOCALIZE[31052]</label>
-			<altlabel>$LOCALIZE[31065]: $LOCALIZE[31053]</altlabel>
-			<usealttexture>Skin.HasSetting(listpanelthin)</usealttexture>
-			<onclick>Skin.SetBool(listpanelthin)</onclick>
-			<altclick>Skin.Reset(listpanelthin)</altclick>
-			<visible>Control.IsVisible(50)</visible>
-		</control>
-		<control type="togglebutton" id="944">
-			<include>Objects_MediaMenuButton</include>
-			<label>$LOCALIZE[31065]: $LOCALIZE[31052]</label>
-			<altlabel>$LOCALIZE[31065]: $LOCALIZE[31053]</altlabel>
-			<usealttexture>Skin.HasSetting(multiplexthin)</usealttexture>
-			<onclick>Skin.ToggleSetting(multiplexthin)</onclick>
-			<visible>Control.IsVisible(52) + !Skin.HasSetting(oldmultiplex)</visible>
-		</control>
-	</include>
 	<include name="Objects_ListLayoutStrings">
 		<label>$LOCALIZE[31075]: $LOCALIZE[31071]</label>
 		<altlabel>$LOCALIZE[31075]: $LOCALIZE[31072]</altlabel>

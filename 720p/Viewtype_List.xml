@@ -163,16 +163,6 @@
 					<posy>73</posy>
 					<width>759</width>
 					<height>647</height>
-					<texture>list/listpanel_black.png</texture>
-					<visible>!Skin.HasSetting(listpanelthin)</visible>
-					<visible>Control.IsVisible(50)</visible>
-					<include>Animation_CommonFade</include>
-				</control>
-				<control type="image">
-					<posx>60</posx>
-					<posy>73</posy>
-					<width>759</width>
-					<height>647</height>
 					<texture>list/listpanel_back.png</texture>
 					<visible>Control.IsVisible(50)</visible>
 				</control>

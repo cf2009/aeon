@@ -52,7 +52,6 @@
 					<altclick>Skin.Reset(listvideosquare)</altclick>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
-				<include>Objects_PanelDensityButton</include>
 				<include>Objects_WallGridButton</include>
 				<include>Objects_WallBackdropButton</include>
 				<control type="togglebutton" id="7">

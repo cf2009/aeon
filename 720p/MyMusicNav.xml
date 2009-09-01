@@ -57,7 +57,6 @@
 					<altclick>Skin.Reset(musiclistfull)</altclick>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
-				<include>Objects_PanelDensityButton</include>
 				<control type="button" id="903">
 					<label>589</label>
 					<include>Objects_MediaMenuButton</include>
