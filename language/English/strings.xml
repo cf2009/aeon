@@ -120,7 +120,7 @@
 	<string id="31110">TOGGLE TIME/DURATION TEXT (CURRENTLY: OFF)</string>
 	<string id="31111">TOGGLE UPPER DETAIL STYLES (CURRENTLY: MAX)</string>
 	<string id="31112">TOGGLE PROGRESS BAR (CURRENTLY: OFF)</string>
-	<string id="31113">TOGGLE TIME/DURATION TEXT (CURRENTLY: ON)</string>	
+	<string id="31113">TOGGLE TIME/DURATION TEXT (CURRENTLY: ON)</string>
   
 <!-- Aeon Customisation Menu labels -->
   
@@ -211,7 +211,7 @@
 	<string id="31249">MEDIA FLAGS TOGGLE</string>
 	<string id="31250">MULTIPLEX LAYOUT (FANART, PLOT, THUMBSHOW)</string>
 	<string id="31251">MULTIPLEX INFO TOGGLE (ON, OFF, AUTO, TRIGGER)</string>
-
+	<string id="31252">SHOW MEDIA FLAGS (STUDIO ICONS, SOURCE INFO, ETC.)</string>
 	<string id="31253">LINK GAMES SHORTCUT TO 'LAUNCHER' PLUGIN</string>
 	<string id="31258">SHOW RATINGS (IMDB, ETC.) IN MOVIE INFO PAGE</string>
 	<string id="31259">DEFAULT ICONS FOR MEDIA FLAGS (OFF FOR BLANK SPACES)</string>

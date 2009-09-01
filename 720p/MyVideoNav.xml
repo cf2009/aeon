@@ -38,7 +38,6 @@
 		<include>BackgroundFade</include>
 		<imagepath>special://skin/media/backdrops/multiplex/curtains.png</imagepath>
 	</control>
-
 	<control type="group" id="25001">
 		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
 		<include>FullScreenDimensions</include>
@@ -104,7 +103,6 @@
 					<altclick>Skin.Reset(notvfanart)</altclick>
 					<visible>Window.IsActive(25) + Skin.HasSetting(videotv)</visible>
 				</control>
-				<include condition="!Skin.HasSetting(nomediaflagsbutton)">Objects_FlagsButton</include>
 				<include>Objects_WallGridButton</include>
 				<include>Objects_WallBackdropButton</include>
 				<control type="togglebutton" id="991">

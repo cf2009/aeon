@@ -187,7 +187,6 @@
 		<include condition="!Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelLightShade</include>
 		<include condition="Skin.HasSetting(darkshowcase)">ShowcaseColour_LabelNightShade</include>
 		<visible>!ControlGroup(7000).HasFocus()</visible>
-		<animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
 	</include>
 	<include name="ShowcaseMainLabelWide">
 		<include>ShowcaseLabelVars</include>
@@ -2585,12 +2584,7 @@
 					<control type="label">
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 						<include>ShowcaseMainLabel</include>
-						<visible>Container.Content(movies) + !Skin.HasSetting(nomediaflags) + !Window.IsActive(24)</visible>
-					</control>
-					<control type="label">
-						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-						<include>ShowcaseMainLabelWide</include>
-						<visible>[!Container.Content(movies) | Window.IsActive(24)] | [Container.Content(movies) + Skin.HasSetting(nomediaflags)]</visible>
+						<visible>!Window.IsActive(24)</visible>
 					</control>
 					<control type="label">
 						<label>[UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31005][/UPPERCASE]</label>
@@ -2612,9 +2606,19 @@
 						<visible>Window.IsActive(1) | Container.Content(albums) | Window.IsActive(501)</visible>
 					</control>
 					<control type="label" id="72">
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+						<include>ShowcaseDetailLabel</include>
+						<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Genre)</visible>
+					</control>
+					<control type="label" id="72">
 						<label>[UPPERCASE]$INFO[ListItem.Episode] $LOCALIZE[31406][/UPPERCASE]</label>
 						<include>ShowcaseDetailLabel</include>
-						<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.Episode)</visible>
+						<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Episode) + IsEmpty(ListItem.Genre)</visible>
+					</control>
+					<control type="label" id="72">
+						<label>$INFO[ListItem.TVShowTitle]</label>
+						<include>ShowcaseDetailLabel</include>
+						<visible>[Container.Content(episodes) + IsEmpty(ListItem.Episode)] | Container.Content(seasons)</visible>
 					</control>
 					<control type="label" id="72">
 						<label>[UPPERCASE]$LOCALIZE[31432] $INFO[ListItem.Season], $LOCALIZE[31433] $INFO[ListItem.Episode][/UPPERCASE]</label>

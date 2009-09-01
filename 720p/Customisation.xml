@@ -300,9 +300,9 @@
 			</control>
 			<control type="radiobutton" id="602">
 				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31281</label>
-				<onclick>Skin.ToggleSetting(nomediaflags)</onclick>
-				<selected>!Skin.HasSetting(nomediaflags)</selected>
+				<label>31252</label>
+				<onclick>Skin.ToggleSetting(flags_onoff)</onclick>
+				<selected>!Skin.HasSetting(flags_onoff)</selected>
 			</control>
 			<control type="radiobutton" id="603">
 				<include>Objects_SettingsDefaultRadioButton</include>
@@ -459,12 +459,6 @@
 				<label>31250</label>
 				<onclick>Skin.ToggleSetting(nomultiplexstylebuttons)</onclick>
 				<selected>!Skin.HasSetting(nomultiplexstylebuttons)</selected>
-			</control>
-			<control type="radiobutton" id="809">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>31249</label>
-				<onclick>Skin.ToggleSetting(nomediaflagsbutton)</onclick>
-				<selected>!Skin.HasSetting(nomediaflagsbutton)</selected>
 			</control>
 		</control>
 		<include>Furniture_SettingsFrontPanel</include>
