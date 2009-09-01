@@ -25,12 +25,6 @@
 			<include>Flag_Vars</include>
 			<texture>$INFO[ListItem(0).AudioChannels,flags/AudioChannels/,ch.png]</texture>
 		</control>
-		
-		<!--control type="image" id="92">
-			<include>Flag_Vars</include>
-			<texture>flags/AudioCodec/dd51.png</texture>
-			<visible>substring(ListItem(0).AudioChannels,6) + substring(ListItem.AudioCodec,ac3)</visible>
-		</control>
 		<control type="image" id="92">
 			<include>Flag_Vars</include>
 			<texture>flags/AudioCodec/dd71.png</texture>
@@ -46,11 +40,6 @@
 			<texture>flags/AudioCodec/dts71.png</texture>
 			<visible>substring(ListItem.AudioChannels,8) + substring(ListItem.AudioCodec,dca)</visible>
 		</control>
-		<control type="image" id="92">
-			<include>Flag_Vars</include>
-			<texture>flags/AudioCodec/dolby20.png</texture>
-			<visible>substring(ListItem.AudioChannels,2)</visible>
-		</control-->
 		<control type="image" id="92">
 			<include>Flag_Vars</include>
 			<texture>flags/AudioCodec/mono.png</texture>
@@ -141,6 +130,24 @@
 			<visible>Control.IsVisible(57) | Control.IsVisible(52)</visible>
 			<posx>0</posx>
 			<posy>640</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-70</posy>
+				<width>298</width>
+				<height>151</height>
+				<texture>showcase/flagshade.png</texture>
+				<include>Animation_HideShowcase</include>
+				<visible>!Skin.HasSetting(darkshowcase)</visible>
+			</control>
+			<control type="image">
+				<posx>982</posx>
+				<posy>-70</posy>
+				<width>298</width>
+				<height>151</height>
+				<texture flipx="true">showcase/flagshade.png</texture>
+				<include>Animation_HideShowcase</include>
+				<visible>!Skin.HasSetting(darkshowcase)</visible>
+			</control>
 			<control type="group">
 				<posx>1085</posx>
 				<posy>0</posy>
@@ -202,6 +209,7 @@
 	<include name="Flag_debug">
 		<control type="group">
 			<visible>Skin.HasSetting(debug)</visible>
+			<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
 			<include>Animation_CommonFade</include>
 			<posx>385</posx>
 			<posy>200</posy>

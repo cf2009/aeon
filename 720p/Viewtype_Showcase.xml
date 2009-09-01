@@ -2641,7 +2641,8 @@
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="group">
-				<visible>Container.Content(movies)</visible>
+				<animation effect="slide" start="0,5" end="0,5" time="0" condition="!Container.Content(movies)">Conditional</animation>
+				<visible>Container.Content(movies) |Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				<include>Flag_showcaseview</include>
 			</control>
 		</control>

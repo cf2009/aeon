@@ -496,9 +496,9 @@
 			</control>
 			<control type="textbox"	id="57004">
 				<posx>105</posx>
-				<posy>224</posy>
+				<posy>210</posy>
 				<width>375</width>
-				<height>197</height>
+				<height>225</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<info>Container(52).ListItem.Plot</info>
 				<textcolor>d0FFFFFF</textcolor>
@@ -507,9 +507,9 @@
 			</control>
 			<control type="textbox" id="57005">
 				<posx>105</posx>
-				<posy>224</posy>
+				<posy>210</posy>
 				<width>375</width>
-				<height>197</height>
+				<height>225</height>
 				<font>Font_MultiplexPlotSmall</font>
 				<info>Container(52).ShowPlot</info>
 				<textcolor>d0FFFFFF</textcolor>
@@ -997,7 +997,8 @@
 				<include>Animation_CommonFade</include>
 			</control>
 			<control type="group">
-				<visible>Container.Content(movies)</visible>
+				<animation effect="slide" start="0,5" end="0,5" time="0" condition="!Container.Content(movies)">Conditional</animation>
+				<visible>Container.Content(movies) |Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				<include>Flag_showcaseview</include>
 			</control>
 		</control>
