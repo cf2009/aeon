@@ -11,7 +11,22 @@
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>
 		<include>Objects_ShowcaseMenuPanel</include>
-		<include>Furniture_MediaPanel</include>
+		<control type="image">
+				<include>FullScreenDimensions</include>
+				<texture>list/list_filter.png</texture>
+				<colordiffuse>d0FFFFFF</colordiffuse>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>315</posy>
+				<width>1280</width>
+				<height>405</height>
+				<include condition="!Skin.HasSetting(darkshowcase)">ListFloorLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">ListFloorNight</include>
+				<visible>Control.IsVisible(50)</visible>
+				<include>Animation_CommonFade</include>
+			</control>
 		<control type="group">
 			<control type="image">
 				<include>Objects_MediaLogo</include>

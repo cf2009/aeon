@@ -208,8 +208,7 @@
 	</include>
 	<include name="Flag_debug">
 		<control type="group">
-			<visible>Skin.HasSetting(debug)</visible>
-			<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
+			<visible>!Skin.HasSetting(flags_onoff) + Skin.HasSetting(debug) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
 			<include>Animation_CommonFade</include>
 			<posx>385</posx>
 			<posy>200</posy>
