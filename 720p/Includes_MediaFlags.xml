@@ -11,8 +11,8 @@
 		<height>72</height>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
-		<include condition="!Skin.HasSetting(darkshowcase)">Flag_Light</include>
-		<include condition="Skin.HasSetting(darkshowcase)">Flag_Night</include>
+		<include condition="!Skin.HasSetting(darkshowcase)+!Window.IsActive(2003)">Flag_Light</include>
+		<include condition="Skin.HasSetting(darkshowcase)|Window.IsActive(2003)">Flag_Night</include>
 	</include>
 	<include name="Flag_AudioCodec">
 		<control type="image">
@@ -164,6 +164,41 @@
 			</control>
 		</control>
 	</include>
+	<include name="Flag_MovieInfo">
+		<control type="group">
+			<posx>-900</posx>
+			<posy>0</posy>
+			<include>Flag_debug</include>
+		</control>
+		<control type="group">
+			<posx>0</posx>
+			<posy>568</posy>
+			<width>550</width>
+			<height>72</height>
+			<animation effect="zoom" start="90" end="90" center="auto" time="0" condition="true">Conditional</animation>
+			<control type="group">
+				<posx>-30</posx>
+				<posy>0</posy>
+				<include>Flag_AudioChannel</include>
+				<include>Flag_AudioCodec</include>
+			</control>
+			<control type="group">
+				<posx>250</posx>
+				<posy>5</posy>
+				<include>Flag_VideoResolution</include>
+			</control>
+			<control type="group">
+				<posx>370</posx>
+				<posy>0</posy>
+				<include>Flag_VideoCodec</include>
+			</control>
+			<control type="group">
+				<posx>490</posx>
+				<posy>0</posy>
+				<include>Flag_Studio</include>
+			</control>
+		</control>
+	</include>
 	<include name="Flag_debug">
 		<control type="group">
 			<visible>Skin.HasSetting(debug)</visible>
@@ -173,7 +208,7 @@
 			<control type="image">
 				<posy>0</posy>
 				<width>450</width>
-				<height>164</height>
+				<height>182</height>
 				<texture>common/black.png</texture>
 				<colordiffuse>78000000</colordiffuse>
 			</control>
@@ -256,6 +291,16 @@
 				<aligny>center</aligny>
 				<textcolor>98FFFFFF</textcolor>
 				<label>Studio: [COLOR ffffffff]$INFO[listitem.studio][/COLOR]</label>
+			</control>listitem.mpaa
+			<control type="label">
+				<posx>10</posx>
+				<posy>154</posy>
+				<width>400</width>
+				<height>18</height>
+				<font>Font_Time</font>
+				<aligny>center</aligny>
+				<textcolor>98FFFFFF</textcolor>
+				<label>Mpaa: [COLOR ffffffff]$INFO[listitem.mpaa][/COLOR]</label>
 			</control>
 		</control>
 	</include>
