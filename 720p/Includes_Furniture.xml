@@ -372,7 +372,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_OSDCodecInfo_Virtual</font>
-					<label>[COLOR AAa7a4a4]$LOCALIZE[31704][/COLOR][COLOR AAFFFFFF] $INFO[MusicPlayer.Offset(1).Title] [/COLOR]</label>
+					<label>[COLOR AAa7a4a4]$LOCALIZE[31704][/COLOR][COLOR AAFFFFFF] $INFO[MusicPlayer.Offset(1).Artist] - $INFO[MusicPlayer.Offset(1).Title] [/COLOR]</label>
 				</control>
 			</control>
 			<control type="group">
@@ -400,7 +400,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Font_OSDCodecInfo_Virtual</font>
-					<label>[COLOR AAa7a4a4]$LOCALIZE[31715][/COLOR][CR][COLOR AAFFFFFF] $INFO[MusicPlayer.Offset(-1).Title][/COLOR][CR][COLOR AAa7a4a4]$LOCALIZE[31704][/COLOR][CR][COLOR AAFFFFFF] $INFO[MusicPlayer.Offset(1).Title][/COLOR]</label>
+					<label>[COLOR AAa7a4a4]$LOCALIZE[31715][/COLOR][CR][COLOR AAFFFFFF] $INFO[MusicPlayer.Offset(-1).Artist] - $INFO[MusicPlayer.Offset(-1).Title][/COLOR][CR][COLOR AAa7a4a4]$LOCALIZE[31704][/COLOR][CR][COLOR AAFFFFFF] $INFO[MusicPlayer.Offset(1).Artist] - $INFO[MusicPlayer.Offset(1).Title][/COLOR]</label>
 				</control>
 				<control type="image">
 					<posx>385</posx>
