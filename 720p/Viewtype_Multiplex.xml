@@ -66,14 +66,46 @@
 				<width>1130</width>
 				<height>564</height>
 				<texture>multiplex/multiplex_tablet.png</texture>
+			</control>
+			<control type="image">
+				<posy>199</posy>
+				<posx>84</posx>
+				<width>461</width>
+				<height>4</height>
+				<texture>multiplex/line_1.png</texture>
+				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>
+			</control>
+			<control type="image">
+				<posy>37</posy>
+				<posx>543</posx>
+				<width>4</width>
+				<height>363</height>
+				<texture>multiplex/line_2.png</texture>
+				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>
+			</control>
+			<control type="image">
+				<posy>37</posy>
+				<posx>315</posx>
+				<width>4</width>
+				<height>163</height>
+				<texture>multiplex/line_2.png</texture>
+				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>
+			</control>
+			<control type="image">
+				<posy>37</posy>
+				<posx>880</posx>
+				<width>4</width>
+				<height>363</height>
+				<texture>multiplex/line_2.png</texture>
 				<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>
 			</control>
 			<control type="image">
-				<posx>75</posx>
-				<width>1130</width>
-				<height>564</height>
-				<texture>multiplex/multiplex_tablet_bigthumb.png</texture>
-				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>
+				<posy>37</posy>
+				<posx>405</posx>
+				<width>4</width>
+				<height>363</height>
+				<texture>multiplex/line_2.png</texture>
+				<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>
 			</control>
 			<control type="group">
 				<posx>105</posx>
@@ -350,7 +382,7 @@
 	<include name="MultiplexInfoPaneTV">
 		<control type="group">
 			<posx>0</posx>
-			<posy>45</posy>
+			<posy>65</posy>
 			<width>1280</width>
 			<height>381</height>
 			<visible>[Container.Content(tvshows)|Container.Content(seasons)|Container.Content(episodes)]</visible>
@@ -363,6 +395,30 @@
 				<width>1130</width>
 				<height>564</height>
 				<texture>multiplex/multiplex_tvtablet.png</texture>
+				<visible>Container.Content(episodes) | [[Container.Content(tvshows)|Container.Content(seasons)]+Skin.HasSetting(multiplextvdvd)]</visible>
+			</control>
+			<control type="image">
+				<posx>75</posx>
+				<width>1130</width>
+				<height>564</height>
+				<texture>multiplex/multiplex_tablet.png</texture>
+				<visible>[!Skin.HasSetting(multiplextvdvd)+!Container.Content(episodes)]+[Container.Content(tvshows)|Container.Content(seasons)]</visible>
+			</control>
+			<control type="image">
+				<posy>199</posy>
+				<posx>84</posx>
+				<width>461</width>
+				<height>4</height>
+				<texture>multiplex/line_1.png</texture>
+				<visible>[!Skin.HasSetting(multiplextvdvd)+!Container.Content(episodes)]+[Container.Content(tvshows)|Container.Content(seasons)]</visible>
+			</control>
+			<control type="image">
+				<posy>37</posy>
+				<posx>543</posx>
+				<width>4</width>
+				<height>363</height>
+				<texture>multiplex/line_2.png</texture>
+				<visible>[!Skin.HasSetting(multiplextvdvd)+!Container.Content(episodes)]+[Container.Content(tvshows)|Container.Content(seasons)]</visible>
 			</control>
 			<control type="group">
 				<posx>105</posx>
@@ -487,9 +543,31 @@
 				<info>Container(52).ListItem.Plot</info>
 				<textcolor>d0FFFFFF</textcolor>
 				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
-				<visible>!Container.Content(seasons)</visible>
+				<visible>[Container.Content(tvshows)+Skin.HasSetting(multiplextvdvd)] | Container.Content(episodes)</visible>
 			</control>
-			<control type="textbox" id="57005">
+			<control type="textbox"	id="57005">
+				<posx>105</posx>
+				<posy>210</posy>
+				<width>375</width>
+				<height>180</height>
+				<font>Font_MultiplexPlotSmall</font>
+				<info>Container(52).ListItem.Plot</info>
+				<textcolor>d0FFFFFF</textcolor>
+				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
+				<visible>Container.Content(tvshows)+!Skin.HasSetting(multiplextvdvd)</visible>
+			</control>
+			<control type="textbox" id="57006">
+				<posx>105</posx>
+				<posy>210</posy>
+				<width>375</width>
+				<height>180</height>
+				<font>Font_MultiplexPlotSmall</font>
+				<info>Container(52).ShowPlot</info>
+				<textcolor>d0FFFFFF</textcolor>
+				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
+				<visible>Container.Content(seasons)+!Skin.HasSetting(multiplextvdvd)</visible>
+			</control>
+			<control type="textbox" id="57007">
 				<posx>105</posx>
 				<posy>210</posy>
 				<width>375</width>
@@ -498,7 +576,7 @@
 				<info>Container(52).ShowPlot</info>
 				<textcolor>d0FFFFFF</textcolor>
 				<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>
-				<visible>Container.Content(seasons)</visible>
+				<visible>Container.Content(seasons)+Skin.HasSetting(multiplextvdvd)</visible>
 			</control>
 			<control type="group">
 				<posx>508</posx>
@@ -510,6 +588,18 @@
 					<height>378</height>
 					<texture>common/black.png</texture>
 					<colordiffuse>94FFFFFF</colordiffuse>
+					<visible>!Container.Content(episodes)+!Skin.HasSetting(multiplextvdvd)</visible>
+					<animation effect="zoom" center="auto" start="92" end="92" time="0" condition="true">Conditional</animation>
+					<animation effect="slide" end="30,-22" time="0"  condition="true">Conditional</animation>  
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>670</width>
+					<height>378</height>
+					<texture>common/black.png</texture>
+					<colordiffuse>94FFFFFF</colordiffuse> 
+					<visible>Container.Content(episodes)|Skin.HasSetting(multiplextvdvd)</visible>
 				</control>
 				<control type="largeimage">
 					<posx>1</posx>
@@ -519,8 +609,10 @@
 					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
 					<texture>$INFO[Container(52).listitem.property(fanart_image)]</texture>
-					<visible>!Skin.HasSetting(multiplextvbigthumb) | !Container.Content(episodes)</visible>
+					<visible>!Container.Content(episodes)+!IsEmpty(Container(52).listitem.property(fanart_image))</visible>
 					<include>Animation_VisibleChange200</include>
+					<animation effect="zoom" center="auto" start="92" end="92" time="0" condition="!Skin.HasSetting(multiplextvdvd)">Conditional</animation> 
+					<animation effect="slide" end="30,-22" time="0"  condition="!Skin.HasSetting(multiplextvdvd)">Conditional</animation> 
 				</control>
 				<control type="largeimage">
 					<posx>1</posx>
@@ -529,9 +621,11 @@
 					<height>376</height>
 					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
-					<texture>$INFO[Fanart.Image]</texture>
-					<visible>!Skin.HasSetting(multiplextvbigthumb) | !Container.Content(episodes)</visible>
+					<info>Fanart.Image</info>
+					<visible>!Container.Content(episodes)+IsEmpty(Container(52).listitem.property(fanart_image))</visible>
 					<include>Animation_VisibleChange200</include>
+					<animation effect="zoom" center="auto" start="92" end="92" time="0" condition="!Skin.HasSetting(multiplextvdvd)">Conditional</animation> 
+					<animation effect="slide" end="30,-22" time="0"  condition="!Skin.HasSetting(multiplextvdvd)">Conditional</animation> 
 				</control>
 				<control type="image">
 					<posx>1</posx>
@@ -541,7 +635,18 @@
 					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
 					<texture>$INFO[Container(52).listitem.thumb]</texture>
-					<visible>Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)</visible>
+					<visible>[Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)] + !IsEmpty(Container(52).listitem.thumb)</visible>
+					<include>Animation_VisibleChange200</include>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>668</width>
+					<height>376</height>
+					<fadetime>400</fadetime>
+					<aspectratio>scale</aspectratio>
+					<info>Fanart.Image</info>
+					<visible>[!Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)] | IsEmpty(Container(52).listitem.thumb)</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
 			</control>
@@ -623,7 +728,7 @@
 				<visible>Control.IsVisible(52)</visible>
 				<animation effect="slide" start="0,-30" end="0,-30" time="0" condition="Container.Content(movies)">Conditional</animation>
 			</control>
-			<include condition="Skin.HasSetting(videomovies)">MultiplexInfoPaneMovies</include>
+			<include>MultiplexInfoPaneMovies</include>
 			<include>MultiplexInfoPaneTV</include>
 		<!-- Default -->
 			<control type="wraplist" id="52">
