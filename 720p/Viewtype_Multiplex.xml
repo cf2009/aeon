@@ -57,7 +57,7 @@
 			<posy>65</posy>
 			<width>1280</width>
 			<height>381</height>
-			<visible>Container.Content(movies) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]</visible>
+			<visible>[Container.Content(movies) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]] + !Skin.HasSetting(multiplexinfooff)</visible>
 			<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="!Skin.HasSetting(multiplexinfoon)">WindowOpen</animation>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
@@ -680,23 +680,12 @@
 		<height>114</height>
 		<colordiffuse>aaFFFFFF</colordiffuse>
 	</include>
-	<include name="MultiplexFocusMovies">
-		<focusposition>4</focusposition>
-	</include>
-	<include name="MultiplexFocusTV">
-		<focusposition>2</focusposition>
-	</include>
-	<include name="MultiplexInfoAutoUp">
-		<onup>7000</onup>
-	</include>
-	<include name="MultiplexInfoTriggerUp">
-		<onup>110</onup>
-	</include>
 	<include name="Viewtype_Multiplex">
 		<control type="group" id="52000">
 			<visible>Control.IsVisible(52)</visible>
 			<include>Furniture_MediaPanel</include>
 			<control type="button" id="110">
+				<visible>[Container.Content(movies)+Skin.HasSetting(multiplexinfotrigger)] | [[Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(multiplextvinfotrigger)]</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>0</width>
@@ -745,11 +734,10 @@
 				<pagecontrol>60</pagecontrol>
 				<onleft>52</onleft>
 				<onright>52</onright>
-				<include condition="!Skin.HasSetting(multiplexinfotrigger)">MultiplexInfoAutoUp</include>
-				<include condition="Skin.HasSetting(multiplexinfotrigger)">MultiplexInfoTriggerUp</include>
+				<onup>110</onup>
 				<ondown>60</ondown>
 				<orientation>horizontal</orientation>
-				<include>MultiplexFocusMovies</include>
+				<focusposition>4</focusposition>
 				<scrolltime>200</scrolltime>
 				<visible>Window.IsActive(25)</visible>
 				<include>Animation_HideMultiplex</include>
@@ -831,11 +819,10 @@
 				<pagecontrol>60</pagecontrol>
 				<onleft>52</onleft>
 				<onright>52</onright>
-				<include condition="!Skin.HasSetting(multiplextvinfotrigger)">MultiplexInfoAutoUp</include>
-				<include condition="Skin.HasSetting(multiplextvinfotrigger)">MultiplexInfoTriggerUp</include>
+				<onup>110</onup>
 				<ondown>60</ondown>
 				<orientation>horizontal</orientation>
-				<include>MultiplexFocusTV</include>
+				<focusposition>2</focusposition>
 				<scrolltime>200</scrolltime>
 				<visible>Window.IsActive(25)</visible>
 				<include>Animation_HideMultiplex</include>

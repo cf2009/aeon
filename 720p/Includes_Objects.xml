@@ -357,7 +357,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
 			<onclick>Skin.SetBool(multiplexinfoauto)</onclick>
 			<onclick>Skin.Reset(multiplexinfooff)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Container.Content(movies) + Control.IsVisible(52) + Skin.HasSetting(multiplexinfooff)</visible>
 		</control>
 		<control type="button" id="981">
@@ -365,7 +364,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
 			<onclick>Skin.SetBool(multiplexinfotrigger)</onclick>
 			<onclick>Skin.Reset(multiplexinfoauto)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Container.Content(movies) + Control.IsVisible(52) + ![Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfoon)]</visible>
 		</control>
 		<control type="button" id="982">
@@ -373,7 +371,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
 			<onclick>Skin.SetBool(multiplexinfoon)</onclick>
 			<onclick>Skin.Reset(multiplexinfotrigger)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Container.Content(movies) + Control.IsVisible(52) + Skin.HasSetting(multiplexinfotrigger)</visible>
 		</control>
 		<control type="button" id="983">
@@ -381,7 +378,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
 			<onclick>Skin.SetBool(multiplexinfooff)</onclick>
 			<onclick>Skin.Reset(multiplexinfoon)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Container.Content(movies) + Control.IsVisible(52) + Skin.HasSetting(multiplexinfoon)</visible>
 		</control>
 		<control type="button" id="984">
@@ -389,7 +385,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
 			<onclick>Skin.SetBool(multiplextvinfoauto)</onclick>
 			<onclick>Skin.Reset(multiplextvinfooff)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Control.IsVisible(6201) + Control.IsVisible(52) + Skin.HasSetting(multiplextvinfooff)</visible>
 		</control>
 		<control type="button" id="985">
@@ -397,7 +392,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
 			<onclick>Skin.SetBool(multiplextvinfotrigger)</onclick>
 			<onclick>Skin.Reset(multiplextvinfoauto)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Control.IsVisible(6201) + Control.IsVisible(52) + ![Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfoon)]</visible>
 		</control>
 		<control type="button" id="986">
@@ -405,7 +399,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
 			<onclick>Skin.SetBool(multiplextvinfoon)</onclick>
 			<onclick>Skin.Reset(multiplextvinfotrigger)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Control.IsVisible(6201) + Control.IsVisible(52) + Skin.HasSetting(multiplextvinfotrigger)</visible>
 		</control>
 		<control type="button" id="987">
@@ -413,7 +406,6 @@
 			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
 			<onclick>Skin.SetBool(multiplextvinfooff)</onclick>
 			<onclick>Skin.Reset(multiplextvinfoon)</onclick>
-			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Control.IsVisible(6201) + Control.IsVisible(52) + Skin.HasSetting(multiplextvinfoon)</visible>
 		</control>
 	</include>
