@@ -2584,7 +2584,6 @@
 					<control type="label">
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 						<include>ShowcaseMainLabel</include>
-						<visible>!Window.IsActive(24)</visible>
 					</control>
 					<control type="label">
 						<label>[UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31005][/UPPERCASE]</label>
