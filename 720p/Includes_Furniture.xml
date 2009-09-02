@@ -19,7 +19,7 @@
 			</animation>
 		</control>
 		<control type="label" id="70">
-			<posx>370</posx>
+			<posx>390</posx>
 			<posy>3</posy>
 			<width>400</width>
 			<font>Font_Time</font>
@@ -29,7 +29,7 @@
 			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[System.Date][/UPPERCASE]  |  [/COLOR][COLOR FFcdcdcd]$INFO[System.Time][/COLOR]</label>
 		</control>
 		<control type="label" id="70">
-			<posx>370</posx>
+			<posx>390</posx>
 			<posy>-4</posy>
 			<width>600</width>
 			<font>Font_BigTime</font>
@@ -52,7 +52,7 @@
 			</animation>
 		</control>
 		<control type="label" id="70">
-			<posx>370</posx>
+			<posx>390</posx>
 			<posy>3</posy>
 			<width>400</width>
 			<font>Font_Time</font>
@@ -62,7 +62,7 @@
 			<label>[COLOR FFe5e5e5][UPPERCASE]$INFO[System.Date][/UPPERCASE]  |  [/COLOR][COLOR FFcdcdcd]$INFO[System.Time][/COLOR]</label>
 		</control>
 		<control type="label" id="70">
-			<posx>370</posx>
+			<posx>390</posx>
 			<posy>3</posy>
 			<width>600</width>
 			<font>Font_BigTime</font>
@@ -74,7 +74,7 @@
 	</include>
 	<include name="Furniture_Time"> <!-- 11 -->
 		<control type="group">
-			<posx>900</posx>
+			<posx>880</posx>
 			<posy>316</posy>
 			<width>451</width>
 			<height>27</height>
@@ -84,7 +84,7 @@
 			<include>Furniture_TimePanel</include>
 		</control>
 		<control type="group">
-			<posx>900</posx>
+			<posx>880</posx>
 			<posy>0</posy>
 			<width>451</width>
 			<height>27</height>
@@ -94,7 +94,7 @@
 			<include>Furniture_TimePanelHigh</include>
 		</control>
 		<control type="group">
-			<posx>900</posx>
+			<posx>880</posx>
 			<posy>45</posy>
 			<width>451</width>
 			<height>27</height>
