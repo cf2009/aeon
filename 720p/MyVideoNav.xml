@@ -56,12 +56,12 @@
 			</control>
 			<control type="label">
 				<label>31033</label>
-				<visible>Skin.HasSetting(videotv)</visible>
+				<visible>Control.IsVisible(6201)</visible>
 				<include>Objects_MediaLabel</include>
 			</control>
 			<control type="label">
 				<label>31032</label>
-				<visible>Skin.HasSetting(videomovies)</visible>
+				<visible>Container.Content(movies)</visible>
 				<include>Objects_MediaLabel</include>
 			</control>
 			<control type="grouplist" id="7000">
@@ -85,7 +85,7 @@
 					<usealttexture>Skin.HasSetting(movieslistfull)</usealttexture>
 					<onclick>Skin.SetBool(movieslistfull)</onclick>
 					<altclick>Skin.Reset(movieslistfull)</altclick>
-					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(50)</visible>
+					<visible>Window.IsActive(25) + Container.Content(movies) + Control.IsVisible(50)</visible>
 				</control>
 				<control type="togglebutton" id="901">
 					<include>Objects_MediaMenuButton</include>
@@ -93,7 +93,7 @@
 					<usealttexture>Skin.HasSetting(nomoviefanart)</usealttexture>
 					<onclick>Skin.SetBool(nomoviefanart)</onclick>
 					<altclick>Skin.Reset(nomoviefanart)</altclick>
-					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + [Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)]</visible>
+					<visible>Window.IsActive(25) + Container.Content(movies) + [Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)]</visible>
 				</control>
 				<control type="togglebutton" id="902">
 					<include>Objects_MediaMenuButton</include>
@@ -101,7 +101,7 @@
 					<usealttexture>Skin.HasSetting(notvfanart)</usealttexture>
 					<onclick>Skin.SetBool(notvfanart)</onclick>
 					<altclick>Skin.Reset(notvfanart)</altclick>
-					<visible>Window.IsActive(25) + Skin.HasSetting(videotv)</visible>
+					<visible>Window.IsActive(25) + Control.IsVisible(6201)</visible>
 				</control>
 				<include>Objects_WallGridButton</include>
 				<include>Objects_WallBackdropButton</include>
@@ -111,7 +111,7 @@
 					<altlabel>$LOCALIZE[31066]: $LOCALIZE[31078]</altlabel>
 					<usealttexture>Skin.HasSetting(nooverlays)</usealttexture>
 					<onclick>Skin.ToggleSetting(nooverlays)</onclick>
-					<visible>Window.IsActive(25) + Skin.HasSetting(videotv)</visible>
+					<visible>Window.IsActive(25) + Control.IsVisible(6201)</visible>
 				</control>
 				<include>Objects_CurtainsButton</include>
 				<include>Objects_LightNightButtons</include>
@@ -120,12 +120,12 @@
 					<label>$LOCALIZE[31058]: $LOCALIZE[31078]</label>
 					<altlabel>$LOCALIZE[31058]: $LOCALIZE[31077]</altlabel>
 					<include>Objects_MediaMenuButton</include>
-					<visible>[Skin.HasSetting(videomovies) + !Skin.HasSetting(nomenumoviewatched)] | [Skin.HasSetting(videotv) + !Skin.HasSetting(nomenutvwatched)]</visible>
+					<visible>[Container.Content(movies) + !Skin.HasSetting(nomenumoviewatched)] | [Control.IsVisible(6201) + !Skin.HasSetting(nomenutvwatched)]</visible>
 				</control>
 				<control type="button" id="8">
 					<label>137</label>
 					<include>Objects_MediaMenuButton</include>
-					<visible>[Skin.HasSetting(videomovies) + !Skin.HasSetting(nomenumoviesearch)] | [Skin.HasSetting(videotv) + !Skin.HasSetting(nomenutvsearch)]</visible>
+					<visible>[Container.Content(movies) + !Skin.HasSetting(nomenumoviesearch)] | [Control.IsVisible(6201) + !Skin.HasSetting(nomenutvsearch)]</visible>
 				</control>
 				<control type="button" id="11">
 					<label>31057</label>
