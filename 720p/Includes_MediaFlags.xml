@@ -11,6 +11,7 @@
 		<height>72</height>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
+		<include>Animation_HideMultiplex</include>
 		<include condition="!Skin.HasSetting(darkshowcase)+!Window.IsActive(2003)">Flag_Light</include>
 		<include condition="Skin.HasSetting(darkshowcase)|Window.IsActive(2003)">Flag_Night</include>
 	</include>
@@ -137,6 +138,7 @@
 				<height>151</height>
 				<texture>showcase/flagshade.png</texture>
 				<include>Animation_HideShowcase</include>
+				<include>Animation_HideMultiplex</include>
 				<visible>!Skin.HasSetting(darkshowcase)</visible>
 			</control>
 			<control type="image">
@@ -146,6 +148,7 @@
 				<height>151</height>
 				<texture flipx="true">showcase/flagshade.png</texture>
 				<include>Animation_HideShowcase</include>
+				<include>Animation_HideMultiplex</include>
 				<visible>!Skin.HasSetting(darkshowcase)</visible>
 			</control>
 			<control type="group">
