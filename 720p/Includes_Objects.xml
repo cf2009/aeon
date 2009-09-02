@@ -305,7 +305,7 @@
 			<usealttexture>Skin.HasSetting(flattenshowcase)</usealttexture>
 			<include>Objects_MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(flattenshowcase)</onclick>
-			<visible>Control.IsVisible(57) + !Container.Content(episodes)</visible>
+			<visible>Control.IsVisible(57)</visible>
 		</control>
 		<control type="togglebutton" id="909">
 			<label>31061</label>
@@ -313,7 +313,7 @@
 			<usealttexture>Skin.HasSetting(flattenflow)</usealttexture>
 			<include>Objects_MediaMenuButton</include>
 			<onclick>Skin.ToggleSetting(flattenflow)</onclick>
-			<visible>Control.IsVisible(55) + !Container.Content(episodes)</visible>
+			<visible>Control.IsVisible(55)</visible>
 		</control>
 	</include>
 	<include name="Objects_MediaDebugButtons">

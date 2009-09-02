@@ -27,7 +27,7 @@
 	</control>
 	<control type="largeimage" id="102">
 		<include>FullScreenDimensions</include>
-		<visible>[Control.IsVisible(50) | [Control.IsVisible(52) + !Skin.HasSetting(nocurtains)] | Control.IsVisible(57) | [Control.IsVisible(53)+Skin.HasSetting(transparentwall)]] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image)) </visible>
+		<visible>[Container.Content(tvshows)|Control.IsVisible(50) | [Control.IsVisible(52) + !Skin.HasSetting(nocurtains)] | Control.IsVisible(57) | [Control.IsVisible(53)+Skin.HasSetting(transparentwall)]] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image)) </visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
