@@ -27,24 +27,24 @@
 	</control>
 	<control type="largeimage" id="102">
 		<include>FullScreenDimensions</include>
-		<visible>[Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(57) | [Control.IsVisible(53)+Skin.HasSetting(transparentwall)]] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image)) </visible>
+		<visible>[Control.IsVisible(50) | [Control.IsVisible(52) + !Skin.HasSetting(nocurtains)] | Control.IsVisible(57) | [Control.IsVisible(53)+Skin.HasSetting(transparentwall)]] + [[Container.Content(movies) + !Skin.HasSetting(nomoviefanart)] | [Container.Content(tvshows) + !Skin.HasSetting(notvfanart)]] + !IsEmpty(listitem.property(fanart_image)) </visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
 	</control>
-	<include condition="Skin.HasSetting(videotv)">MediaBackdropsTVFanart</include>
-	<control type="multiimage">
+	<control type="largeimage">
 		<include>FullScreenDimensions</include>
-		<timeperimage>20000</timeperimage>
-		<randomize>true</randomize>
-		<fadetime>1000</fadetime>
-		<visible>Control.IsVisible(52) + !Skin.HasSetting(nocurtains)</visible>
+		<info>Fanart.Image</info>
+		<visible>!Skin.HasSetting(notvfanart) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+	</control>
+	<control type="largeimage">
+		<include>FullScreenDimensions</include>
 		<include>BackgroundFade</include>
 		<imagepath>special://skin/media/backdrops/multiplex/curtains.png</imagepath>
+		<visible>Control.IsVisible(52) + !Skin.HasSetting(nocurtains)</visible>
 	</control>
 	<control type="group" id="25001">
 		<visible>![Window.IsActive(2001) | Window.IsActive(2003)]</visible>
-		<include>FullScreenDimensions</include>
 		<include>Animation_OpenCloseZoom</include>
 		<include>Furniture_Time</include>
 		<include>Objects_ShowcaseMenuPanel</include>
@@ -59,14 +59,19 @@
 				<texture>windows/logo_movies.png</texture>
 			</control>
 			<control type="label">
+				<include>Objects_MediaLabel</include>
 				<label>31033</label>
 				<visible>Control.IsVisible(6201)</visible>
-				<include>Objects_MediaLabel</include>
 			</control>
 			<control type="label">
+				<include>Objects_MediaLabel</include>
 				<label>31032</label>
 				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="label">
 				<include>Objects_MediaLabel</include>
+				<label>157</label>
+				<visible>!Container.Content(movies)+!Control.IsVisible(6201)</visible>
 			</control>
 			<control type="grouplist" id="7000">
 				<include>Animation_MediaMenuSlide</include>

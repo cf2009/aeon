@@ -18,7 +18,7 @@
 		<randomize>true</randomize>
 		<fadetime>1000</fadetime>
 		<include>BackgroundFade</include>
-		<visible>!Control.IsVisible(52) | [Control.IsVisible(52) + Skin.HasSetting(nocurtains)]</visible>
+		<!--visible>!Control.IsVisible(52) | [Control.IsVisible(52) + Skin.HasSetting(nocurtains)]</visible-->
 	</include>
 	<include name="Background_ContextBlack">
 		<control type="image" id="909">
