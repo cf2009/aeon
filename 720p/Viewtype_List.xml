@@ -195,7 +195,7 @@
 				</control>
 			<!-- Default -->
 				<control type="list" id="50">
-					<visible>![Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(tvshows)|Container.Content(episodes)|Container.Content(seasons)|Container.Content(movies)]</visible>
+					<visible>![Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(tvshows)|Container.Content(episodes)|Container.Content(seasons)|Container.Content(movies)] | Window.IsActive(24)</visible>
 					<viewtype label="31752">list</viewtype>
 					<posx>60</posx>
 					<posy>105</posy>
@@ -534,7 +534,7 @@
 				</control>
 			<!-- Music -->
 				<control type="list" id="50">
-					<visible>Container.Content(artists)|Container.Content(albums)|Container.Content(songs)</visible>
+					<visible>[Container.Content(artists)|Container.Content(albums)|Container.Content(songs)] + !Window.IsActive(24)</visible>
 					<viewtype label="31752">list</viewtype>
 					<posx>60</posx>
 					<posy>105</posy>
