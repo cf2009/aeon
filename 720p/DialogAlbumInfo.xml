@@ -285,6 +285,6 @@
 				<textcolor>Colour_OffWhite</textcolor>
 			</control>
 		</control>
-		<!--<include>Background_ContextBlack</include>-->
+		<include>Background_ContextBlack</include>
 	</controls>
 </window>

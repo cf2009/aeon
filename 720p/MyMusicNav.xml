@@ -86,7 +86,7 @@
 	</control>
 	
 	<include>ViewChange</include>
-	<!--<include>Background_ContextBlack</include>-->
+	<include>Background_ContextBlack</include>
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	</controls>
 </window>
