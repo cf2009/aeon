@@ -51,8 +51,7 @@
 		<include>Viewtype_Wall</include>
 		<include>Viewtype_Showcase</include>
 		<include>Viewtype_List</include>
-		<include condition="!Skin.HasSetting(oldmultiplex)">Viewtype_Multiplex</include>
-		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
+		<include>Viewtype_Multiplex</include>
 		<control type="group" id="25002">
 			<control type="image">
 				<include>Objects_MediaLogo</include>

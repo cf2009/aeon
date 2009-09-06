@@ -252,12 +252,6 @@
 				<onclick>Skin.ToggleSetting(debug)</onclick>
 				<selected>Skin.HasSetting(debug)</selected>
 			</control>
-			<control type="radiobutton" id="406">
-				<include>Objects_SettingsDefaultRadioButton</include>
-				<label>USE LEGACY 'DARK' MULTIPLEX</label>
-				<onclick>Skin.ToggleSetting(oldmultiplex)</onclick>
-				<selected>Skin.HasSetting(oldmultiplex)</selected>
-			</control>
 		</control>
 		<control type="grouplist" id="11">
 			<include>Objects_SettingsControlAreaVars</include>

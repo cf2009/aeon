@@ -58,7 +58,7 @@
 			<width>1280</width>
 			<height>381</height>
 			<visible>[Container.Content(movies) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplexinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplexinfotrigger)]]] + !Skin.HasSetting(multiplexinfooff)</visible>
-			<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="!Skin.HasSetting(multiplexinfoon)">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="3000" condition="!Skin.HasSetting(multiplexinfoon)">WindowOpen</animation>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
 			<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 			<control type="image">
@@ -646,7 +646,7 @@
 					<fadetime>400</fadetime>
 					<aspectratio>scale</aspectratio>
 					<info>Fanart.Image</info>
-					<visible>[!Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)] | IsEmpty(Container(52).listitem.thumb)</visible>
+					<visible>[!Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)] | [IsEmpty(Container(52).listitem.thumb)+Container.Content(episodes)]</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
 			</control>
@@ -869,7 +869,7 @@
 						<include>Animation_VisibleChange200</include>
 						<visible>false</visible>
 					</control>
-					<control type="image">
+					<!--control type="image">
 						<posx>14</posx>
 						<posy>92</posy>
 						<width>185</width>
@@ -906,7 +906,7 @@
 						<label>ALL SEASONS</label>
 						<font>Font_MultiplexInfoLabel</font>
 						<visible>Container.Content(seasons) + IsEmpty(ListItem.Season)</visible>
-					</control>
+					</control-->
 				</itemlayout>
 				<focusedlayout width="219" height="300">
 					<control type="image">
@@ -957,6 +957,82 @@
 						<visible>false</visible>
 					</control>
 				</focusedlayout>
+			</control>
+			<control type="group">
+				<visible>Container.Content(episodes) | [[Container.Content(tvshows)|Container.Content(seasons)]+Skin.HasSetting(multiplextvdvd)]</visible>
+				<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+				<include>Animation_HideMultiplex</include>
+				<posx>110</posx>
+				<posy>615</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>185</width>
+					<height>60</height>
+					<texture>multiplex/multiplex_labelblock.png</texture>
+					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>7</posy>
+					<width>185</width>
+					<height>60</height>
+					<align>center</align>
+					<label>EPISODE $INFO[ListItem(-2).Season].$INFO[ListItem(-2).Episode]</label>
+					<font>Font_MultiplexInfoLabel</font>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+				<control type="image">
+					<posx>218</posx>
+					<posy>0</posy>
+					<width>185</width>
+					<height>60</height>
+					<texture>multiplex/multiplex_labelblock.png</texture>
+				</control>
+				<control type="label">
+					<posx>218</posx>
+					<posy>7</posy>
+					<width>185</width>
+					<height>60</height>
+					<align>center</align>
+					<label>EPISODE $INFO[ListItem(-1).Season].$INFO[ListItem(-1).Episode]</label>
+					<font>Font_MultiplexInfoLabel</font>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+				<control type="image">
+					<posx>656</posx>
+					<posy>0</posy>
+					<width>185</width>
+					<height>60</height>
+					<texture>multiplex/multiplex_labelblock.png</texture>
+				</control>
+				<control type="label">
+					<posx>656</posx>
+					<posy>7</posy>
+					<width>185</width>
+					<height>60</height>
+					<align>center</align>
+					<label>EPISODE $INFO[ListItem(1).Season].$INFO[ListItem(1).Episode]</label>
+					<font>Font_MultiplexInfoLabel</font>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+				<control type="image">
+					<posx>874</posx>
+					<posy>0</posy>
+					<width>185</width>
+					<height>60</height>
+					<texture>multiplex/multiplex_labelblock.png</texture>
+				</control>
+				<control type="label">
+					<posx>874</posx>
+					<posy>7</posy>
+					<width>185</width>
+					<height>60</height>
+					<align>center</align>
+					<label>EPISODE $INFO[ListItem(2).Season].$INFO[ListItem(2).Episode]</label>
+					<font>Font_MultiplexInfoLabel</font>
+					<visible>Container.Content(episodes)</visible>
+				</control>
 			</control>
 			<control type="scrollbar" id="60">
 				<description>My first scroll bar control</description>
