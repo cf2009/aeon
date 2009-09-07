@@ -158,13 +158,6 @@
 					<onclick>XBMC.ReloadSkin</onclick>
 					<visible>Skin.HasSetting(debug)</visible>
 				</item>
-				<item id="21">
-					<description>Assistant</description>
-					<label>31021</label>
-					<include>BackgroundVarsAssistant</include>
-					<onclick>XBMC.ActivateWindow(605)</onclick>
-					<visible>Skin.HasSetting(assistant)</visible>
-				</item>
 				<item id="23">
 					<description>Sign out</description>
 					<label>31209</label>
@@ -313,14 +306,6 @@
 					<include>BackgroundVarsPlayDVD</include>
 					<onclick>Skin.SetString(custom,CustomPlayDVD)</onclick>
 					<onclick>SetFocus(92)</onclick>
-				</item>
-				<item id="21">
-					<description>Assistant</description>
-					<label>31021</label>
-					<include>BackgroundVarsAssistant</include>
-					<onclick>Skin.SetString(custom,CustomAssistant)</onclick>
-					<onclick>SetFocus(92)</onclick>
-					<visible>Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="23">
 					<description>Sign Out</description>
@@ -526,20 +511,6 @@
 					<include>BackgroundVarsShutdown</include>
 					<onclick>Skin.SetBool(shutdown)</onclick>
 					<visible>!Skin.HasSetting(shutdown)</visible>
-				</item>
-				<item id="21">
-					<description>Assistant</description>
-					<label>31021</label>
-					<include>BackgroundVarsAssistant</include>
-					<onclick>Skin.Reset(assistant)</onclick>
-					<visible>Skin.HasSetting(assistant)</visible>
-				</item>
-				<item id="21">
-					<description>Assistant</description>
-					<label2>31021</label2>
-					<include>BackgroundVarsAssistant</include>
-					<onclick>Skin.SetBool(assistant)</onclick>
-					<visible>!Skin.HasSetting(assistant)</visible>
 				</item>
 				<item id="23">
 					<description>Sign Out</description>

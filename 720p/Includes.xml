@@ -6,7 +6,6 @@
 	<include file="Includes_Objects.xml" />
 	<include file="Includes_Furniture.xml" />
 	<include file="Includes_MainMenu.xml" />
-	<include file="Includes_Assistant_LabelsButtons.xml" />
 	<include file="Includes_Settings_Welcome.xml" />
 	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_ViewSelect.xml" />
@@ -46,7 +45,6 @@
 		<focusedcolor>Colour_OffWhite</focusedcolor>
 		<disabledcolor>d0202020</disabledcolor>
 	</include>
-	
 <!-- Labels -->
 	<include name="Labels_MainLabelGroup">
 		<posx>220</posx>

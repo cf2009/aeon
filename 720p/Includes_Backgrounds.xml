@@ -85,10 +85,6 @@
 		<icon>special://skin/media/backdrops/default_settings/default.png</icon>
 		<thumb>$INFO[Skin.String(CustomPlayDVD)]</thumb>
 	</include>
-	<include name="BackgroundVarsAssistant">
-		<icon>special://skin/media/backdrops/default_settings/default.png</icon>
-		<thumb>$INFO[Skin.String(CustomAssistant)]</thumb>
-	</include>
 	<include name="BackgroundVarsSignOut">
 		<icon>special://skin/media/backdrops/default_settings/default.png</icon>
 		<thumb>$INFO[Skin.String(CustomSignOut)]</thumb>

@@ -31,7 +31,7 @@
 					<onclick>SetFocus(300)</onclick>
 					<onleft>300</onleft>
 					<onright>300</onright>
-					<onup>11</onup>
+					<onup>12</onup>
 					<ondown>7</ondown>
 					<onfocus>Skin.Reset(bmtransit)</onfocus>
 					<visible allowhiddenfocus="true">![Control.HasFocus(6) | Control.HasFocus(300) | Control.HasFocus(92)]</visible>
@@ -44,7 +44,7 @@
 					<onclick>SetFocus(300)</onclick>
 					<onleft>300</onleft>
 					<onright>300</onright>
-					<onup>11</onup>
+					<onup>12</onup>
 					<ondown>7</ondown>
 					<visible>Control.HasFocus(6) | Control.HasFocus(300) | Control.HasFocus(92)</visible>
 				</control>
@@ -223,7 +223,7 @@
 					<label>31158</label>
 					<include>Objects_SettingsSectionMenuButton</include>
 					<onup>10</onup>
-					<ondown>6</ondown>
+					<ondown>12</ondown>
 					<onclick>XBMC.ActivateWindow(56)</onclick>
 					<visible allowhiddenfocus="true">!Control.HasFocus(11)</visible>
 				</control>
@@ -233,7 +233,7 @@
 					<label>31158</label>
 					<include>Objects_SettingsSectionMenuButtonFocused</include>
 					<onup>10</onup>
-					<ondown>6</ondown>
+					<ondown>12</ondown>
 					<visible>Control.HasFocus(11)</visible>
 				</control>
 				<control type="label">
@@ -252,6 +252,81 @@
 					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 					<visible>Control.HasFocus(11)</visible>
 				</control>
+				<control type="button" id="12">
+					<description>Credits</description>
+					<posy>348</posy>
+					<label>31504</label>
+					<include>Objects_SettingsSectionMenuButton</include>
+					<onup>11</onup>
+					<ondown>6</ondown>
+					<visible>!Control.HasFocus(12)</visible>
+				</control>
+				<control type="button" id="12">
+					<description>Credits</description>
+					<posy>348</posy>
+					<label>31504</label>
+					<include>Objects_SettingsSectionMenuButtonFocused</include>
+					<onup>11</onup>
+					<ondown>6</ondown>
+					<visible>Control.HasFocus(12)</visible>
+				</control>
+				<control type="label">
+					<description>Credits Unfocused</description>
+					<posy>380</posy>
+					<label>31505</label>
+					<textcolor>FFf5f5f5</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>!Control.HasFocus(12)</visible>
+				</control>
+				<control type="label">
+					<description>Credits Sub Unfocused</description>
+					<posy>380</posy>
+					<label>31505</label>
+					<textcolor>FF262728</textcolor>
+					<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+					<visible>Control.HasFocus(12)</visible>
+				</control>
+			</control>
+		<!-- Credits -->
+			<control type="group">
+				<visible>Control.HasFocus(12)</visible>
+				<posx>332</posx>
+				<posy>58</posy>
+				<width>840</width>
+				<height>580</height>
+				<control type="image">
+					<width>840</width>
+					<height>602</height>
+					<texture>assistant/credits.jpg</texture>
+					<visible>Control.HasFocus(12)</visible>
+					<animation type="Visible" reversible="false">
+						<effect type="fade" start="0" end="100" time="200" />
+						<effect type="fade" start="100" end="0" time="200" delay="10000" />
+					</animation>
+				</control>
+				<control type="image">
+					<width>840</width>
+					<height>602</height>
+					<texture>assistant/credits2.jpg</texture>
+					<visible>Control.HasFocus(12)</visible>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="200" delay="6000" />
+					</animation>
+				</control>
+				<control type="textbox">
+					<posx>420</posx>
+					<posy>0</posy>
+					<width>420</width>
+					<height>601</height>
+					<label>[CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31900][/COLOR][CR]DUNCAN HARRIS[CR]EMILIO AYALA[CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31901][/COLOR][CR]BIDE CUI[CR](PETERCUI.DEVIANTART.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31910][/COLOR][CR]JAVIER OCASIO[CR](STUDIOTWENTYEIGHT.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31902][/COLOR][CR]JORDAN MICHAEL[CR](JORDAN-MICHAEL.COM)[CR]ROBERTO ABRIL[CR](TESKOSTUDIO.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31903][/COLOR][CR]THE BOXHEAD (NORWEGIAN)[CR]JULIEN CINGOZ (FRENCH)[CR]LEANDRO DISCACIATE (B. PORTUGUESE)[CR]MARKUS KAHLE (GERMAN)[CR]MELY (ITALIAN)[CR]CARLOS NABB (SWEDISH)[CR]ALBERT PI (SPANISH)[CR]CRISTIANO SILVA (E. PORTUGUESE)[CR]JOHN T (TRAD. CHINESE)[CR]SANDER VAN DER VEER (DUTCH)[CR]KWANGHO YUN (KOREAN)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31904][/COLOR][CR]KEVIN GOFFE[CR]MATT GRIMES[CR]PETER HARTMAN[CR]STEVE LOFTUS[CR]GIULIANO MACIOCCI[CR]NATHAN MARCONI[CR]SEBASTIAN NIEROP[CR]SKUNKM0NKEE[CR]STEVE MCNALLY[CR]STEVE SAUNDERS[CR]MARCO SCHACHE[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31905][/COLOR][CR]DUNCAN HARRIS[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31906][/COLOR][CR]JMARSHALL[CR]JEZZ X[CR]TEAM XBMC[CR]SMOKEHEAD[CR]MIKE BEECHAM[CR]TEAM RAZORFISH[CR]PARTHIBAN MOHANRAJ[CR]JOHAN ABADIE (NEUROS)[CR]DAVID MCLEOD (ELISA)[CR]ELAN FEINGOLD (PLEX)[CR]CS GOH (SELECT-TV)[CR]$LOCALIZE[31907][CR][CR]$LOCALIZE[31908][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31909][/COLOR][CR]"FROM CHIPPENHAM WITH LOVE"[CR][CR][CR][CR][CR][CR][CR][CR]</label>
+					<visible>Control.HasFocus(12)</visible>
+					<font>Font_ProgressLabelMid</font>
+					<autoscroll delay="3000" time="1000" repeat="10000">true</autoscroll>
+					<align>center</align>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="1000" delay="7000" />
+					</animation>
+				</control>
 			</control>
 			<control type="image">
 				<description>Internal Panel (rear texture)</description>
@@ -265,6 +340,7 @@
 				<width>840</width>
 				<height>472</height>
 				<include>Animation_CommonFade</include>
+				<visible>!Control.HasFocus(12)</visible>
 				<control type="image" id="87">
 					<visible>[Container(300).OnNext | Container(300).OnPrevious] | [Container(301).OnNext | Container(301).OnPrevious]</visible>
 					<animation effect="fade" time="300">Hidden</animation>
@@ -545,7 +621,6 @@
 				<onclick>Skin.Reset(CustomVideo)</onclick>
 				<onclick>Skin.Reset(CustomVideoFolder)</onclick>
 			</control>
-			<include>Furniture_SettingsFrontPanel</include>
 			<control type="image">
 				<posx>331</posx>
 				<posy>43</posy>
@@ -553,6 +628,16 @@
 				<height>634</height>
 				<texture>settings/settings_intframe_top.png</texture>
 				<include>Animation_SettingsInternalPanel</include>
+				<visible>!Control.HasFocus(12)</visible>
+			</control>
+			<control type="image">
+				<posx>331</posx>
+				<posy>43</posy>
+				<width>842</width>
+				<height>634</height>
+				<texture>settings/settings_intframebig_top.png</texture>
+				<include>Animation_SettingsInternalPanel</include>
+				<visible>Control.HasFocus(12)</visible>
 			</control>
 		<!-- Main instruction labels -->
 			<control type="group">

@@ -391,7 +391,7 @@
 			<name>Font_Vitals</name>
 			<filename>aeon_settings.ttf</filename>
 			<size>21</size>
-			<linespacing>2.4</linespacing>
+			<linespacing>1.9</linespacing>
 		</font>
 	<!-- Wall -->
 		<font>
@@ -1873,7 +1873,7 @@
 			<name>Font_Vitals</name>
 			<filename>aeon_settings_ce.ttf</filename>
 			<size>21</size>
-		<linespacing>1.9</linespacing>
+			<linespacing>1.9</linespacing>
 		</font>
 	<!-- Wall -->
 		<font>
@@ -1888,9 +1888,9 @@
 			<size>19</size>
 		</font>
 		<font>
-		<name>Font_OSDOptions</name>
-		<filename>aeon_title_ce.ttf</filename>
-		<size>16</size>
+			<name>Font_OSDOptions</name>
+			<filename>aeon_title_ce.ttf</filename>
+			<size>16</size>
 		</font>
 		<font>
 			<name>Font_OSDCodecInfo</name>

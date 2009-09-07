@@ -87,7 +87,6 @@
 				<ondown>5</ondown>
 				<onleft>3</onleft>
 				<onright>3</onright>
-				<visible>Window.Previous(4) | Window.Previous(10) | Window.Previous(24) | Window.Previous(25) | Window.Previous(1) | Window.Previous(2) | Window.Previous(500) | Window.Previous(501) | Window.Previous(502) | Window.Previous(VideosSettings) | Window.Previous(Home)</visible>
 			</control>
 			<control type="group">
 				<description>Videos subheadings</description>

@@ -746,7 +746,7 @@
 			<include>Furniture_HomeNowPlayingInfo</include>
 		</control>
 	</include>
-	<include name="Furniture_NowPlayingWidget">
+	<include name="Furniture_NowPlayingWidget"><!-- 1 -->
 		<control type="group">
 			<animation effect="fade" delay="1500" start="0" end="100" time="400">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
@@ -787,7 +787,7 @@
 		</control>
 	</include>
 <!-- Settings windows -->
-	<include name="Furniture_SettingsBackPanel">
+	<include name="Furniture_SettingsBackPanel"><!-- 5 -->
 		<control type="image">
 			<description>background image</description>
 			<posx>23</posx>
@@ -797,7 +797,7 @@
 			<texture>settings/settings_panelback.png</texture>
 		</control>
 	</include>
-	<include name="Furniture_SettingsFrontPanel">
+	<include name="Furniture_SettingsFrontPanel"><!-- 2 -->
 		<control type="image">
 			<description>Front pane for Settings panel</description>
 			<posx>42</posx>
@@ -807,34 +807,12 @@
 			<texture>settings/settings_panelfront.png</texture>
 		</control>
 	</include>
-	<include name="Furniture_SettingsInternalBackPanel"><!-- 4 -->
+	<include name="Furniture_SettingsInternalBackPanel"><!-- 2 -->
 		<posx>234</posx>
 		<posy>42</posy>
 		<width>1035</width>
 		<height>634</height>
 		<texture>settings/settings_intframe_bottom.png</texture>
-	</include>
-	<include name="Furniture_SettingsTutorialSlide"><!-- 10 -->
-		<width>840</width>
-		<height>472</height>
-		<timeperimage>999999</timeperimage>
-		<fadetime>300</fadetime>
-		<randomize>true</randomize>
-		<include>Animation_SettingsSlide</include>
-	</include>
-	<include name="Furniture_SettingsNewsSlideBig"><!-- 3 -->
-		<width>840</width>
-		<height>602</height>
-		<include>Animation_SettingsSlide</include>
-	</include>
-	<include name="Furniture_SettingsVitals"><!-- 2 -->
-		<posy>56</posy>
-		<height>491</height>
-		<font>Font_Vitals</font>
-		<align>left</align>
-		<aligny>center</aligny>
-		<textoffsetx>15</textoffsetx>
-		<include>Animation_SettingsSlide</include>
 	</include>
 <!-- Debug -->
 	<include name="Furniture_Debug">
