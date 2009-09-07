@@ -3,7 +3,7 @@
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
-	<string id="31000">0.9 (STARK)</string> <!-- DO NOT CHANGE -->
+	<string id="31000">0.91 (AURIGA) - CF2009 (MOD)</string> <!-- DO NOT CHANGE -->
 	<string id="31001">N/A</string>
 	<string id="31002">MUTED</string>
 	<string id="31003">WEATHER SCREEN OPTIONS UNAVAILABLE IN THIS VERSION</string>
@@ -27,7 +27,7 @@
 	<string id="31018">PLAY DISC</string>
 	<string id="31019">SHUTDOWN</string>
 	<string id="31020">SCRIPTS</string>
-	<string id="31021">ASSISTANT</string>
+	<string id="31021">-</string>
 
 <!-- Media Window titles -->
  
@@ -341,20 +341,20 @@
 	
 <!--  Aeon Assistant  -->
 
-	<string id="31500">NEWS</string>
-	<string id="31501">ONLINE AEON UPDATES</string>
+	<string id="31500">-</string>
+	<string id="31501">-</string>
 	<string id="31502">VITALS</string>
 	<string id="31503">XBMC STATISTICS</string>
 	<string id="31504">CREDITS</string>
 	<string id="31505">AUTHOR AND THANKS</string>
-	<string id="31510">ASSISTANT</string>
-	<string id="31511">LATEST NEWS</string>
-	<string id="31512">RETURN HERE FOR PERIODICAL UPDATES FROM THE AEON SERVER</string>
-	<string id="31520">START TOUR</string>
-	<string id="31521">AEON WELCOME PAGE</string>
-	<string id="31522">BACK TO BASICS</string>
-	<string id="31523">PRESS SELECT TO REPLAY THE INTRODUCTORY AEON TOUR</string>
-	<string id="31524">CONTACTING AEON SERVER</string>
+	<string id="31510">-</string>
+	<string id="31511">-</string>
+	<string id="31512">-</string>
+	<string id="31520">-</string>
+	<string id="31521">-</string>
+	<string id="31522">-</string>
+	<string id="31523">-</string>
+	<string id="31524">-</string>
 	
 <!--  Aeon Assistant Tutorials  -->
 
@@ -366,7 +366,7 @@
 	
 <!-- Debug mode -->
 
-	<string id="31600">AEON VERSION: 1.0</string>
+	<string id="31600">-</string>
 	<string id="31601">FREE SYSTEM RAM:</string>
 	<string id="31602">XBMC BUILD DATE:</string>
 	<string id="31603">FPS:</string>

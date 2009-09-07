@@ -331,11 +331,11 @@
 				<visible>Container(6).HasFocus(11)</visible>
 				<control type="label">
 					<include>Labels_MainLabelBigVars</include>
-					<label>31820</label>
+					<label>31502</label>
 				</control>
 				<control type="label">
 					<include>Labels_MainLabelSmallVars</include>
-					<label>31821</label>
+					<label>31503</label>
 				</control>
 			</control>
 		<!-- front panel -->
