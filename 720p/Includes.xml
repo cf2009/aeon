@@ -15,30 +15,30 @@
 	<include file="Viewtype_Multiplex.xml" />
 	<include file="Viewtype_List.xml" />
 	<include file="Viewtype_Wall.xml" />
-<!-- Text colours ================================== -->
+<!-- Text colours -->
 	<include name="subcolornofocus">
 		<textcolor>ff969696</textcolor>
-		<selectedcolor>ff969696</selectedcolor>
-	</include>
-	<include name="listcolornofocus">
-		<textcolor>dcffffff</textcolor>
-		<selectedcolor>dcffffff</selectedcolor>
+		<selectedcolor>ab749a9a</selectedcolor>
 	</include>
 	<include name="subcolorfocus">
 		<textcolor>ff2e2e2e</textcolor>
-		<selectedcolor>ff2e2e2e</selectedcolor>
+		<selectedcolor>ff144848</selectedcolor>
+	</include>
+	<include name="listcolornofocus">
+		<textcolor>dcffffff</textcolor>
+		<selectedcolor>ab749a9a</selectedcolor>
 	</include>
 	<include name="listcolorfocus">
 		<textcolor>ff2e2e2e</textcolor>
-		<selectedcolor>ff2e2e2e</selectedcolor>
+		<selectedcolor>ff144848</selectedcolor>
 	</include>
 	<include name="detailcolornofocus">
 		<textcolor>dcbdbdbd</textcolor>
-		<selectedcolor>dcbdbdbd</selectedcolor>
+		<selectedcolor>9b749a9a</selectedcolor>
 	</include>
 	<include name="detailcolorfocus">
 		<textcolor>FF585858</textcolor>
-		<selectedcolor>FF585858</selectedcolor>
+		<selectedcolor>ff144848</selectedcolor>
 	</include>
 	<include name="Colour_Grey">
 		<textcolor>FF868686</textcolor>
