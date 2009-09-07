@@ -2,11 +2,7 @@
 	<defaultcontrol>6</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="multiimage">
-			<include>BackgroundVarsGlobal</include>
-			<imagepath>backdrops/default_settings</imagepath>
-			<info>Skin.String(CustomSettings)</info>
-		</control>
+		<include>Background_setting</include>
 		<include>Furniture_SettingsBackPanel</include>
 		<control type="label">
 			<description>sectiontitle</description>
