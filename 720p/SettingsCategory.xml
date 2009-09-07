@@ -2,11 +2,7 @@
 	<defaultcontrol>3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="multiimage">
-			<include>BackgroundVarsGlobal</include>
-			<imagepath>backdrops/default_settings</imagepath>
-			<info>Skin.String(CustomSettings)</info>
-		</control>
+		<include>Background_setting</include>
 		<control type="group">
 			<include>FullScreenDimensions</include>
 			<animation type="WindowOpen" reversible="false" condition="!Window.Previous(4)">
@@ -628,14 +624,7 @@
 				<include>Animation_SettingsButtonFade</include>
 				<onclick>SetFocus(800)</onclick>
 			</control>
-			<control type="image">
-				<description>background image</description>
-				<posx>42</posx>
-				<posy>28</posy>
-				<width>1196</width>
-				<height>651</height>
-				<texture>settings/settings_panelfront.png</texture>
-			</control>
+			<include>Furniture_SettingsFrontPanel</include>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>

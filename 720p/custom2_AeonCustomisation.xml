@@ -1,13 +1,8 @@
 <window id="604">
 	<defaultcontrol always="true">6</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="multiimage">
-			<description>Settings Backdrop</description>
-			<include>BackgroundVarsGlobal</include>
-			<imagepath>backdrops/default_settings</imagepath>
-			<info>Skin.String(CustomSettings)</info>
-		</control>
+		<include>Background_setting</include>
 		<control type="group">
 			<include>FullScreenDimensions</include>
 			<animation type="WindowOpen" reversible="false" condition="Window.Previous(Home) | Skin.HasSetting(bmtransit)">
@@ -289,7 +284,6 @@
 			</control>
 		<!-- Credits -->
 			<control type="group">
-				<visible>Control.HasFocus(12)</visible>
 				<posx>332</posx>
 				<posy>58</posy>
 				<width>840</width>
@@ -300,7 +294,7 @@
 					<texture>assistant/credits.jpg</texture>
 					<visible>Control.HasFocus(12)</visible>
 					<animation type="Visible" reversible="false">
-						<effect type="fade" start="0" end="100" time="200" />
+						<effect type="fade" start="0" end="100" time="400" />
 						<effect type="fade" start="100" end="0" time="200" delay="10000" />
 					</animation>
 				</control>
@@ -310,7 +304,7 @@
 					<texture>assistant/credits2.jpg</texture>
 					<visible>Control.HasFocus(12)</visible>
 					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="200" delay="6000" />
+						<effect type="fade" start="0" end="100" time="400" delay="6000" />
 					</animation>
 				</control>
 				<control type="textbox">
@@ -318,7 +312,7 @@
 					<posy>0</posy>
 					<width>420</width>
 					<height>601</height>
-					<label>[CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31900][/COLOR][CR]DUNCAN HARRIS[CR]EMILIO AYALA[CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31901][/COLOR][CR]BIDE CUI[CR](PETERCUI.DEVIANTART.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31910][/COLOR][CR]JAVIER OCASIO[CR](STUDIOTWENTYEIGHT.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31902][/COLOR][CR]JORDAN MICHAEL[CR](JORDAN-MICHAEL.COM)[CR]ROBERTO ABRIL[CR](TESKOSTUDIO.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31903][/COLOR][CR]THE BOXHEAD (NORWEGIAN)[CR]JULIEN CINGOZ (FRENCH)[CR]LEANDRO DISCACIATE (B. PORTUGUESE)[CR]MARKUS KAHLE (GERMAN)[CR]MELY (ITALIAN)[CR]CARLOS NABB (SWEDISH)[CR]ALBERT PI (SPANISH)[CR]CRISTIANO SILVA (E. PORTUGUESE)[CR]JOHN T (TRAD. CHINESE)[CR]SANDER VAN DER VEER (DUTCH)[CR]KWANGHO YUN (KOREAN)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31904][/COLOR][CR]KEVIN GOFFE[CR]MATT GRIMES[CR]PETER HARTMAN[CR]STEVE LOFTUS[CR]GIULIANO MACIOCCI[CR]NATHAN MARCONI[CR]SEBASTIAN NIEROP[CR]SKUNKM0NKEE[CR]STEVE MCNALLY[CR]STEVE SAUNDERS[CR]MARCO SCHACHE[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31905][/COLOR][CR]DUNCAN HARRIS[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31906][/COLOR][CR]JMARSHALL[CR]JEZZ X[CR]TEAM XBMC[CR]SMOKEHEAD[CR]MIKE BEECHAM[CR]TEAM RAZORFISH[CR]PARTHIBAN MOHANRAJ[CR]JOHAN ABADIE (NEUROS)[CR]DAVID MCLEOD (ELISA)[CR]ELAN FEINGOLD (PLEX)[CR]CS GOH (SELECT-TV)[CR]$LOCALIZE[31907][CR][CR]$LOCALIZE[31908][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31909][/COLOR][CR]"FROM CHIPPENHAM WITH LOVE"[CR][CR][CR][CR][CR][CR][CR][CR]</label>
+					<label>[CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31900][/COLOR][CR]DUNCAN HARRIS[CR]EMILIO AYALA[CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31901][/COLOR][CR]BIDE CUI[CR](PETERCUI.DEVIANTART.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31910][/COLOR][CR]JAVIER OCASIO[CR](STUDIOTWENTYEIGHT.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31902][/COLOR][CR]JORDAN MICHAEL[CR](JORDAN-MICHAEL.COM)[CR]ROBERTO ABRIL[CR](TESKOSTUDIO.COM)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31903][/COLOR][CR]THE BOXHEAD (NORWEGIAN)[CR]JULIEN CINGOZ (FRENCH)[CR]LEANDRO DISCACIATE (B. PORTUGUESE)[CR]MARKUS KAHLE (GERMAN)[CR]MELY (ITALIAN)[CR]CARLOS NABB (SWEDISH)[CR]ALBERT PI (SPANISH)[CR]CRISTIANO SILVA (E. PORTUGUESE)[CR]JOHN T (TRAD. CHINESE)[CR]SANDER VAN DER VEER (DUTCH)[CR]KWANGHO YUN (KOREAN)[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31904][/COLOR][CR]KEVIN GOFFE[CR]MATT GRIMES[CR]PETER HARTMAN[CR]STEVE LOFTUS[CR]GIULIANO MACIOCCI[CR]NATHAN MARCONI[CR]SEBASTIAN NIEROP[CR]SKUNKM0NKEE[CR]STEVE MCNALLY[CR]STEVE SAUNDERS[CR]MARCO SCHACHE[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31905][/COLOR][CR]DUNCAN HARRIS[CR][CR][COLOR ff6a6a6a]$LOCALIZE[31906][/COLOR][CR]JMARSHALL[CR]JEZZ X[CR]TEAM XBMC[CR]SMOKEHEAD[CR]MIKE BEECHAM[CR]TEAM RAZORFISH[CR]PARTHIBAN MOHANRAJ[CR]JOHAN ABADIE (NEUROS)[CR]DAVID MCLEOD (ELISA)[CR]ELAN FEINGOLD (PLEX)[CR]CS GOH (SELECT-TV)[CR]$LOCALIZE[31907][CR][CR]$LOCALIZE[31908][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][CR][COLOR ff6a6a6a]$LOCALIZE[31909][/COLOR][CR]"FROM CHIPPENHAM WITH LOVE"[CR][CR][CR][CR][CR][CR][CR][CR]</label>
 					<visible>Control.HasFocus(12)</visible>
 					<font>Font_ProgressLabelMid</font>
 					<autoscroll delay="3000" time="1000" repeat="10000">true</autoscroll>
@@ -621,6 +615,7 @@
 				<onclick>Skin.Reset(CustomVideo)</onclick>
 				<onclick>Skin.Reset(CustomVideoFolder)</onclick>
 			</control>
+			<include>Furniture_SettingsFrontPanel</include>
 			<control type="image">
 				<posx>331</posx>
 				<posy>43</posy>

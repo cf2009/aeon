@@ -1,12 +1,8 @@
 <window id="4">
 	<defaultcontrol always="true">6</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="multiimage">
-			<include>BackgroundVarsGlobal</include>
-			<imagepath>backdrops/default_settings</imagepath>
-			<info>Skin.String(CustomSettings)</info>
-		</control>
+		<include>Background_setting</include>
 		<control type="group">
 			<include>FullScreenDimensions</include>
 			<animation type="WindowOpen" reversible="false" condition="!Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(18) + !Window.Previous(19) + !Window.Previous(17) + !Window.Previous(604) + !Window.Previous(56) + !Window.Previous(34)">
