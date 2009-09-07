@@ -168,6 +168,7 @@
 		<!-- Vitals -->
 			<control type="group">
 				<visible>Container(6).HasFocus(11)</visible>
+				<include>Animation_CommonFade</include>
 				<posx>332</posx>
 				<posy>58</posy>
 				<width>840</width>
@@ -181,7 +182,6 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>15</textoffsetx>
-					<include>Animation_SettingsSlide</include>
 					<textcolor>aa000000</textcolor>
 					<label>31598</label>
 				</control>
@@ -194,7 +194,6 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<textoffsetx>15</textoffsetx>
-					<include>Animation_SettingsSlide</include>
 					<textcolor>Colour_OffWhite</textcolor>
 					<label>$INFO[System.BuildDate][CR]$LOCALIZE[31000][CR]$INFO[Skin.CurrentTheme][CR]$INFO[System.Language][CR]$INFO[System.ScreenResolution][CR]$INFO[System.FreeMemory][CR]$INFO[System.UsedspacePercent][CR]$INFO[System.CPUTemperature][CR]$INFO[System.GPUTemperature][CR]$INFO[System.Uptime][CR]$INFO[System.Internetstate][CR]$INFO[Network.IPAddress][CR]$INFO[System.DVDLabel]</label>
 				</control>
