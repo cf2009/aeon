@@ -71,55 +71,6 @@
 					</control>
 				</focusedlayout>
 				<content>
-					<item id="1">
-						<description>Videos</description>
-						<label>31140</label>
-						<label2>31141</label2>
-						<thumb>special://skin/media/tutorials/tut_movies</thumb>
-						<onclick>ActivateWindow(MyVideosSettings)</onclick>
-					</item>
-					<item id="2">
-						<description>Music</description>
-						<label>31142</label>
-						<label2>31143</label2>
-						<thumb>tutorials/tut_music</thumb>
-						<onclick>ActivateWindow(MyMusicSettings)</onclick>
-					</item>
-					<item id="3">
-						<description>Programs</description>
-						<label>31144</label>
-						<label2>31145</label2>
-						<thumb>tutorials/tut_apps</thumb>
-						<onclick>ActivateWindow(MyProgramsSettings)</onclick>
-					</item>
-					<item id="4">
-						<description>Pictures</description>
-						<label>31146</label>
-						<label2>31147</label2>
-						<thumb>tutorials/tut_pictures</thumb>
-						<onclick>ActivateWindow(MyPicturesSettings)</onclick>
-					</item>
-					<item id="5">
-						<description>Weather</description>
-						<label>31148</label>
-						<label2>31149</label2>
-						<thumb>tutorials/tut_weather</thumb>
-						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
-					</item>
-					<item id="6">
-						<description>Network</description>
-						<label>31150</label>
-						<label2>31151</label2>
-						<thumb>tutorials/tut_network</thumb>
-						<onclick>ActivateWindow(NetworkSettings)</onclick>
-					</item>
-					<item id="7">
-						<description>System</description>
-						<label>31152</label>
-						<label2>31153</label2>
-						<thumb>tutorials/tut_system</thumb>
-						<onclick>ActivateWindow(SystemSettings)</onclick>
-					</item>
 					<item id="8">
 						<description>Appearance</description>
 						<label>31154</label>
@@ -134,6 +85,27 @@
 						<thumb>tutorials/tut_aeon</thumb>
 						<onclick>ActivateWindow(604)</onclick>
 					</item>
+					<item id="2">
+						<description>Music</description>
+						<label>31142</label>
+						<label2>31143</label2>
+						<thumb>tutorials/tut_music</thumb>
+						<onclick>ActivateWindow(MyMusicSettings)</onclick>
+					</item>
+					<item id="6">
+						<description>Network</description>
+						<label>31150</label>
+						<label2>31151</label2>
+						<thumb>tutorials/tut_network</thumb>
+						<onclick>ActivateWindow(NetworkSettings)</onclick>
+					</item>
+					<item id="4">
+						<description>Pictures</description>
+						<label>31146</label>
+						<label2>31147</label2>
+						<thumb>tutorials/tut_pictures</thumb>
+						<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+					</item>
 					<item id="10">
 						<description>Profile Settings</description>
 						<label>31160</label>
@@ -141,12 +113,40 @@
 						<thumb>tutorials/tut_profiles</thumb>
 						<onclick>XBMC.ActivateWindow(34)</onclick>
 					</item>
+					<item id="3">
+						<description>Programs</description>
+						<label>31144</label>
+						<label2>31145</label2>
+						<thumb>tutorials/tut_apps</thumb>
+						<onclick>ActivateWindow(MyProgramsSettings)</onclick>
+					</item>
+					<item id="7">
+						<description>System</description>
+						<label>31152</label>
+						<label2>31153</label2>
+						<thumb>tutorials/tut_system</thumb>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+					</item>
+					<item id="1">
+						<description>Videos</description>
+						<label>31140</label>
+						<label2>31141</label2>
+						<thumb>tutorials/tut_movies</thumb>
+						<onclick>ActivateWindow(MyVideosSettings)</onclick>
+					</item>
 					<item id="11">
 						<description>Vitals</description>
 						<label>31502</label>
 						<label2>31503</label2>
 						<thumb>tutorials/vitals</thumb>
 						<onclick>XBMC.ActivateWindow(34)</onclick>
+					</item>
+					<item id="5">
+						<description>Weather</description>
+						<label>31148</label>
+						<label2>31149</label2>
+						<thumb>tutorials/tut_weather</thumb>
+						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 					</item>
 				</content>
 			</control>
@@ -177,7 +177,6 @@
 					<font>Font_Vitals</font>
 					<align>left</align>
 					<aligny>top</aligny>
-					<textoffsetx>15</textoffsetx>
 					<textcolor>aa000000</textcolor>
 					<label>31598</label>
 				</control>
@@ -189,9 +188,8 @@
 					<font>Font_Vitals</font>
 					<align>left</align>
 					<aligny>top</aligny>
-					<textoffsetx>15</textoffsetx>
 					<textcolor>Colour_OffWhite</textcolor>
-					<label>$INFO[System.BuildDate][CR]$LOCALIZE[31000][CR]$INFO[Skin.CurrentTheme][CR]$INFO[System.Language][CR]$INFO[System.ScreenResolution][CR]$INFO[System.FreeMemory][CR]$INFO[System.UsedspacePercent][CR]$INFO[System.CPUTemperature][CR]$INFO[System.GPUTemperature][CR]$INFO[System.Uptime][CR]$INFO[System.Internetstate][CR]$INFO[Network.IPAddress][CR]$INFO[System.DVDLabel]</label>
+					<label>$INFO[System.BuildVersion] - $INFO[System.BuildDate][CR]$LOCALIZE[31000][CR]$INFO[Skin.CurrentTheme][CR]$INFO[System.Language][CR]$INFO[System.ScreenResolution][CR]$INFO[System.FreeMemory][CR]$INFO[System.UsedspacePercent][CR]$INFO[System.CPUTemperature][CR]$INFO[System.GPUTemperature][CR]$INFO[System.Uptime][CR]$INFO[System.Internetstate][CR]$INFO[Network.IPAddress][CR]$INFO[System.DVDLabel]</label>
 				</control>
 			</control>
 		<!-- Settings Labels -->

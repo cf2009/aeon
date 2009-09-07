@@ -287,8 +287,7 @@
 					<description>Settings</description>
 					<label>31016</label>
 					<include>BackgroundVarsSettings</include>
-					<onclick>Skin.SetString(custom,CustomSettings)</onclick>
-					<onclick>SetFocus(92)</onclick>
+					<onclick>Skin.SetImage(CustomSettings)</onclick>
 					<visible>!Skin.HasSetting(nosettings)</visible>
 				</item>
 				<item id="10">
